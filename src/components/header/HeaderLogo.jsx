@@ -1,7 +1,6 @@
 import React from 'react';
-import HeaderNavIcons from './HeaderNavIcons';
 
-export function HeaderLogo() {
+export default function HeaderLogo() {
   const url = "https://d1lhyycl5p8pom.cloudfront.net/media/image/ff/be/cd/apocalyptica.png";
   return (
     <div >
@@ -9,10 +8,10 @@ export function HeaderLogo() {
     </div>
   )
 }
-export default function HeaderMain() {
-  return (
-    <div>
-      <HeaderLogo />
-    </div>
-  )
-}
+// export default function HeaderMain() {
+//   return (
+//     <div>
+//       <HeaderLogo />
+//     </div>
+//   )
+// }
