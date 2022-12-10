@@ -24,9 +24,10 @@ export default function HeaderTop() {
   const handleChange = (event) => {
     setLanguage(event.target.value);
   };
-  return (
 
-    <Navbar className="p-0 mb-2 bg-dark text-white">
+  return (
+    // show only from md    
+    <Navbar className="d-none d-md-block p -0 mb-2 bg-dark text-white">
       <Container className="justify-content-end ">
         <Row >
           <Col>

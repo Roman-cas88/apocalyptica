@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
     const linkStyle = {     
       margin: ".5rem",
       color: 'black',
-      height: '50'
     }
     return (
-      <div className="justify-content-end">
-        <Link to="/" style={linkStyle} ><BsSearch /></Link>
-        <Link to="/" style={linkStyle} ><BsPersonFill /></Link>
-        <Link to="/" style={linkStyle} ><BsCartCheckFill /></Link>
-     
+      // size: https://www.folkstalk.com/tech/react-icon-size-with-code-examples/
+      <div >
+        {/* className="justify-content-end" */}
+        <Link to="/" style={linkStyle} ><BsSearch size={28}/></Link>
+        <Link to="/" style={linkStyle} ><BsPersonFill  size={28}/></Link>
+        <Link to="/" style={linkStyle} ><BsCartCheckFill  size={28}/></Link>
       </div>
     )
   }

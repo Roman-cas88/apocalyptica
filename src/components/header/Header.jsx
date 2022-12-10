@@ -1,14 +1,16 @@
 import React from 'react';
 import HeaderTop from './HeaderTop';
 import HeaderMain from './HeaderMain'
-import NavBar from '../navbar/NavBar';
+
 
 export default function Header() {
+  const isMobile = window.screen.width < 700;
+
   return (
     <div> 
-      <HeaderTop />
+      { isMobile && <HeaderTop /> }  
+      <HeaderTop />    
       <HeaderMain />
-      <NavBar />
     </div>
   )
 }
