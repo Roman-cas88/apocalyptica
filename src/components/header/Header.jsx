@@ -5,7 +5,7 @@ import NavBar from '../navbar/NavBar';
 
 export default function Header() {
   return (
-    <div>
+    <div> 
       <HeaderTop />
       <HeaderMain />
       <NavBar />

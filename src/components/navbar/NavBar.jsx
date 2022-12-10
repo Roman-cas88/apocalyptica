@@ -8,8 +8,11 @@ export default function NavBar() {
   let unsetStyle = {all: 'unset'}
 
   return (
-    <Navbar variant='light'>
+  // https://react-bootstrap.netlify.app/layout/breakpoints/
+  <Navbar variant='light' expand="md">   
       <Container>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
         <Nav className='me-auto'>
           <Nav.Link><Link style={unsetStyle} to="/">HOME</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/tickets">TICKETS</Link></Nav.Link>
@@ -20,6 +23,7 @@ export default function NavBar() {
           <Nav.Link><Link style={unsetStyle} to="/stuff">STUFF</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/coffee">COFFEE</Link></Nav.Link>
         </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   )
