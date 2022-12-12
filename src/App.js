@@ -8,7 +8,7 @@ import NavBar from './components/navbar/NavBar';
 import HeaderTop from './components/header/HeaderTop';
 import HeaderLogo from './components/header/HeaderLogo';
 import HeaderNavIcons from './components/header/HeaderNavIcons';
-
+import HeaderSearch from './components/header/HeaderSearch';
 
 export default function App() {
   // return (
@@ -51,7 +51,10 @@ export default function App() {
         </Col>
       </Row>
 
-
+      <Row>
+        <HeaderSearch />
+      </Row>
+      
       <Row>
         <Content />
       </Row>
