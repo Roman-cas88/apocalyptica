@@ -1,6 +1,8 @@
 import React from 'react'
 import { Container, Navbar, Nav } from "react-bootstrap/"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"; 
+  // https://react-bootstrap.netlify.app/layout/breakpoints/
+  // Small sm ≥576px;  Medium  md ≥768px ; Large lg  ≥992px
 
 export default function NavBar() {
   
@@ -8,8 +10,10 @@ export default function NavBar() {
   let unsetStyle = {all: 'unset'}
 
   return (
-    <Navbar variant='light'>
+  <Navbar variant='light' expand="md">   
       <Container>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
         <Nav className='me-auto'>
           <Nav.Link><Link style={unsetStyle} to="/">HOME</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/tickets">TICKETS</Link></Nav.Link>
@@ -19,8 +23,10 @@ export default function NavBar() {
           <Nav.Link><Link style={unsetStyle} to="/music">MUSIC</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/stuff">STUFF</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/coffee">COFFEE</Link></Nav.Link>
-        </Nav>
+        </Nav>        
+        </Navbar.Collapse>
       </Container>
+
     </Navbar>
   )
 }
