@@ -8,10 +8,3 @@ export default function HeaderLogo() {
     </div>
   )
 }
-// export default function HeaderMain() {
-//   return (
-//     <div>
-//       <HeaderLogo />
-//     </div>
-//   )
-// }

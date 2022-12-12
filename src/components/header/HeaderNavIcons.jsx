@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsSearch, BsPersonFill, BsCartCheckFill } from "react-icons/bs";
+import { Form, Button } from "react-bootstrap/";
 import { Link } from 'react-router-dom';
 
   export default function HeaderNavIcons() {
@@ -17,3 +18,15 @@ import { Link } from 'react-router-dom';
       </div>
     )
   }
+
+  export function HeaderSearch() {
+  <Form className="d-flex">
+  <Form.Control
+    type="search"
+    placeholder="Search"
+    className="me-2"
+    aria-label="Search"
+  />
+  <Button variant="outline-success">Search</Button>
+</Form>
+}

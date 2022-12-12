@@ -21,35 +21,37 @@ export default function App() {
   //   </>
   // );
   return (
-    <Container>
-      <Row debug>
-        <Col xs={12} justify="end" debug>
+    <Container fluid>
+      <Row align="center">
+        <Col >
           <Hidden xs sm>
           <HeaderTop />
           </Hidden>
         </Col>
       </Row>
-      <Row justify="between" align="center" debug>
-        <Col sm={12} md={8} debug>
+      <Row justify="between" align="center">
+        <Col sm={12} md={8}>
         <HeaderLogo />
         </Col>
-        <Col justify="end" debug>
+        <Col justify="end" >
           <Hidden xs sm>
           <HeaderNavIcons />
           </Hidden>
         </Col>
       </Row>
 
-      <Row justify="between" debug>
-        <Col md={12} debug>
-        <NavBar />
+      <Row justify="between" align="center">
+        <Col md={12} xs="content">
+          <NavBar />
         </Col>
-        <Col >
+        <Col xs="content">
         <Visible sm xs>
           <HeaderNavIcons />
         </Visible>
         </Col>
       </Row>
+
+
       <Row>
         <Content />
       </Row>

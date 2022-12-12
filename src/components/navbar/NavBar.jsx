@@ -1,7 +1,8 @@
 import React from 'react'
 import { Container, Navbar, Nav } from "react-bootstrap/"
 import { Link } from "react-router-dom"; 
-import HeaderNavIcons from '../header/HeaderNavIcons';
+  // https://react-bootstrap.netlify.app/layout/breakpoints/
+  // Small sm ≥576px;  Medium  md ≥768px ; Large lg  ≥992px
 
 export default function NavBar() {
   
@@ -9,8 +10,6 @@ export default function NavBar() {
   let unsetStyle = {all: 'unset'}
 
   return (
-  // https://react-bootstrap.netlify.app/layout/breakpoints/
-  // Small sm ≥576px;  Medium  md ≥768px ; Large lg  ≥992px
   <Navbar variant='light' expand="md">   
       <Container>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -26,7 +25,6 @@ export default function NavBar() {
           <Nav.Link><Link style={unsetStyle} to="/coffee">COFFEE</Link></Nav.Link>
         </Nav>        
         </Navbar.Collapse>
-        <HeaderNavIcons />
       </Container>
 
     </Navbar>
