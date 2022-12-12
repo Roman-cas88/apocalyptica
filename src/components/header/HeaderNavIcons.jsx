@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
     return (
       // size: https://www.folkstalk.com/tech/react-icon-size-with-code-examples/
       <div >
-        {/* className="justify-content-end" */}
         <Link to="/" style={linkStyle} ><BsSearch size={28}/></Link>
         <Link to="/" style={linkStyle} ><BsPersonFill  size={28}/></Link>
         <Link to="/" style={linkStyle} ><BsCartCheckFill  size={28}/></Link>
