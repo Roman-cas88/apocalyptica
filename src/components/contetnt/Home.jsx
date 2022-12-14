@@ -11,7 +11,7 @@ export const Home = () => {
             <h2>Home</h2>
 
             {/* Need to do adaptive */}
-            <Carousel indicators={false}>
+            <Carousel indicators={false} className="mb-5">
                 <Carousel.Item>
                     <a 
                     href="https://en.helsinginkahvipaahtimo.fi/product/72/"
@@ -36,7 +36,7 @@ export const Home = () => {
             </Carousel>
 
             {/* Need to do adaptive */}
-            <Container className="mt-4">
+            <Container className="mt-5 mb-5">
                 <Row className="justify-content-md-center">
                     <Col xs lg="2" style={styleCol}>
                         <img src="https://d1lhyycl5p8pom.cloudfront.net/media/vector/76/57/69/Trust_Icon_Versichert.svg" alt="delivery" /> 
@@ -58,6 +58,7 @@ export const Home = () => {
                     </Col>
                 </Row>
             </Container>
+            <div style={{width: "100%", height: "125px", backgroundColor: "grey", margin: "20px 0"}}></div>
         </Container>
     )
 }
