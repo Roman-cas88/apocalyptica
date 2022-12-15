@@ -3,8 +3,11 @@ import { Card } from 'react-bootstrap'
 
 export const CardTicket = ({ id }) => {
     let ticket = data.eTicket[id]
+    let clickedCard = () => {
+      console.log("Clicked")
+    }
     return (
-        <Card style={{ width: '15rem', textAlign:'center' }}>
+        <Card style={{ width: '15rem', textAlign:'center',cursor:"pointer" }} onClick={clickedCard}>
       <Card.Img variant="top" src={ticket.img} />
       <Card.Body>
         <Card.Title style={{fontSize: "15px", fontWeight:"lighter"}}>{ticket.title}</Card.Title>
