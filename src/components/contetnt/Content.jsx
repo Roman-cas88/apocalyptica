@@ -1,13 +1,13 @@
 import { Container } from "react-bootstrap/"
 import { Routes, Route } from "react-router-dom"
-import { Coffee } from "./Coffee"
-import { Girls } from "./Girls"
-import { Home } from "./Home"
-import { Hoods } from "./Hoods"
-import { Music } from "./Music"
-import { Shirts } from "./Shirts"
-import { Stuff } from "./Stuff"
-import { Tickets } from "./Tickets"
+import { Coffee } from "./Coffee/Coffee"
+import { Girls } from "./Girls/Girls"
+import { Home } from "./Home/Home"
+import { Hoods } from "./Hoods/Hoods"
+import { Music } from "./Music/Music"
+import { Shirts } from "./Shirts/Shirts"
+import { Stuff } from "./Stuff/Stuff"
+import { Tickets } from "./Tickets/Tickets"
 
 export const Content = () => {
     return (

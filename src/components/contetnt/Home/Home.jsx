@@ -1,6 +1,6 @@
 import { Carousel, Container } from "react-bootstrap"
-import TeaserCoffee from "./img/teaser-coffee-1200x400.jpg"
-import NewMerch1200x400 from "./img/newMerch-1200x400.jpg"
+import TeaserCoffee from "../img/teaser-coffee-1200x400.jpg"
+import NewMerch1200x400 from "../img/newMerch-1200x400.jpg"
 import { Link } from "react-router-dom"
 
 

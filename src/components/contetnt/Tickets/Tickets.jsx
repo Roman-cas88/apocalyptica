@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap"
-import { CardTicket } from "./Cards/CardTicket"
+import { CardTicket } from "../Cards/CardTicket"
 
 
 export const Tickets = () => {

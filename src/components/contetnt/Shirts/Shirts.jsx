@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap"
-import { CardShirts } from "./Cards/CardShirts"
+import { CardShirts } from "../Cards/CardShirts"
 
 
 export const Shirts = () => {
