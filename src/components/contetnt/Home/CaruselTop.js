@@ -1,14 +1,13 @@
-import { Carousel, Container } from "react-bootstrap"
-import TeaserCoffee from "./img/teaser-coffee-1200x400.jpg"
-import NewMerch1200x400 from "./img/newMerch-1200x400.jpg"
+import { Carousel } from "react-bootstrap"
+import TeaserCoffee from "../img/teaser-coffee-1200x400.jpg"
+import NewMerch1200x400 from "../img/newMerch-1200x400.jpg"
 import { Link } from "react-router-dom"
 
 
-export const Home = () => {
-    return ( 
-        <Container>
-            <h2>Home</h2>
-            <Carousel indicators={false}>
+
+export const CaruselTop = () => {
+    return (
+        <Carousel indicators={false}>
                 <Carousel.Item>
                     <a 
                     href="https://en.helsinginkahvipaahtimo.fi/product/72/"
@@ -31,6 +30,5 @@ export const Home = () => {
                     </Link>
                 </Carousel.Item>
             </Carousel>
-      </Container>
     )
 }
