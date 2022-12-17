@@ -22,7 +22,7 @@ export default function NavBar() {
           <Nav.Link><Link style={unsetStyle} to="/hoods">HOODS</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/music">MUSIC</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/stuff">STUFF</Link></Nav.Link>
-          <Nav.Link><Link style={unsetStyle} to="/coffee">COFFEE</Link></Nav.Link>
+          <Nav.Link href='https://en.helsinginkahvipaahtimo.fi/search/?q=apocalyptica' target="_blank">COFFEE</Nav.Link>
         </Nav>        
         </Navbar.Collapse>
       </Container>
