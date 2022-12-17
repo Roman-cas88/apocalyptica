@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap/"
 import { Routes, Route } from "react-router-dom"
-import { Coffee } from "./Coffee/Coffee"
 import { Girls } from "./Girls/Girls"
 import { Home } from "./Home/Home"
 import { Hoods } from "./Hoods/Hoods"
@@ -20,7 +19,6 @@ export const Content = () => {
                 <Route path="/hoods" element={<Hoods />} />
                 <Route path="/music" element={<Music />} />
                 <Route path="/stuff" element={<Stuff />} />
-                <Route path="/coffee" element={<Coffee />} />
             </Routes>
         </Container>
     )
