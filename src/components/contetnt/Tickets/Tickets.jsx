@@ -9,7 +9,7 @@ export const Tickets = () => {
         <>
     <h2>Tickets</h2>
     <Container>
-        <Row>
+        <Row xs={1} md={2} lg={3} xl={4} className="g-3">
             {idList}
         </Row>
     </Container>
