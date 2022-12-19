@@ -10,7 +10,7 @@ import { Tickets } from "./Tickets/Tickets"
 
 export const Content = () => {
     return (
-        <Container className="mt-4">
+        <Container fluid className="mt-1">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/tickets" element={<Tickets />} />

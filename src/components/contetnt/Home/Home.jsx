@@ -4,7 +4,7 @@ import { DeliveryInfo } from "./DeliveryInfo"
 
 export const Home = () => {
     return ( 
-        <Container>
+        <Container fluid>
             <h2>Home</h2>
             <CaruselTop />
             <DeliveryInfo />
