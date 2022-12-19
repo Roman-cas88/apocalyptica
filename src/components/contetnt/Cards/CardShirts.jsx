@@ -9,10 +9,11 @@ export const CardShirts = ({ id }) => {
     }
     const SoldOut = () => {
       const sold = shirts.isSold
-      if (sold === "true")  {return (
+      if (sold)  {return (
         <div className="soldOut">Sold Out</div>
       )}
     }
+
     // Need to tune CSS or BS
     return (
         <Card style={{ width: '15rem', height:'20rem', textAlign:'center',cursor:"pointer" }} onClick={clickedCard}>

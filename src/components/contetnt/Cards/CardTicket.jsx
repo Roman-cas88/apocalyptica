@@ -8,7 +8,7 @@ export const CardTicket = ({ id }) => {
     }
     const SoldOut = () => {
       const sold = ticket.isSold
-      if (sold === "true")  {return (
+      if (sold)  {return (
         <div className="soldOut">Sold Out</div>
       )}
     }
