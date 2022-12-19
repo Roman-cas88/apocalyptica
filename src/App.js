@@ -8,20 +8,11 @@ import NavBar from './components/navbar/NavBar';
 import HeaderTop from './components/header/HeaderTop';
 import HeaderLogo from './components/header/HeaderLogo';
 import HeaderNavIcons from './components/header/HeaderNavIcons';
-
+import HeaderSearch from './components/header/HeaderSearch';
 
 export default function App() {
-  // return (
-  //   <>
-  //     <HeaderTop />    
-  //     <HeaderMain />
-  //     <HeaderNavIcons />
-  //     <NavBar />
-  //     <Content />
-  //   </>
-  // );
   return (
-    <Container fluid>
+    <Container >
       <Row align="center">
         <Col >
           <Hidden xs sm>
@@ -29,29 +20,32 @@ export default function App() {
           </Hidden>
         </Col>
       </Row>
-      <Row justify="between" align="center">
+
+      <Row justify="between" >
+      {/* align="center" */}
         <Col sm={12} md={8}>
         <HeaderLogo />
         </Col>
-        <Col justify="end" >
+        <Col >
           <Hidden xs sm>
           <HeaderNavIcons />
           </Hidden>
         </Col>
       </Row>
 
-      <Row justify="between" align="center">
-        <Col md={12} xs="content">
+      <Row justify="between">      {/* align="center" */}
+        <Col md={12} xs="content" >         {/* xs="content" */}
           <NavBar />
         </Col>
-        <Col xs="content">
+        <Row justify="end">
+        <Col >
         <Visible sm xs>
           <HeaderNavIcons />
         </Visible>
         </Col>
+        </Row>
       </Row>
-
-
+      
       <Row>
         <Content />
       </Row>
