@@ -10,7 +10,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 import "react-bootstrap/dist/react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 
 
 

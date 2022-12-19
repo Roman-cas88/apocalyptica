@@ -35,8 +35,13 @@ export default function NavBar() {
           <Nav.Link><Link style={unsetStyle} to="/hoods" className='px-3'>HOODS</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/music" className='px-3'>MUSIC</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/stuff" className='px-3'>STUFF</Link></Nav.Link>
-          <Nav.Link><Link style={unsetStyle} href='https://en.helsinginkahvipaahtimo.fi/search/?q=apocalyptica' target="_blank" className='px-3'>COFFEE</Link></Nav.Link>
-
+          <Nav>
+            <a href="https://en.helsinginkahvipaahtimo.fi/search/?q=apocalyptica" target="_blank" style={unsetStyle} className='px-3'>COFFEE</a>
+            </Nav>
+          <Nav.Link href='https://en.helsinginkahvipaahtimo.fi/search/?q=apocalyptica' target="_blank" style={unsetStyle} className='px-3'>COFFEE</Nav.Link>
+        
+          {/* Roman: */}
+          {/* <Nav.Link href='https://en.helsinginkahvipaahtimo.fi/search/?q=apocalyptica' target="_blank">COFFEE</Nav.Link> */}
           <Nav.Link variant='light' className='d-md-none text-light  bg-secondary px-3'>Information</Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/" className='d-md-none px-3'>FAQ</Link></Nav.Link>
           <Nav.Link><Link style={unsetStyle} to="/" className='d-md-none px-3'>Rücksendung</Link></Nav.Link>
