@@ -1,31 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BsSearch, BsPersonFill, BsCartCheckFill } from "react-icons/bs";
-import { Form, Button } from "react-bootstrap/";
+import { Form, Button, Container, Row, Col } from "react-bootstrap/";
 import { Link } from 'react-router-dom';
+import HeaderSearch from './HeaderSearch';
 
   export default function HeaderNavIcons() {
     const linkStyle = {     
       margin: ".5rem",
       color: 'black',
     }
+    const [isShown, setIsShown] = useState(false);
+    const handleClick = event => {
+      setIsShown(current => !current)
+    }
     return (
       // size: https://www.folkstalk.com/tech/react-icon-size-with-code-examples/
-      <div >
-        <Link to="/" style={linkStyle} ><BsSearch size={28}/></Link>
+      <Container>
+
+        <div className="pt-2 text-end">
+        <Link onClick={handleClick} style={linkStyle} ><BsSearch size={22}/></Link>
         <Link to="/" style={linkStyle} ><BsPersonFill  size={28}/></Link>
         <Link to="/" style={linkStyle} ><BsCartCheckFill  size={28}/></Link>
-      </div>
+        </div>
+        <div className="text-end">
+        {isShown && (
+        <HeaderSearch /> )}
+        </div>
+         </Container>    
+
     )
   }
 
-  export function HeaderSearch() {
-  <Form className="d-flex">
-  <Form.Control
-    type="search"
-    placeholder="Search"
-    className="me-2"
-    aria-label="Search"
-  />
-  <Button variant="outline-success">Search</Button>
-</Form>
-}
