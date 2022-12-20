@@ -4,84 +4,84 @@
         "id": "еt-01",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 18.01.2023, Vilnius, LT",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       },
       {
         "id": "et-02",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       },
       {
         "id": "et-03",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": true       
       },
       {
         "id": "et-04",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       },
       {
         "id": "et-05",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": true       
       },
       {
         "id": "et-06",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       },
       {
         "id": "et-07",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       },
       {
         "id": "et-08",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       },
       {
         "id": "et-09",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       },
       {
         "id": "et-010",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       },
       {
         "id": "et-011",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       },
       {
         "id": "et-012",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": "€73.20 *",
+        "price": 73.20,
         "isSold": false       
       }
     ],
@@ -90,56 +90,56 @@
         "id": "sh-01",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/ce/c7/e8/22-APO-tshirt-mayhem-black_200x200.jpg",
         "title": " T-Shirt - Mayhem ",
-        "price": "€26.99 *",
+        "price": 26.99,
         "isSold": false  
       },
       {
         "id": "sh-02",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/5b/5a/APO-TS-Skeletons_200x200.jpg",
         "title": " T-Shirt - Skeletons ",
-        "price": "€24.99 *",
+        "price": 24.99,
         "isSold": true  
       },
       {
         "id": "sh-03",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/5f/e8/bf/22-APO-tanktop-skull-black_200x200.jpg",
         "title": " Tanktop - I'll get through it ",
-        "price": "€26.99 *",
+        "price": 26.99,
         "isSold": false  
       },
       {
         "id": "sh-04",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/1c/f8/7e/APO-LS-Cult_200x200.jpg",
         "title": " Longsleeve - Cult ",
-        "price": "€34.99 *",
+        "price": 34.99,
         "isSold": true  
       },
       {
         "id": "sh-05",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/77/fc/2d/APO-TS-Cult_200x200.jpg",
         "title": " T-Shirt - Cult ",
-        "price": "€25.99 *",
+        "price": 25.99,
         "isSold": true  
       },
       {
         "id": "sh-06",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/7e/0b/cd/APO-TS-CallMyName_200x200.jpg",
         "title": " T-Shirt - Call my name ",
-        "price": "€24.99 *",
+        "price": 24.99,
         "isSold": true  
       },
       {
         "id": "sh-07",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/a3/33/cf/APO-TS-Eclipse_200x200.jpg",
         "title": " T-Shirt - Eclipse ",
-        "price": "€24.99 *",
+        "price": 24.99,
         "isSold": false  
       },
       {
         "id": "sh-08",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/5f/e8/bf/22-APO-tanktop-skull-black_200x200.jpg",
         "title": " Tanktop - I'll get through it ",
-        "price": "€26.99 *",
+        "price": 26.99,
         "isSold": false  
       }
     ]
