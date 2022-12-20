@@ -8,11 +8,12 @@ import NavBar from './components/navbar/NavBar';
 import HeaderTop from './components/header/HeaderTop';
 import HeaderLogo from './components/header/HeaderLogo';
 import HeaderNavIcons from './components/header/HeaderNavIcons';
-import HeaderSearch from './components/header/HeaderSearch';
+// import HeaderSearch from './components/header/HeaderSearch';
+import {Footer} from './components/footer/Footer';
 
 export default function App() {
   return (
-    <Container >
+    <Container fluid>
       <Row align="center">
         <Col >
           <Hidden xs sm>
@@ -49,7 +50,10 @@ export default function App() {
       <Row>
         <Content />
       </Row>
-      <br />
+      <Row>
+      <Footer />
+      </Row>
+
     </Container>
   );
 }
