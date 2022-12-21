@@ -21,7 +21,7 @@ export const Cards = ({ card }) => {
           <SoldOut />
           <Card.Body>
             <Card.Title style={{fontSize: "15px", fontWeight:"lighter"}}>{card.title}</Card.Title>
-            <Card.Text className="mt-3" style={{fontWeight:"bold"}}>€{card.price} *</Card.Text>
+            <Card.Text className="mt-3" style={{fontWeight:"bold"}}>€{card.price.toFixed(2)} *</Card.Text>
           </Card.Body>
         </Card>
       
