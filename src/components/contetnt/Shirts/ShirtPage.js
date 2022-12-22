@@ -49,6 +49,8 @@ export const ShirtPage = () => {
                             <Button className="ps-5 pe-5 mt-3">ADD TO CARD</Button>
                             </span>
                         </Form.Group>
+                        <hr />
+                        <h5>Order number: {shirts[0].id}</h5>
                     </Form>
             </span>
         </Container>
