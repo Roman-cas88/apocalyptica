@@ -8,7 +8,6 @@ import NavBar from './components/navbar/NavBar';
 import HeaderTop from './components/header/HeaderTop';
 import HeaderLogo from './components/header/HeaderLogo';
 import HeaderNavIcons from './components/header/HeaderNavIcons';
-// import HeaderSearch from './components/header/HeaderSearch';
 import {Footer} from './components/footer/Footer';
 
 export default function App() {
@@ -21,10 +20,10 @@ export default function App() {
           </Hidden>
         </Col>
       </Row>
-
+    <Container  className="px-0">
       <Row justify="between" >
       {/* align="center" */}
-        <Col sm={12} md={8}>
+        <Col sx={12} md={8}>
         <HeaderLogo />
         </Col>
         <Col >
@@ -34,22 +33,22 @@ export default function App() {
         </Col>
       </Row>
 
-      <Row justify="between">      {/* align="center" */}
-        <Col md={12} xs="content" >         {/* xs="content" */}
+      <Row justify="between">      
+        <Col md={12} xs="content" >         
           <NavBar />
         </Col>
-        <Row justify="end">
         <Col >
         <Visible sm xs>
           <HeaderNavIcons />
         </Visible>
         </Col>
-        </Row>
       </Row>
       
       <Row>
         <Content />
       </Row>
+      </Container>
+
       <Row>
       <Footer />
       </Row>

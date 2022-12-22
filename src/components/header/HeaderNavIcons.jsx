@@ -16,16 +16,21 @@ export default function HeaderNavIcons() {
   return (
     // size: https://www.folkstalk.com/tech/react-icon-size-with-code-examples/
     <Container>
-
-      <div className="pt-2 text-end">
+      <Row xs={1}>
+      <Col >
+        <div className="pt-2 text-end">
+        {  !isShown && (
         <Link onClick={handleClick} style={linkStyle} ><BsSearch size={22} /></Link>
+        )}
         <Link to="/" style={linkStyle} ><BsPersonFill size={28} /></Link>
         <Link to="/" style={linkStyle} ><BsCartCheckFill size={28} /></Link>
-      </div>
-      <div className="text-end">
+        </div>
+      </Col>
+      <Col >
         {isShown && (
           <HeaderSearch />)}
-      </div>
+      </Col>
+      </Row>
     </Container>
 
   )
