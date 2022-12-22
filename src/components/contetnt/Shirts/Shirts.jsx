@@ -1,18 +1,25 @@
-import { Col, Container, Row } from "react-bootstrap"
-import { CardShirts } from "../Cards/CardShirts"
+import { Container, Row, Col } from "react-bootstrap"
+import { Cards } from "../Cards/Card"
+import data from "../Cards/data.json"
+
 
 
 export const Shirts = () => {
-    let num = [0, 1, 2, 3, 4, 5, 6, 7]
-    let idList = num.map((id) => <Col><CardShirts id={id} /></Col>)
+
+const { shirts } = data
+
     return (
         <>
-    <h2>Shirts</h2>
-    <Container>
-        <Row>
-            {idList}
-        </Row>
-    </Container>
-    </>
+            <h2>Shirts</h2>
+            <Container>
+                <Row xs={1} md={2} lg={3} xl={4} className="g-3">
+                {shirts.map((card) => (
+                    <Col>
+                        <Cards card={card} />
+                    </Col>
+                ))}
+                </Row>
+            </Container>
+        </>
     )
 }
