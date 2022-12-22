@@ -71,7 +71,7 @@ export default function HeaderTop() {
 
   };
   return (
-    <Navbar className="p-0  ">
+    <Navbar className="p-0">
       <Container className="justify-content-end ">
         <Row >
           <Col>

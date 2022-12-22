@@ -18,7 +18,7 @@ export default function NavBar() {
               id="offcanvasNavbar-expand"
               aria-labelledby="offcanvasNavbar-expand"
               placement="start"
-              variant='light' className="fs-6 bg-light "              
+              variant='light' className="fs-6 bg-light "           
             >
               <Offcanvas.Header closeButton className="text-white bg-dark">
                 <Offcanvas.Title id="offcanvasNavbar-expand" >Close menu</Offcanvas.Title>
@@ -26,7 +26,7 @@ export default function NavBar() {
               <Offcanvas.Body className='p-0'>
       {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
-        <Nav className='me-auto '>
+        <Nav className='me-auto ' >
           <Nav.Link variant='light' className='d-md-none text-light bg-secondary ps-3'>Categories</Nav.Link>
           <Nav.Link className='ps-3'><Link style={unsetStyle} to="/" >HOME</Link></Nav.Link>
           <Nav.Link className='ps-3'><Link style={unsetStyle} to="/tickets" className=''>TICKETS</Link></Nav.Link>
