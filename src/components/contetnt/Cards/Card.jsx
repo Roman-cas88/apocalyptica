@@ -5,6 +5,7 @@ import "./cards.css"
 export const Cards = ({ card }) => {
 
     let clickedCard = () => {
+      console.log(card.id)
     }
     
     const SoldOut = () => {
