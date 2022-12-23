@@ -2,6 +2,7 @@
     "eTicket": [
       {
         "id": "еt-01",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 18.01.2023, Vilnius, LT",
         "price": 73.20,
@@ -9,6 +10,7 @@
       },
       {
         "id": "et-02",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -16,6 +18,7 @@
       },
       {
         "id": "et-03",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -23,6 +26,7 @@
       },
       {
         "id": "et-04",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -30,6 +34,7 @@
       },
       {
         "id": "et-05",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -37,6 +42,7 @@
       },
       {
         "id": "et-06",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -44,6 +50,7 @@
       },
       {
         "id": "et-07",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -51,6 +58,7 @@
       },
       {
         "id": "et-08",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -58,6 +66,7 @@
       },
       {
         "id": "et-09",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -65,6 +74,7 @@
       },
       {
         "id": "et-010",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -72,6 +82,7 @@
       },
       {
         "id": "et-011",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -79,6 +90,7 @@
       },
       {
         "id": "et-012",
+        "name": "ticket",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
         "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
         "price": 73.20,
@@ -88,57 +100,75 @@
     "shirts": [
       {
         "id": "sh-01",
+        "name": "shirts",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/ce/c7/e8/22-APO-tshirt-mayhem-black_200x200.jpg",
-        "title": " T-Shirt - Mayhem ",
+        "title": "T-Shirt - Mayhem",
         "price": 26.99,
-        "isSold": false  
+        "isSold": false,
+        "description": [
+          {"key":"Künstler*innen", "value":"Apocalyptica"},
+          {"key":"Produkttyp", "value":"T-shirt"},
+          {"key":"Passform", "value":"Regular Fit"},
+          {"key":"Materialzusammensetzung", "value":"100% Baumwolle in Bio-Qualität"},
+          {"key":"Rohware", "value":"Stanley/Stella"},
+          {"key":"Veredelung", "value":"Siebdruck"},
+          {"key":"Pflegehinweise", "value":"Maschinenwäsche bei 30°C, Mit ähnlichen Farben waschen"}
+        ] 
       },
       {
         "id": "sh-02",
+        "name": "shirts",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/5b/5a/APO-TS-Skeletons_200x200.jpg",
-        "title": " T-Shirt - Skeletons ",
+        "title": "T-Shirt - Skeletons",
         "price": 24.99,
-        "isSold": true  
+        "isSold": true,
+        "description": "" 
       },
       {
         "id": "sh-03",
+        "name": "shirts",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/5f/e8/bf/22-APO-tanktop-skull-black_200x200.jpg",
-        "title": " Tanktop - I'll get through it ",
+        "title": "Tanktop - I'll get through it",
         "price": 26.99,
         "isSold": false  
       },
       {
         "id": "sh-04",
+        "name": "shirts",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/1c/f8/7e/APO-LS-Cult_200x200.jpg",
-        "title": " Longsleeve - Cult ",
+        "title": "Longsleeve - Cult",
         "price": 34.99,
         "isSold": true  
       },
       {
         "id": "sh-05",
+        "name": "shirts",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/77/fc/2d/APO-TS-Cult_200x200.jpg",
-        "title": " T-Shirt - Cult ",
+        "title": "T-Shirt - Cult",
         "price": 25.99,
         "isSold": true  
       },
       {
         "id": "sh-06",
+        "name": "shirts",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/7e/0b/cd/APO-TS-CallMyName_200x200.jpg",
-        "title": " T-Shirt - Call my name ",
+        "title": "T-Shirt - Call my name",
         "price": 24.99,
         "isSold": true  
       },
       {
         "id": "sh-07",
+        "name": "shirts",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/a3/33/cf/APO-TS-Eclipse_200x200.jpg",
-        "title": " T-Shirt - Eclipse ",
+        "title": "T-Shirt - Eclipse",
         "price": 24.99,
         "isSold": false  
       },
       {
         "id": "sh-08",
+        "name": "shirts",
         "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/5f/e8/bf/22-APO-tanktop-skull-black_200x200.jpg",
-        "title": " Tanktop - I'll get through it ",
+        "title": "Tanktop - I'll get through it",
         "price": 26.99,
         "isSold": false  
       }

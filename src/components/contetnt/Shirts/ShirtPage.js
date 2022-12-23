@@ -1,6 +1,14 @@
 import { Button, Container, Form } from "react-bootstrap"
 import data from "../Cards/data.json"
 
+// let params = useParams()
+// let { shirts } = data
+// console.log(params.id)
+// console.log(shirts.id)
+// let product = shirts.find(id => id.id === params.id)
+
+
+
 export const ShirtPage = () => {
     let { shirts } = data
     let productImg = "https://d1lhyycl5p8pom.cloudfront.net/media/image/d9/07/93/22-APO-tshirt-mayhem-black_600x600.jpg"
