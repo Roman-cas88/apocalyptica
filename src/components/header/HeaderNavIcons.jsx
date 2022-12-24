@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { BsSearch, BsPersonFill, BsCartCheckFill } from "react-icons/bs";
-import { Form, Button, Container, Row, Col, Navbar, Nav, Overlay, Popover } from "react-bootstrap/";
+import { Form, Button, Container, Row, Col, Navbar, Nav, Overlay, Popover, Offcanvas } from "react-bootstrap/";
 import { Link, NavLink } from 'react-router-dom';
 import HeaderSearch from './HeaderSearch';
 
@@ -45,26 +45,47 @@ export default function HeaderNavIcons() {
 }
 
 const PopoverMyAccount = (props) => {
-  console.log(props.show)
   const ref = useRef(null);
-
+  const [show, setShow] = useState(props.show);
   return (
-    <div ref={ref}>
+    <div ref={ref} md>
       <Overlay
-        show={props.show}
+        show={show}
         target={props.target}
         placement="bottom"
         container={ref}
         containerPadding={20}
       >
-        <Popover id="popover-contained">
+        <Popover id="popover-contained" >
           <Popover.Header as="h3">My Account</Popover.Header>
-          <Popover.Body className='p-0 '>
+          <Popover.Body className='p-0 'onClick={() => setShow(false)}>
             <NavMyAccount />
           </Popover.Body>
         </Popover>
       </Overlay>
     </div>
+    // <div>
+    // <Navbar className='d-md-none' >   
+    //   <Container >
+    //   <Navbar.Toggle aria-controls="offcanvasNavbar-expand" />
+    //         <Navbar.Offcanvas
+    //           id="offcanvasNavbar-expand"
+    //           aria-labelledby="offcanvasNavbar-expand"
+    //           placement="end"
+    //           variant='light' className="fs-6 bg-light "           
+    //         >
+    //           <Offcanvas.Header closeButton className="text-white bg-dark">
+    //             <Offcanvas.Title id="offcanvasNavbar-expand" >Close menu</Offcanvas.Title>
+    //           </Offcanvas.Header>
+    //           <Offcanvas.Body className='p-0'>
+    //           <NavMyAccount />
+    //          </Offcanvas.Body>
+    //       </Navbar.Offcanvas>
+    //       <hr className='d-md-none' />
+    //   </Container>
+
+    // </Navbar>
+    // </div>
   )
 }
 
