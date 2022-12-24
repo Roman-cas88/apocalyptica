@@ -18,7 +18,6 @@ export default function HeaderNavIcons() {
   const handleClickMyAccount = event => {
     setIsShownMyAccount(current => !current)
     setTarget(event.target);
-
   }
 
   return (
@@ -40,7 +39,6 @@ export default function HeaderNavIcons() {
         </Col>
       </Row>
     </Container>
-
   )
 }
 
@@ -64,28 +62,6 @@ const PopoverMyAccount = (props) => {
         </Popover>
       </Overlay>
     </div>
-    // <div>
-    // <Navbar className='d-md-none' >   
-    //   <Container >
-    //   <Navbar.Toggle aria-controls="offcanvasNavbar-expand" />
-    //         <Navbar.Offcanvas
-    //           id="offcanvasNavbar-expand"
-    //           aria-labelledby="offcanvasNavbar-expand"
-    //           placement="end"
-    //           variant='light' className="fs-6 bg-light "           
-    //         >
-    //           <Offcanvas.Header closeButton className="text-white bg-dark">
-    //             <Offcanvas.Title id="offcanvasNavbar-expand" >Close menu</Offcanvas.Title>
-    //           </Offcanvas.Header>
-    //           <Offcanvas.Body className='p-0'>
-    //           <NavMyAccount />
-    //          </Offcanvas.Body>
-    //       </Navbar.Offcanvas>
-    //       <hr className='d-md-none' />
-    //   </Container>
-
-    // </Navbar>
-    // </div>
   )
 }
 
