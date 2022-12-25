@@ -21,8 +21,8 @@ export const Content = () => {
                 <Route path="/hoods" element={<Hoods />} />
                 <Route path="/music" element={<Music />} />
                 <Route path="/stuff" element={<Stuff />} />
-                <Route path="/tickets/product-page/:id" element={<ProductPage />} />
-                <Route path="/shirts/product-page/:id" element={<ProductPage />} />
+                <Route path="/:name/product-page/:id" element={<ProductPage />} />
+                {/* <Route path="/:shirts/product-page/:id" element={<ProductPage />} /> */}
 
             </Routes>
         </Container>

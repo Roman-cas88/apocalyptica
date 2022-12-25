@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom'
 import "./cards.css"
 
 export const Cards = ({ card }) => {
-
-    let clickedCard = () => {
-      console.log(card.id)
-    }
     
     const SoldOut = () => {
       const sold = card.isSold
@@ -17,7 +13,7 @@ export const Cards = ({ card }) => {
 
     return (
       <Link to={`/${card.name}/product-page/${card.id}`}>
-        <Card style={{ width: '15rem', height:'21rem', textAlign:'center',cursor:"pointer" }} onClick={clickedCard}>
+        <Card style={{ width: '15rem', height:'21rem', textAlign:'center',cursor:"pointer" }}>
           <Card.Img style={{position:"relative"}} variant="top" src={card.img} />
           <SoldOut />
           <Card.Body>
