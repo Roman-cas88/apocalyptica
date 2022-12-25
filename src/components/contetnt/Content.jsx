@@ -7,8 +7,10 @@ import { Music } from "./Music/Music"
 import { Shirts } from "./Shirts/Shirts"
 import { Stuff } from "./Stuff/Stuff"
 import { Tickets } from "./Tickets/Tickets"
+import { ProductPage } from "./ProductPage/ProductPage"
 
 export const Content = () => {
+   
     return (
         <Container className="mt-1">
             <Routes>
@@ -19,6 +21,9 @@ export const Content = () => {
                 <Route path="/hoods" element={<Hoods />} />
                 <Route path="/music" element={<Music />} />
                 <Route path="/stuff" element={<Stuff />} />
+                <Route path="/:name/product-page/:id" element={<ProductPage />} />
+                {/* <Route path="/:shirts/product-page/:id" element={<ProductPage />} /> */}
+
             </Routes>
         </Container>
     )
