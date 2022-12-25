@@ -8,3 +8,16 @@
     padding: 10px 0;
     opacity: 0.6;
 }
+
+.count{
+    color: white;
+    width: 25px;
+    font-size: 15px;
+    left: 20px;
+    bottom: 15px;
+    position: absolute;
+    text-align: center;
+    background-color: red;
+    border-radius: 50%;
+  }
+  

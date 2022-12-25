@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Button, Container, Form, Col, Row, Stack } from "react-bootstrap"
+import { Container, Form, Col, Row, Stack } from "react-bootstrap"
 import { Description } from './Description'
 import "../Cards/cards.css"
 import { Busket } from "../Busket/Busket"
@@ -28,10 +27,6 @@ const SoldOutShipping = () => {
         )
     }
 }
-const [show, setShow] = useState(false);
-
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
 
 
 const SoldOutButton = () => {
@@ -39,8 +34,7 @@ const SoldOutButton = () => {
         return (
             <>
                 <Col>
-                    <Button onClick={handleShow} className="w-100">ADD TO CARD</Button>
-                    <Busket show={show} handleClose={handleClose}/>
+                    <Busket />
                 </Col>
             </>
         )
