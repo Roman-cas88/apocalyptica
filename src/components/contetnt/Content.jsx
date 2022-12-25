@@ -7,8 +7,8 @@ import { Music } from "./Music/Music"
 import { Shirts } from "./Shirts/Shirts"
 import { Stuff } from "./Stuff/Stuff"
 import { Tickets } from "./Tickets/Tickets"
+import { ProductPage } from "./ProductPage/ProductPage"
 import { Account } from "./Account/Account"
-
 
 export const Content = () => {
     return (
@@ -21,8 +21,9 @@ export const Content = () => {
                 <Route path="/hoods" element={<Hoods />} />
                 <Route path="/music" element={<Music />} />
                 <Route path="/stuff" element={<Stuff />} />
+                <Route path="/:name/product-page/:id" element={<ProductPage />} />
+                {/* <Route path="/:shirts/product-page/:id" element={<ProductPage />} /> */}
                 <Route path="/account" element={<Account />} />
-
             </Routes>
         </Container>
     )

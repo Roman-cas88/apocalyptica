@@ -23,10 +23,10 @@ export const Account = () => {
                         <Button variant="info" className='bg-blue' type="submit">Login    ></Button>
                     </Form>
                     <h6>My benefits</h6>
-                    <p>Express Shopping</p>
-                    <p>Save your user data and settings</p>
-                    <p>Overview of your orders incl. shipping informations</p>
-                    <p>Wishlist</p>
+                    <p>- Express Shopping</p>
+                    <p>- Save your user data and settings</p>
+                    <p>- Overview of your orders incl. shipping informations</p>
+                    <p>- Wishlist</p>
                 </Col>
                 <Col>
                     <Form className='border p-3 mb-5'>
