@@ -71,8 +71,8 @@ const NavMyAccount = () => {
   return (
     <>
       <Nav className="flex-column bg-light px-2">
-      <Nav.Link className='w-100 mx-auto bg-secondary text-white'><Link style={unsetStyle} to="/home" >Sign in</Link></Nav.Link>
-      <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >or register</Link></Nav.Link>
+      <Nav.Link className='w-100 mx-auto bg-secondary text-white'><Link style={unsetStyle} to="/account" >Sign in</Link></Nav.Link>
+      <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >or register</Link></Nav.Link>
         <hr />
         <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >Overview</Link></Nav.Link>
         <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >Profile</Link></Nav.Link>

@@ -7,6 +7,8 @@ import { Music } from "./Music/Music"
 import { Shirts } from "./Shirts/Shirts"
 import { Stuff } from "./Stuff/Stuff"
 import { Tickets } from "./Tickets/Tickets"
+import { Account } from "./Account/Account"
+
 
 export const Content = () => {
     return (
@@ -19,6 +21,8 @@ export const Content = () => {
                 <Route path="/hoods" element={<Hoods />} />
                 <Route path="/music" element={<Music />} />
                 <Route path="/stuff" element={<Stuff />} />
+                <Route path="/account" element={<Account />} />
+
             </Routes>
         </Container>
     )
