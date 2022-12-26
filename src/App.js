@@ -11,8 +11,10 @@ import HeaderNavIcons from './components/header/HeaderNavIcons';
 import {Footer} from './components/footer/Footer';
 
 export default function App() {
+  const styleContent = {background: '#f5f5f5'};
   return (
-    <Container fluid>
+    <Container fluid  className="p-0 bg-white">
+      <Container> 
       <Row align="center">
         <Col >
           <Hidden xs sm>
@@ -20,7 +22,7 @@ export default function App() {
           </Hidden>
         </Col>
       </Row>
-    <Container  className="px-0">
+
       <Row justify="between" >
       {/* align="center" */}
         <Col sx={12} md={8}>
@@ -43,10 +45,15 @@ export default function App() {
         </Visible>
         </Col>
       </Row>
-      
+      </Container> 
+      <hr className='my-0'/>
+    
+      <Container fluid className="py-md-3" style={styleContent}>
+      <Container className="px-0 pt-3 mx-auto bg-white">
       <Row>
         <Content />
       </Row>
+      </Container>
       </Container>
 
       <Row>
@@ -56,7 +63,3 @@ export default function App() {
     </Container>
   );
 }
-
-
-
-
