@@ -9,7 +9,7 @@ import { Stuff } from "./Stuff/Stuff"
 import { Tickets } from "./Tickets/Tickets"
 import { ProductPage } from "./ProductPage/ProductPage"
 import { Account } from "./Account/Account"
-import { Privacy } from "./Account/Privacy"
+import { Privacy } from "./Privacy/Privacy"
 import { WishList } from "./Account/WishList"
 
 export const Content = () => {

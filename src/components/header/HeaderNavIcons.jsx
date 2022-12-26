@@ -3,8 +3,12 @@ import { BsSearch, BsPersonFill, BsCartCheckFill } from "react-icons/bs";
 import { Form, Button, Container, Row, Col, Navbar, Nav, Overlay, Popover, Offcanvas } from "react-bootstrap/";
 import { Link, NavLink } from 'react-router-dom';
 import HeaderSearch from './HeaderSearch';
+import { Busket } from '../contetnt/Busket/Busket';
 
 export default function HeaderNavIcons() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const linkStyle = {
     margin: ".5rem",
     color: 'black',
@@ -30,7 +34,15 @@ export default function HeaderNavIcons() {
               <Link onClick={handleClick} style={linkStyle} ><BsSearch size={22} /></Link>
             )}
             <Link onClick={handleClickMyAccount} style={linkStyle} ><BsPersonFill size={28} /></Link>
-            <Link to="/" style={linkStyle} ><BsCartCheckFill size={28} /></Link>
+
+            <div style={{ display: "inline-block", position: "relative", cursor: "pointer" }}>
+              {/* <Link to="/" style={linkStyle} > */}
+              <Button style={{ all: 'unset' }} onClick={handleShow}>
+                <BsCartCheckFill size={28} />
+                <div className="count">1</div>
+              </Button>
+              <Busket propsHandleClose={handleClose} show={show} />
+            </div>
             {isShownMyAccount && (<PopoverMyAccount show={isShownMyAccount} target={target} />)}
           </div>
         </Col>
@@ -39,7 +51,7 @@ export default function HeaderNavIcons() {
         </Col>
       </Row>
     </Container>
-  )
+  );
 }
 
 const PopoverMyAccount = (props) => {
@@ -56,7 +68,7 @@ const PopoverMyAccount = (props) => {
       >
         <Popover id="popover-contained" >
           <Popover.Header as="h3">My Account</Popover.Header>
-          <Popover.Body className='p-0 'onClick={() => setShow(false)}>
+          <Popover.Body className='p-0 ' onClick={() => setShow(false)}>
             <NavMyAccount />
           </Popover.Body>
         </Popover>
@@ -65,14 +77,13 @@ const PopoverMyAccount = (props) => {
   )
 }
 
-
 const NavMyAccount = () => {
-  let unsetStyle = {all: 'unset', color: 'dark'}
+  let unsetStyle = { all: 'unset', color: 'dark' }
   return (
     <>
       <Nav className="flex-column bg-light px-2">
-      <Nav.Link className='w-100 mx-auto bg-secondary text-white'><Link style={unsetStyle} to="/account" >Sign in</Link></Nav.Link>
-      <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >or register</Link></Nav.Link>
+        <Nav.Link className='w-100 mx-auto bg-secondary text-white'><Link style={unsetStyle} to="/account" >Sign in</Link></Nav.Link>
+        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >or register</Link></Nav.Link>
         <hr />
         <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >Overview</Link></Nav.Link>
         <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >Profile</Link></Nav.Link>
@@ -85,3 +96,4 @@ const NavMyAccount = () => {
     </>
   )
 };
+
