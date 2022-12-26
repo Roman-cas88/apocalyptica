@@ -3,15 +3,22 @@ import { BsSearch, BsPersonFill, BsCartCheckFill } from "react-icons/bs";
 import { Form, Button, Container, Row, Col } from "react-bootstrap/";
 import { Link } from 'react-router-dom';
 import HeaderSearch from './HeaderSearch';
+
+// Change by Roman from here
 import { Busket } from '../contetnt/Busket/Busket';
 
 
 
 export default function HeaderNavIcons() {
 
-  let openBusket = () => {
-    return <Busket />
-  }
+        {/* Change by Roman from here*/}
+
+const [show, setShow] = useState(false);
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
+
+        {/* To here */}
+
 
   const linkStyle = {
     margin: ".5rem",
@@ -30,12 +37,17 @@ export default function HeaderNavIcons() {
         <Link to="/" style={linkStyle} ><BsPersonFill size={28} /></Link>
 
         {/* Change by Roman from here*/}
-        <div onClick={openBusket} style={{display:"inline-block", position:"relative", cursor:"pointer"}}>
-        {/* <Link to="/" style={linkStyle} > */}
-          <BsCartCheckFill size={28} />
-        <div className="count">1</div>
+
+        <div style={{display:"inline-block", position:"relative", cursor:"pointer"}}>
+          {/* <Link to="/" style={linkStyle} > */}
+          <Button style={{all: 'unset'}} onClick={handleShow}>
+            <BsCartCheckFill size={28} />
+            <div className="count">1</div>
+            </Button>
+          <Busket propsHandleClose={handleClose} show={show}/>
         {/* </Link> */}
         </div>
+
         {/* To here */}
 
       </div>

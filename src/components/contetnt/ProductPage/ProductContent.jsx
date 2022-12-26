@@ -1,4 +1,6 @@
+import React, { useState } from 'react';
 import { Container, Form, Col, Row, Stack } from "react-bootstrap"
+import { Button } from 'react-bootstrap';
 import { Description } from './Description'
 import "../Cards/cards.css"
 import { Busket } from "../Busket/Busket"
@@ -28,13 +30,18 @@ const SoldOutShipping = () => {
     }
 }
 
+const [show, setShow] = useState(false);
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
+
 
 const SoldOutButton = () => {
     if (!product.isSold) {
         return (
             <>
                 <Col>
-                    <Busket />
+                    <Button onClick={handleShow} className="w-100">ADD TO CARD</Button>
+                    <Busket propsHandleClose={handleClose} show={show}/>
                 </Col>
             </>
         )

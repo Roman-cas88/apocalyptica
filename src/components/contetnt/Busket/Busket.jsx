@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+// import React, { useState } from 'react';
+// import { Button } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-export const Busket = ({}) => {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+export const Busket = ({show, propsHandleClose}) => {
+    // const [show, setShow] = useState(false);
+    // const handleClose = () => setShow(false);
+    // const propsHandleShow = handleShow;
+    // const handleShow = () => setShow(true);
     
     return (
         <>
-        <Button onClick={handleShow} className="w-100">ADD TO CARD</Button>
+        {/* <Button onClick={handleShow} className="w-100">ADD TO CARD</Button> */}
 
-        <Offcanvas show={show} onHide={handleClose} placement="end">
-        <Offcanvas.Header onClick={handleClose} className='bg-black p-2' style={{color:"grey", cursor:"pointer"}}>
+        <Offcanvas show={show} onHide={propsHandleClose} placement="end">
+        <Offcanvas.Header onClick={propsHandleClose} className='bg-black p-2' style={{color:"grey", cursor:"pointer"}}>
             ❰ Continue shopping
         </Offcanvas.Header>
         <Offcanvas.Body>
