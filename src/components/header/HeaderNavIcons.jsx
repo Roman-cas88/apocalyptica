@@ -7,8 +7,6 @@ import HeaderSearch from './HeaderSearch';
 // Change by Roman from here
 import { Busket } from '../contetnt/Busket/Busket';
 
-
-
 export default function HeaderNavIcons() {
 
         {/* Change by Roman from here*/}
@@ -30,12 +28,15 @@ const handleShow = () => setShow(true);
   }
   return (
     // size: https://www.folkstalk.com/tech/react-icon-size-with-code-examples/
-    <Container>
-
-      <div className="pt-2 text-end">
+<Container>
+      <Row xs={1}>
+      <Col >
+        <div className="pt-2 text-end">
+        {  !isShown && (
         <Link onClick={handleClick} style={linkStyle} ><BsSearch size={22} /></Link>
+        )}
         <Link to="/" style={linkStyle} ><BsPersonFill size={28} /></Link>
-
+        
         {/* Change by Roman from here*/}
 
         <div style={{display:"inline-block", position:"relative", cursor:"pointer"}}>
@@ -49,14 +50,14 @@ const handleShow = () => setShow(true);
         </div>
 
         {/* To here */}
-
-      </div>
-      <div className="text-end">
+        
+        </div>
+      </Col>
+      <Col >
         {isShown && (
           <HeaderSearch />)}
-      </div>
+      </Col>
+      </Row>
     </Container>
-
-  )
+    )
 }
-
