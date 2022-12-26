@@ -9,6 +9,8 @@ import { Stuff } from "./Stuff/Stuff"
 import { Tickets } from "./Tickets/Tickets"
 import { ProductPage } from "./ProductPage/ProductPage"
 import { Account } from "./Account/Account"
+import { Privacy } from "./Account/Privacy"
+import { WishList } from "./Account/WishList"
 
 export const Content = () => {
     return (
@@ -24,6 +26,8 @@ export const Content = () => {
                 <Route path="/:name/product-page/:id" element={<ProductPage />} />
                 {/* <Route path="/:shirts/product-page/:id" element={<ProductPage />} /> */}
                 <Route path="/account" element={<Account />} />
+                <Route path="/privacy" element={<Privacy />} />     
+                <Route path="/wishlist" element={<WishList />} />    
             </Routes>
         </Container>
     )

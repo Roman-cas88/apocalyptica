@@ -74,13 +74,13 @@ const NavMyAccount = () => {
       <Nav.Link className='w-100 mx-auto bg-secondary text-white'><Link style={unsetStyle} to="/account" >Sign in</Link></Nav.Link>
       <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >or register</Link></Nav.Link>
         <hr />
-        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >Overview</Link></Nav.Link>
-        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >Profile</Link></Nav.Link>
-        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >Addresses</Link></Nav.Link>
-        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >Payment methods</Link></Nav.Link>
-        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >Order</Link></Nav.Link>
-        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >Instant downloads</Link></Nav.Link>
-        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/" >Wish list</Link></Nav.Link>
+        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >Overview</Link></Nav.Link>
+        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >Profile</Link></Nav.Link>
+        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >Addresses</Link></Nav.Link>
+        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >Payment methods</Link></Nav.Link>
+        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >Order</Link></Nav.Link>
+        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/account" >Instant downloads</Link></Nav.Link>
+        <Nav.Link className='w-100 mx-auto text-dark'><Link style={unsetStyle} to="/wishlist" >Wish list</Link></Nav.Link>
       </Nav>
     </>
   )
