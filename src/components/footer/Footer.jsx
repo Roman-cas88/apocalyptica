@@ -12,6 +12,7 @@ import { FiFacebook } from "react-icons/fi";
 export function Footer() {
     return (
         <Container fluid variant='dark' className="text-light bg-dark my-5">
+        <Container >
             <Row>
                 <Nav className='d-md-none justify-content-around '>
                     <Nav.Link href=""><FiFacebook size={22} style={{ color: "white" }} /></Nav.Link>
@@ -126,7 +127,7 @@ export function Footer() {
                                 <Nav.Link href="#" className='text-white  p-1 pb-0'> +49(0)815-123 1234 12</Nav.Link>
                                 <Nav.Link href="mailto:support@merchcowboy.com" className='text-white  p-1'>support@merchcowboy.com </Nav.Link>
                             </Nav.Item>
-                            <Nav className='justify-content-around'>
+                            <Nav >
                                 <Nav.Link href=""><FiFacebook size={22} style={{ color: "white" }} /></Nav.Link>
                                 <Nav.Link href=""><BsInstagram size={22} style={{ color: "white" }} /></Nav.Link>
                                 <Nav.Link href=""><BsYoutube size={22} style={{ color: "white" }} /></Nav.Link>
@@ -140,8 +141,9 @@ export function Footer() {
                 <p>* All prices incl. value added tax plus. shipping costs and possibly cash on delivery fee, if not otherwise stated</p>
             </Row>
             <Row className=" text-center text-white-50 my-5">
-                <p>Theme version: 2022.9.1 | © 2007 - 2022 | POWERED BY:</p>
+                <p>Theme version: 2022.9.1 | © 2007 - 2022 | </p>
             </Row>
+        </Container>
         </Container>
     )
 
