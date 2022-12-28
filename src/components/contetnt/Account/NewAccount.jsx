@@ -1,46 +1,135 @@
-import React from 'react'
-import { Form, Button, Container, Row, Col } from "react-bootstrap/";
+import React, { useRef } from "react";
+import { Form, Button, Row, Col } from "react-bootstrap/";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import "./style.css";
 
 export function NewAccount() {
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors }
+    } = useForm({
+        defaultValues: {
+            firstName: "Zhanna",
+            // email: "@gmail.com"
+        }
+    });
+    const password = useRef({});
+    password.current = watch("password", "");
+
+    const onSubmit = (data) => {
+        console.log(data);
+    };
     return (
         <div>
-            <Form className='border p-3 mb-5'>
+            <Form className='border p-3 mb-5' onSubmit={handleSubmit(onSubmit)}>
                 <h6>I'm a new customer.</h6>
                 <hr />
                 <Form.Group className="mb-3">
-                    <Form.Select required aria-label="Default select example">
-                        <option>Salutation *</option>
-                        <option value="1">Ms</option>
-                        <option value="2">Ms</option>
+                    <Form.Select
+                        aria-label="salutation"
+                        {...register("salutation", {
+                            required: "Please select"
+                        })}
+                    >
+                        <option value="">Salutation *</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Ms</option>
                     </Form.Select>
+                    {errors.salutation && (
+                        <p className="errorMsg">{errors.salutation.message}</p>
+                    )}
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    <Form.Control required type="text" placeholder="First name*" />
+                <Form.Group className="mb-3" id="firstName">
+                    <Form.Control
+                        type="text"
+                        placeholder="First name*"
+                        {...register("firstName", {
+                            required: "Please enter your First name",
+                            pattern: {
+                                value: /^[^0-9]/,
+                                message: "Please enter a valid name"
+                            }
+                        })}
+                    // className={`${errors.firstName ? "input-error" : ""}`}
+                    />
+                    {errors.firstName && (
+                        <p className="errorMsg">{errors.firstName.message}</p>
+                    )}
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    <Form.Control required type="text" placeholder="Last name*" />
+                <Form.Group className="mb-3" id="lastName">
+                    <Form.Control
+                        type="text"
+                        placeholder="Last name*"
+                        {...register("lastName", {
+                            required: "Please enter your Last name",
+                            pattern: {
+                                value: /^[^0-9]/,
+                                message: "Please enter a valid name"
+                            }
+                        })}
+                    // className={`${errors.lastName ? "input-error" : ""}`}
+                    />
+                    {errors.lastName && (
+                        <p className="errorMsg">{errors.lastName.message}</p>
+                    )}
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control required type="email" placeholder="Your email address*" />
+                <Form.Group className="mb-3" controlId="email">
+                    <Form.Control
+                        type="email"
+                        placeholder="Enter your email"
+                        {...register("email", {
+                            required: "Email is required.",
+                            pattern: {
+                                value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+                                message: "Please enter a valid email"
+                            }
+                        })}
+                    />
+                    {errors.email && <p className="errorMsg">{errors.email.message}</p>}
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control required type="email" placeholder="Re-enter your email address*" />
+                {/* <Form.Group className="mb-3" controlId="reEmail">
+                    <Form.Control type="email" placeholder="Re-enter your email address*"  />
+                </Form.Group> */}
+
+                <Form.Group className="mb-3" controlId="password">
+                    <Form.Control
+                        type="password"
+                        placeholder="Your password"
+                        {...register("password", {
+                            required: "Password is required.",
+                            minLength: {
+                                value: 6,
+                                message: "Password must have at least 6 characters"
+                            }
+                        })}
+                    />
+                    {errors.password && (
+                        <p className="errorMsg">{errors.password.message}</p>
+                    )}
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control required type="password" placeholder="Your password*" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control required type="password" placeholder="Re-enter your password*" />
+                <Form.Group className="mb-3" controlId="confirmPassword">
+                    <Form.Control
+                        type="password"
+                        placeholder="Re-enter your password*"
+                        {...register("confirmPassword", {
+                            validate: (value) =>
+                                value === password.current || "The passwords do not match"
+                        })}
+                    />
                     <Form.Text className="text-muted">
-                        Your password must contain at least 12 characters. <br />
-                        The password is case sensitive.
+                        Your password must contain at least 6 characters. <br />
                     </Form.Text>
+                    {errors.confirmPassword && (
+                        <p className="errorMsg">{errors.confirmPassword.message}</p>
+                    )}
                 </Form.Group>
 
                 <h6 className='mt-5'>Your address</h6>
@@ -57,7 +146,7 @@ export function NewAccount() {
                 </Row>
                 <hr />
                 <Form.Group className="mb-3">
-                    <Form.Select required aria-label="Default select">
+                    <Form.Select  aria-label="Default select">
                         <option>Country*</option>
                         <option value="1">Sweden</option>
                         <option value="2">Deutschland</option>
@@ -66,24 +155,24 @@ export function NewAccount() {
                 <Row>
                     <Col xs={4}>
                         <Form.Group className="mb-3">
-                            <Form.Control required type="text" placeholder="Zipcode*" />
+                            <Form.Control  type="text" placeholder="Zipcode*" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group className="mb-3">
-                            <Form.Control required type="text" placeholder="City*" />
+                            <Form.Control  type="text" placeholder="City*" />
                         </Form.Group>
                     </Col>
                 </Row>
                 <Row>
                     <Col xs={8}>
                         <Form.Group className="mb-3">
-                            <Form.Control required type="text" placeholder="Street or 'Packstation'*" />
+                            <Form.Control  type="text" placeholder="Street or 'Packstation'*" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group className="mb-3">
-                            <Form.Control required type="text" placeholder="House/Packstat*" />
+                            <Form.Control  type="text" placeholder="House/Packstat*" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -111,7 +200,7 @@ export function NewAccount() {
                         }
                     />
                 </Form.Group>
-                <Button variant="info" className='bg-blue' type="submit">Register now </Button>
+                <Button variant="info" type="submit">Register now </Button>
             </Form>
 
         </div>
