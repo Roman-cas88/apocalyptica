@@ -73,7 +73,7 @@ export function Footer() {
                 <Col md={2}>
                     <Navbar expand="md" className="flex-column align-items-stretch">
                         <Container >
-                            <div class="w-100 d-flex flex-column">
+                            <div className="w-100 d-flex flex-column">
                                 <div className="d-flex align-items-center">
                                     <Navbar.Brand href="#" className="text-white h6 fs-6 p-1 w-100">SHIPPING</Navbar.Brand>
                                     <Navbar.Toggle aria-controls="nav" className="border-0">
@@ -96,7 +96,7 @@ export function Footer() {
                 <Col md={2}>
                     <Navbar expand="md" className="flex-column align-items-stretch">
                         <Container >
-                            <div class="w-100 d-flex flex-column">
+                            <div className="w-100 d-flex flex-column">
                                 <div className="d-flex align-items-center">
                                     <Navbar.Brand href="#" className="text-white h6 fs-6 p-1  w-100">PAIMENT</Navbar.Brand>
                                     <Navbar.Toggle aria-controls="nav" className="border-0">

@@ -48,7 +48,8 @@ export default function NavBar() {
               <NavLink  className={navLinkStyleMdNone}   to="/">FAQ</NavLink>
               <NavLink  className={navLinkStyleMdNone} to="/">Rücksendung</NavLink>
 
-              {/* <Nav.Link variant='light' className='d-md-none text-light bg-secondary ps-3'>Categories</Nav.Link>
+              {/* corrected because "Warning: validateDOMNesting(...): <a> cannot appear as a descendant of <a>."
+              <Nav.Link variant='light' className='d-md-none text-light bg-secondary ps-3'>Categories</Nav.Link>
               <Nav.Link className='ps-3'><Link style={unsetStyle} to="/">HOME</Link></Nav.Link>
               <Nav.Link className='ps-3'><Link style={unsetStyle} to="/tickets">TICKETS</Link></Nav.Link>
               <Nav.Link className='ps-3'><Link style={unsetStyle} to="/shirts">SHIRTS</Link></Nav.Link>
