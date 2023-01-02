@@ -1,23 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Form, Button } from "react-bootstrap/";
 import { useForm } from "react-hook-form";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
+
+
 
 export function RegisteredAccount(props) {
+  const userEmailLocaleStore = localStorage.getItem('userEmail');
+  const [userEmail, setuserEmail ] = useState(userEmailLocaleStore);
+  console.log(userEmail)
   const {
     register,
     handleSubmit,
     formState: { errors }
 } = useForm({
     defaultValues: {
-        firstName: "Zhanna",
-        // email: "@gmail.com"
+      email: userEmail
     }
 });
+const navigate = useNavigate();
 
 const onSubmit = (data) => {
     console.log(data);
+    navigate("/")
 };
+
   return (
     <div>
       <Form className='border p-3 mb-5' onSubmit={handleSubmit(onSubmit)}>
@@ -58,7 +66,8 @@ const onSubmit = (data) => {
         </Form.Group>
 
         <p>Forgot your password?</p>
-        <Button variant="info" className='bg-blue' type="submit">Login </Button>
+        <Button variant="info" className='bg-blue' type="submit" >Login </Button>
+
       </Form>
       <h6>My benefits</h6>
       <ul>

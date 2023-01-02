@@ -12,15 +12,17 @@ export function NewAccount() {
         formState: { errors }
     } = useForm({
         defaultValues: {
-            firstName: "Zhanna",
-            // email: "@gmail.com"
+            email: "@"
         }
     });
     const password = useRef({});
     password.current = watch("password", "");
 
     const onSubmit = (data) => {
-        console.log(data);
+        // console.log(data);
+        // console.log(JSON.stringify(data));
+        localStorage.setItem('userFirstname', data.firstName);
+        localStorage.setItem('userEmail', data.email); 
     };
     return (
         <div>

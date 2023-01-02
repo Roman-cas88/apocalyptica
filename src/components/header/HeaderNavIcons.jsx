@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { BsSearch, BsPersonFill, BsCartCheckFill } from "react-icons/bs";
-import {Button, Container, Row, Col, Navbar, Nav, Overlay, Popover, Offcanvas } from "react-bootstrap/";
+import {Button, Container, Row, Col, Nav, Overlay, Popover} from "react-bootstrap/";
 import { Link, NavLink } from 'react-router-dom';
 import HeaderSearch from './HeaderSearch';
 import { Busket } from '../contetnt/Busket/Busket';
@@ -24,6 +24,9 @@ export default function HeaderNavIcons() {
     setTarget(event.target);
   }
 
+  const userFirstnameLocal = localStorage.getItem('userFirstname');
+  const userFirstname = (userFirstnameLocal) ? userFirstnameLocal : <BsPersonFill size={28} />;
+
   return (
     // size: https://www.folkstalk.com/tech/react-icon-size-with-code-examples/
     <Container>
@@ -33,7 +36,7 @@ export default function HeaderNavIcons() {
             {!isShown && (
               <Link onClick={handleClick} style={linkStyle} ><BsSearch size={22} /></Link>
             )}
-            <Link onClick={handleClickMyAccount} style={linkStyle} ><BsPersonFill size={28} /></Link>
+            <Link onClick={handleClickMyAccount} style={linkStyle} >{userFirstname}</Link>
 
             <div style={{ display: "inline-block", position: "relative", cursor: "pointer" }}>
               {/* <Link to="/" style={linkStyle} > */}
@@ -54,21 +57,22 @@ export default function HeaderNavIcons() {
   );
 }
 
+
 const PopoverMyAccount = (props) => {
   const ref = useRef(null);
   const [show, setShow] = useState(props.show);
   return (
     <div ref={ref} >
-      <Overlay
+      <Overlay 
         show={show}
         target={props.target}
         placement="bottom"
         container={ref}
-        containerPadding={20}
+        containerPadding={20}        
       >
-        <Popover id="popover-contained" >
+        <Popover id="popover-contained" onClick={() => setShow(false)}>
           <Popover.Header as="h3">My Account</Popover.Header>
-          <Popover.Body className='p-0 ' onClick={() => setShow(false)}>
+          <Popover.Body className='p-0 '>
             <NavMyAccount />
           </Popover.Body>
         </Popover>
@@ -78,7 +82,7 @@ const PopoverMyAccount = (props) => {
 }
 
 const NavMyAccount = () => {
-  let unsetStyle = { all: 'unset', color: 'dark' }
+  // let unsetStyle = { all: 'unset', color: 'dark' }
   const navLinkStyle = 'p-2 text-decoration-none w-100 mx-auto text-dark';
   return (
     <>

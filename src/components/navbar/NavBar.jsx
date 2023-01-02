@@ -7,8 +7,7 @@ import "./navBar.css"
 // Small sm ≥576px;  Medium  md ≥768px ; Large lg  ≥992px
 
 export default function NavBar() {
-  // Unstyling navbar buttons
-  let unsetStyle = { all: 'unset' };
+  // Unstyling navbar buttons     let unsetStyle = { all: 'unset' };
   const navLinkStyle = 'p-2 ps-3 text-decoration-none text-secondary';
   const navLinkStyleMdNoneBg = 'p-2 ps-3 d-md-none text-light bg-secondary text-decoration-none';
   const navLinkStyleMdNone = 'd-md-none p-2 ps-3 text-decoration-none text-secondary';
