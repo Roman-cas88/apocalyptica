@@ -2,9 +2,12 @@ import React, { useRef } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap/";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
+import { login } from './Authentication'
 
 export function NewAccount() {
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -19,10 +22,8 @@ export function NewAccount() {
     password.current = watch("password", "");
 
     const onSubmit = (data) => {
-        // console.log(data);
-        // console.log(JSON.stringify(data));
-        localStorage.setItem('userFirstname', data.firstName);
-        localStorage.setItem('userEmail', data.email); 
+        login(data);
+        navigate("/")
     };
     return (
         <div>

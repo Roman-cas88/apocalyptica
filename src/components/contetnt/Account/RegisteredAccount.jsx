@@ -1,14 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { Form, Button } from "react-bootstrap/";
 import { useForm } from "react-hook-form";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-
+import { UserContext } from "./UserContext";
+// import { isAuthenticated } from './Authentication'
 
 
 export function RegisteredAccount(props) {
-  const userEmailLocaleStore = localStorage.getItem('userEmail');
-  const [userEmail, setuserEmail ] = useState(userEmailLocaleStore);
+  // let curuser = isAuthenticated();
+const curuser = useContext(UserContext)
+console.log('Registered:',curuser)
+
+  const [userEmail, setuserEmail ] = useState(curuser ? curuser.email : null);
+
   console.log(userEmail)
   const {
     register,

@@ -10,8 +10,10 @@ import HeaderLogo from './components/header/HeaderLogo';
 import HeaderNavIcons from './components/header/HeaderNavIcons';
 import {Footer} from './components/footer/Footer';
 
+
 export default function App() {
   const styleContent = {background: '#f5f5f5'};
+
   return (
     <Container fluid  className="p-0 bg-white">
       <Container> 
@@ -24,7 +26,6 @@ export default function App() {
       </Row>
 
       <Row justify="between" >
-      {/* align="center" */}
         <Col sx={12} md={8}>
         <HeaderLogo />
         </Col>
