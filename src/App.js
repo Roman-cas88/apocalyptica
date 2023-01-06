@@ -9,9 +9,32 @@ import HeaderTop from './components/header/HeaderTop';
 import HeaderLogo from './components/header/HeaderLogo';
 import HeaderNavIcons from './components/header/HeaderNavIcons';
 import {Footer} from './components/footer/Footer';
+import { StoreContext } from "./components/contetnt/StoreContext/StoreContext";
+import { useState } from "react";
 
 export default function App() {
+// Creating global Storage using useContext 
+  const [item, setItem] = useState([])
+  const [counter, setCounter] = useState(0)
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const countItem = () => setCounter(counter + 1)
+  const clearBusket = () => setCounter(counter * 0)
+  
+  const store = {
+    item,
+    counter,
+    countItem,
+    show,
+    handleClose,
+    handleShow,
+    clearBusket,
+  }
+
   return (
+    <StoreContext.Provider value={store}>
     <Container fluid>
       <Row align="center">
         <Col >
@@ -54,6 +77,7 @@ export default function App() {
       </Row>
 
     </Container>
+    </StoreContext.Provider>
   );
 }
 

@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Container, Form, Col, Row, Stack } from "react-bootstrap"
 import { Button } from 'react-bootstrap';
 import { Description } from './Description'
 import "../Cards/cards.css"
 import { Busket } from "../Busket/Busket"
+import { StoreContext } from '../StoreContext/StoreContext';
 
 export const ProductContent = ({product}) => {
+    
+const { countItem, handleShow } = useContext(StoreContext)
+
 const SoldOutImg = () => {
-    if (product.isSold) {
-        return <div className="soldOut">Sold Out</div>
-    }
+          return (product.isSold &&
+        <div className="soldOut">Sold Out</div>
+        )
+    
 }
 
 const SoldOutShipping = () => {
@@ -25,27 +30,26 @@ const SoldOutShipping = () => {
             <ul style={{color:"red"}}>
             <li> Not in stock at the moment</li>
         </ul>
-
         )
     }
 }
 
-const [show, setShow] = useState(false);
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
-
+const addItem = () => {
+    countItem()
+    handleShow()
+}
 
 const SoldOutButton = () => {
-    if (!product.isSold) {
-        return (
+
+        return (!product.isSold &&
             <>
                 <Col>
-                    <Button onClick={handleShow} className="w-100">ADD TO CARD</Button>
-                    <Busket propsHandleClose={handleClose} show={show}/>
+                    <Button onClick={ addItem } className="w-100">ADD TO CARD</Button>
+                    <Busket />
                 </Col>
             </>
         )
-    }
+    
 }
 
     return (
