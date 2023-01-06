@@ -18,13 +18,18 @@ export default function App() {
   const [counter, setCounter] = useState(0)
   const [show, setShow] = useState(false);
 
+  const addToBusket = (i) => setItem([...item, i])
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const countItem = () => setCounter(counter + 1)
-  const clearBusket = () => setCounter(counter * 0)
-  
+  const clearBusket = () => {
+    setCounter(0)
+    setItem([])
+  }
+
   const store = {
     item,
+    addToBusket,
     counter,
     countItem,
     show,

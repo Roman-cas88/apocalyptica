@@ -7,11 +7,8 @@ import { Busket } from '../contetnt/Busket/Busket';
 import { StoreContext } from '../contetnt/StoreContext/StoreContext';
 
 export default function HeaderNavIcons() {
-const { counter } = useContext(StoreContext)
+const { counter, handleShow } = useContext(StoreContext)
 
-const [show, setShow] = useState(false);
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
 const linkStyle = {
     margin: ".5rem",
     color: 'black',
@@ -33,9 +30,9 @@ const [isShown, setIsShown] = useState(false);
           <div style={{display:"inline-block", position:"relative", cursor:"pointer"}}>
             <Button style={{all: 'unset'}} onClick={handleShow}>
               <BsCartCheckFill size={28} />
-              {counter !=0 && <div className="count">{counter}</div>}
+              {counter !==0 && <div className="count">{counter}</div>}
             </Button>
-            <Busket propsHandleClose={handleClose} show={show}/>
+            <Busket />
           </div>
         </div>
       </Col>

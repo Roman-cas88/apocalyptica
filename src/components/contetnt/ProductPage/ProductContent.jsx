@@ -8,7 +8,7 @@ import { StoreContext } from '../StoreContext/StoreContext';
 
 export const ProductContent = ({product}) => {
     
-const { countItem, handleShow } = useContext(StoreContext)
+const { countItem, handleShow, addToBusket, item } = useContext(StoreContext)
 
 const SoldOutImg = () => {
           return (product.isSold &&
@@ -34,9 +34,20 @@ const SoldOutShipping = () => {
     }
 }
 
+const busket = {
+    id: product.id,
+    img: product.img,
+    amount:"",
+    size:"",
+    title: product.title,
+    price: product.price,
+  }
+
+
 const addItem = () => {
     countItem()
     handleShow()
+    addToBusket(busket)
 }
 
 const SoldOutButton = () => {
@@ -45,12 +56,13 @@ const SoldOutButton = () => {
             <>
                 <Col>
                     <Button onClick={ addItem } className="w-100">ADD TO CARD</Button>
-                    <Busket />
+                    <Busket busket={busket}/>
                 </Col>
             </>
         )
     
 }
+
 
     return (
         <Container>
