@@ -13,7 +13,7 @@ import {Footer} from './components/footer/Footer';
 
 export default function App() {
   const styleContent = {background: '#f5f5f5'};
-
+  console.log('App');
   return (
     <Container fluid  className="p-0 bg-white">
       <Container> 

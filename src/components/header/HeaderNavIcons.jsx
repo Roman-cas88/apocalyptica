@@ -1,6 +1,6 @@
 import React, { useState, useRef, useContext } from 'react';
 import { BsSearch, BsPersonFill, BsCartCheckFill } from "react-icons/bs";
-import {Button, Container, Row, Col, Nav, Overlay, Popover} from "react-bootstrap/";
+import { Button, Container, Row, Col, Nav, Overlay, Popover } from "react-bootstrap/";
 import { Link, NavLink } from 'react-router-dom';
 import HeaderSearch from './HeaderSearch';
 import { Busket } from '../contetnt/Busket/Busket';
@@ -30,7 +30,6 @@ export default function HeaderNavIcons() {
   const curuser = useContext(UserContext);
 
   return (
-    // size: https://www.folkstalk.com/tech/react-icon-size-with-code-examples/
     <Container>
       <Row xs={1}>
         <Col >
@@ -38,11 +37,11 @@ export default function HeaderNavIcons() {
             {!isShown && (
               <Link onClick={handleClick} style={linkStyle} ><BsSearch size={22} /></Link>
             )}
-            { curuser && (
-            <Link  onClick={handleClickMyAccount} style={linkStyle} >{curuser.firstName}</Link>            
+            {curuser && (
+              <Link onClick={handleClickMyAccount} style={linkStyle} >{curuser.firstName}</Link>
             )}
-            { !curuser && (
-            <Link onClick={handleClickMyAccount} style={linkStyle} ><BsPersonFill size={28} /></Link>            
+            {!curuser && (
+              <Link onClick={handleClickMyAccount} style={linkStyle} ><BsPersonFill size={28} /></Link>
             )}
             <div style={{ display: "inline-block", position: "relative", cursor: "pointer" }}>
               {/* <Link to="/" style={linkStyle} > */}

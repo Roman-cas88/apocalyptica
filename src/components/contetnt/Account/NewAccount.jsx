@@ -149,7 +149,7 @@ export function NewAccount() {
                 </Row>
                 <hr />
                 <Form.Group className="mb-3">
-                    <Form.Select  aria-label="Default select">
+                    <Form.Select aria-label="Default select">
                         <option>Country*</option>
                         <option value="1">Sweden</option>
                         <option value="2">Deutschland</option>
@@ -158,24 +158,24 @@ export function NewAccount() {
                 <Row>
                     <Col xs={4}>
                         <Form.Group className="mb-3">
-                            <Form.Control  type="text" placeholder="Zipcode*" />
+                            <Form.Control type="text" placeholder="Zipcode*" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group className="mb-3">
-                            <Form.Control  type="text" placeholder="City*" />
+                            <Form.Control type="text" placeholder="City*" />
                         </Form.Group>
                     </Col>
                 </Row>
                 <Row>
                     <Col xs={8}>
                         <Form.Group className="mb-3">
-                            <Form.Control  type="text" placeholder="Street or 'Packstation'*" />
+                            <Form.Control type="text" placeholder="Street or 'Packstation'*" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group className="mb-3">
-                            <Form.Control  type="text" placeholder="House/Packstat*" />
+                            <Form.Control type="text" placeholder="House/Packstat*" />
                         </Form.Group>
                     </Col>
                 </Row>
