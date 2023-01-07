@@ -1,13 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap/";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
-import { login } from './Authentication'
+import { UserContext } from "./UserContext";
 
 export function NewAccount() {
     const navigate = useNavigate();
+    const {login} = useContext(UserContext);
     const {
         register,
         handleSubmit,

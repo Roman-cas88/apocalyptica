@@ -3,23 +3,16 @@ import { Form, Button } from "react-bootstrap/";
 import { useForm } from "react-hook-form";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "./UserContext";
 
 
 export function RegisteredAccount(props) {
-  const curuser = useContext(UserContext)
-  console.log('Registered from context:')
-
-  const [userEmail, setuserEmail] = useState(curuser ? curuser.email : null);
-
-  console.log(userEmail)
   const {
     register,
     handleSubmit,
     formState: { errors }
   } = useForm({
     defaultValues: {
-      email: userEmail
+      email: "@"
     }
   });
   const navigate = useNavigate();

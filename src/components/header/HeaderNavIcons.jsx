@@ -30,7 +30,7 @@ export default function HeaderNavIcons() {
     setTarget(event.target);
   }
 
-  const curuser = useContext(UserContext);
+  const {nameAccount} = useContext(UserContext);
 
   return (
     <Container>
@@ -40,10 +40,10 @@ export default function HeaderNavIcons() {
             {!isShown && (
               <Link onClick={handleClick} style={linkStyle} ><BsSearch size={22} /></Link>
             )}
-            {curuser && (
-              <Link onClick={handleClickMyAccount} style={linkStyle} >{curuser.firstName}</Link>
+            {nameAccount && (
+              <Link onClick={handleClickMyAccount} style={linkStyle} >{nameAccount}</Link>
             )}
-            {!curuser && (
+            {!nameAccount && (
               <Link onClick={handleClickMyAccount} style={linkStyle} ><BsPersonFill size={28} /></Link>
             )}
             <div style={{ display: "inline-block", position: "relative", cursor: "pointer" }}>

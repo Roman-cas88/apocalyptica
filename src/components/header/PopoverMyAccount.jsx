@@ -2,7 +2,6 @@ import React, { useState, useRef, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Nav, Overlay, Popover } from "react-bootstrap/";
 import { UserContext } from "../contetnt/Account/UserContext";
-import { logout } from '../contetnt/Account/Authentication';
 
 export const PopoverMyAccount = (props) => {
     const ref = useRef(null);
@@ -29,23 +28,22 @@ export const PopoverMyAccount = (props) => {
 
 const NavMyAccount = () => {
     const navLinkStyle = 'p-2 text-decoration-none w-100 mx-auto text-dark';
-    const curuser = useContext(UserContext);
+    const {nameAccount, logout} = useContext(UserContext);
 
     const handleSignoutClick = () => {
-        console.log("sign out:");
         logout()
     };
 
     return (
         <>
             <Nav className="flex-column bg-light px-2">
-                {!curuser && (
+                {!nameAccount && (
                     <NavLink className='p-2 w-100 mx-auto bg-secondary text-white text-decoration-none' to="/account" >Sign in</NavLink>
                 )}
-                {!curuser && (
+                {!nameAccount && (
                     <NavLink className={navLinkStyle} to="/account" >or register</NavLink>
                 )}
-                {curuser && (
+                {nameAccount && (
                     <NavLink className={navLinkStyle} onClick={handleSignoutClick} to="/">Sing out</NavLink>
                 )}
 
@@ -75,6 +73,3 @@ const NavMyAccount = () => {
 };
 
 
-//   const handleChange = (event) => {
-//     setLanguage(event.target.value);
-//   };
