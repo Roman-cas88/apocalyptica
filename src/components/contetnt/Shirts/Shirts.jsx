@@ -15,8 +15,8 @@ const { shirts } = data
             <Container>
                     <Row xs={1} md={2} lg={3} xl={4} className="g-3">
                     {shirts.map((card) => (
-                        <Col>
-                            <Cards  key={card.id} card={card} />
+                        <Col key={card.id}>
+                            <Cards card={card} />
                         </Col>
                     ))}
                     </Row>

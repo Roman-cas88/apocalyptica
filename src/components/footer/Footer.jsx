@@ -15,9 +15,9 @@ export function Footer() {
         <Container >
             <Row>
                 <Nav className='d-md-none justify-content-around '>
-                    <Nav.Link href=""><FiFacebook size={22} style={{ color: "white" }} /></Nav.Link>
-                    <Nav.Link href=""><BsInstagram size={22} style={{ color: "white" }} /></Nav.Link>
-                    <Nav.Link href=""><BsYoutube size={22} style={{ color: "white" }} /></Nav.Link>
+                    <Nav.Link><FiFacebook size={22} style={{ color: "white" }} /></Nav.Link>
+                    <Nav.Link><BsInstagram size={22} style={{ color: "white" }} /></Nav.Link>
+                    <Nav.Link><BsYoutube size={22} style={{ color: "white" }} /></Nav.Link>
                 </Nav>
                 <hr className='d-md-none' />
             </Row>
@@ -25,7 +25,7 @@ export function Footer() {
                 <Col md={3} >
                     <Navbar expand="md" className="flex-column align-items-stretch">
                         <Container >
-                            <div class="w-100 d-flex flex-column">
+                            <div className="w-100 d-flex flex-column">
                                 <div className="d-flex align-items-center">
                                     <Navbar.Brand href="#" className="text-white h6 fs-6 p-1 w-100">INFORMATION</Navbar.Brand>
                                     <Navbar.Toggle aria-controls="nav" className="border-0">
@@ -51,7 +51,7 @@ export function Footer() {
                 <Col md={2} className="">
                     <Navbar expand="md" className="flex-column align-items-stretch">
                         <Container >
-                            <div class="w-100 d-flex flex-column">
+                            <div className="w-100 d-flex flex-column">
                                 <div className="d-flex align-items-center">
                                     <Navbar.Brand href="#" className="text-white h6 fs-6 p-1 w-100">SHOP SERVICE</Navbar.Brand>
                                     <Navbar.Toggle aria-controls="nav" className="border-0">
@@ -73,7 +73,7 @@ export function Footer() {
                 <Col md={2}>
                     <Navbar expand="md" className="flex-column align-items-stretch">
                         <Container >
-                            <div class="w-100 d-flex flex-column">
+                            <div className="w-100 d-flex flex-column">
                                 <div className="d-flex align-items-center">
                                     <Navbar.Brand href="#" className="text-white h6 fs-6 p-1 w-100">SHIPPING</Navbar.Brand>
                                     <Navbar.Toggle aria-controls="nav" className="border-0">
@@ -96,7 +96,7 @@ export function Footer() {
                 <Col md={2}>
                     <Navbar expand="md" className="flex-column align-items-stretch">
                         <Container >
-                            <div class="w-100 d-flex flex-column">
+                            <div className="w-100 d-flex flex-column">
                                 <div className="d-flex align-items-center">
                                     <Navbar.Brand href="#" className="text-white h6 fs-6 p-1  w-100">PAIMENT</Navbar.Brand>
                                     <Navbar.Toggle aria-controls="nav" className="border-0">

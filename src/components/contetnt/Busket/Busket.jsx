@@ -13,7 +13,8 @@ export const Busket = () => {
     }
 
     let shippingCost = 10.49
-    // let itemMap = item.map(() => (<BusketItem i={i}/>))
+    let itemMap = item.map((map) => (<BusketItem key={map.id} id={map.id} price={map.price} 
+        img={map.img} title={map.title}/>))
     
     return (
         <>
@@ -22,7 +23,7 @@ export const Busket = () => {
             ❰ Continue shopping
         </Offcanvas.Header>
         <Offcanvas.Body>
-            <BusketItem />
+            {itemMap}
             <hr />
             <div>
                 <p>Subtotal amount <span>€{0.00}*</span></p>
@@ -31,7 +32,6 @@ export const Busket = () => {
             </div>
 
         <button onClick={clear}>Clear Busket</button>
-        <button onClick={() => console.log(1)}>Show</button>
         </Offcanvas.Body>
       </Offcanvas>
         </>

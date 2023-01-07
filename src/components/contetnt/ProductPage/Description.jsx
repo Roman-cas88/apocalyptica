@@ -7,7 +7,7 @@ export const Description = ({ product }) => {
             return (
     
             product.description.map((des) => (
-                <tr>
+                <tr key={des.id}>
                     <th>{des.key}</th>
                     <td>{des.value}</td>
                 </tr>
