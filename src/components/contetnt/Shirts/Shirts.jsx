@@ -16,7 +16,7 @@ const { shirts } = data
                     <Row xs={1} md={2} lg={3} xl={4} className="g-3">
                     {shirts.map((card) => (
                         <Col>
-                            <Cards card={card} />
+                            <Cards  key={card.id} card={card} />
                         </Col>
                     ))}
                     </Row>
