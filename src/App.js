@@ -27,6 +27,10 @@ export default function App() {
     setCounter(0)
     setItem([])
   }
+  const deleteItem = (id) => {
+    setItem(item.filter((element) => element.id !== id))
+    setCounter(counter - 1)
+  }
 
   const store = {
     item,
@@ -37,6 +41,7 @@ export default function App() {
     handleClose,
     handleShow,
     clearBusket,
+    deleteItem,
   }
   const styleContent = {background: '#f5f5f5'};
   return (

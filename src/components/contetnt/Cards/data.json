@@ -106,13 +106,13 @@
         "price": 26.99,
         "isSold": false,
         "description": [
-          {"key":"Künstler*innen", "value":"Apocalyptica"},
-          {"key":"Produkttyp", "value":"T-shirt"},
-          {"key":"Passform", "value":"Regular Fit"},
-          {"key":"Materialzusammensetzung", "value":"100% Baumwolle in Bio-Qualität"},
-          {"key":"Rohware", "value":"Stanley/Stella"},
-          {"key":"Veredelung", "value":"Siebdruck"},
-          {"key":"Pflegehinweise", "value":"Maschinenwäsche bei 30°C, Mit ähnlichen Farben waschen"}
+          {"id":"01", "key":"Künstler*innen", "value":"Apocalyptica"},
+          {"id":"02", "key":"Produkttyp", "value":"T-shirt"},
+          {"id":"03", "key":"Passform", "value":"Regular Fit"},
+          {"id":"04", "key":"Materialzusammensetzung", "value":"100% Baumwolle in Bio-Qualität"},
+          {"id":"05", "key":"Rohware", "value":"Stanley/Stella"},
+          {"id":"06", "key":"Veredelung", "value":"Siebdruck"},
+          {"id":"07", "key":"Pflegehinweise", "value":"Maschinenwäsche bei 30°C, Mit ähnlichen Farben waschen"}
         ] 
       },
       {

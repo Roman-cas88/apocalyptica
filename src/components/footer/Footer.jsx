@@ -15,9 +15,9 @@ export function Footer() {
         <Container >
             <Row>
                 <Nav className='d-md-none justify-content-around '>
-                    <Nav.Link href=""><FiFacebook size={22} style={{ color: "white" }} /></Nav.Link>
-                    <Nav.Link href=""><BsInstagram size={22} style={{ color: "white" }} /></Nav.Link>
-                    <Nav.Link href=""><BsYoutube size={22} style={{ color: "white" }} /></Nav.Link>
+                    <Nav.Link><FiFacebook size={22} style={{ color: "white" }} /></Nav.Link>
+                    <Nav.Link><BsInstagram size={22} style={{ color: "white" }} /></Nav.Link>
+                    <Nav.Link><BsYoutube size={22} style={{ color: "white" }} /></Nav.Link>
                 </Nav>
                 <hr className='d-md-none' />
             </Row>

@@ -1,23 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import data from "../Cards/data.json"
+import { StoreContext } from '../StoreContext/StoreContext'
+import './busketItem.css'
 
-export const BusketItem = () => {
-   
-let { shirts } = data
+export const BusketItem = ({ price, title, img, id }) => {
+    const { deleteItem } = useContext(StoreContext)
 
   return (
-    <Container style={{border:"solid"}}>
+    <Container className='Container'>
         <Row>
-            <Col>
-                <img width="100%" src={shirts[0].img} alt="Item" />
+            <Col xs lg="3" className='Col-1'>
+                <div>
+                <img width="100%" src={img} alt="Item" />
+                </div>   
             </Col>
-            <Col style={{position: "inline-block"}}>
-                <b>{1}x</b> {shirts[0].title}
-                <p className='fw-bold'>€{shirts[0].price}*</p>  
+            <Col xs lg="7" className='Col-2'>
+                <div>
+                    <b>{1}x</b> {title}
+                    <p className='fw-bold'>€{price}*</p>  
+                </div>
             </Col>
-            <Col>
-                <button style={{border:"none", backgroundColor:"rgb(250, 219, 219, 0.8)"}} className='w-100 h-100'>X</button>
+            <Col md="auto" className='Col-3'>
+                <div>
+                    <button onClick={() => deleteItem(id)}>X</button>
+                </div>
             </Col>
 
         </Row>

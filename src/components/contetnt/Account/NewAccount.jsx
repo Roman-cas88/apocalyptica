@@ -98,9 +98,6 @@ export function NewAccount() {
                     {errors.email && <p className="errorMsg">{errors.email.message}</p>}
                 </Form.Group>
 
-                {/* <Form.Group className="mb-3" controlId="reEmail">
-                    <Form.Control type="email" placeholder="Re-enter your email address*"  />
-                </Form.Group> */}
 
                 <Form.Group className="mb-3" controlId="password">
                     <Form.Control
@@ -159,24 +156,24 @@ export function NewAccount() {
                 <Row>
                     <Col xs={4}>
                         <Form.Group className="mb-3">
-                            <Form.Control type="text" placeholder="Zipcode*" />
+                            <Form.Control type="text" placeholder="Zipcode" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group className="mb-3">
-                            <Form.Control type="text" placeholder="City*" />
+                            <Form.Control type="text" placeholder="City" />
                         </Form.Group>
                     </Col>
                 </Row>
                 <Row>
                     <Col xs={8}>
                         <Form.Group className="mb-3">
-                            <Form.Control type="text" placeholder="Street or 'Packstation'*" />
+                            <Form.Control type="text" placeholder="Street or 'Packstation'" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group className="mb-3">
-                            <Form.Control type="text" placeholder="House/Packstat*" />
+                            <Form.Control type="text" placeholder="House/Packstat" />
                         </Form.Group>
                     </Col>
                 </Row>

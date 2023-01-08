@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Container, Form, Col, Row, Stack } from "react-bootstrap"
 import { Button } from 'react-bootstrap';
 import { Description } from './Description'
@@ -8,7 +8,7 @@ import { StoreContext } from '../StoreContext/StoreContext';
 
 export const ProductContent = ({product}) => {
     
-const { countItem, handleShow, addToBusket, item } = useContext(StoreContext)
+const { countItem, handleShow, addToBusket } = useContext(StoreContext)
 
 const SoldOutImg = () => {
           return (product.isSold &&
@@ -75,7 +75,7 @@ const SoldOutButton = () => {
                 <p>Apocaliptica</p>
                 <h2>{product.title}</h2>
                 <h2>€{product.price.toFixed(2)} *</h2>
-                <h6>*incl. VAT <a href="#">plus shipping costs</a></h6>
+                <h6>*incl. VAT plus shipping costs</h6>
                 <SoldOutShipping />
                 <Form>
                     <Form.Group className='mt-4'>

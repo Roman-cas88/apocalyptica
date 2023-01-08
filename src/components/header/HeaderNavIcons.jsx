@@ -1,16 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { BsSearch, BsPersonFill, BsCartCheckFill } from "react-icons/bs";
-import { Button, Container, Row, Col, Nav, Overlay, Popover } from "react-bootstrap/";
+import { Button, Container, Row, Col } from "react-bootstrap/";
 import { Link } from 'react-router-dom';
 import HeaderSearch from './HeaderSearch';
 import { Busket } from '../contetnt/Busket/Busket';
 import { StoreContext } from '../contetnt/StoreContext/StoreContext';
 import { UserContext } from "../contetnt/Account/UserContext";
 import { PopoverMyAccount } from './PopoverMyAccount'
-
-//   const [show, setShow] = useState(false);
-//   const handleClose = () => setShow(false);
-//   const handleShow = () => setShow(true);
 
 export default function HeaderNavIcons() {
   const { counter, handleShow } = useContext(StoreContext)
