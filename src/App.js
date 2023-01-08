@@ -9,12 +9,45 @@ import HeaderTop from './components/header/HeaderTop';
 import HeaderLogo from './components/header/HeaderLogo';
 import HeaderNavIcons from './components/header/HeaderNavIcons';
 import {Footer} from './components/footer/Footer';
+import { StoreContext } from "./components/contetnt/StoreContext/StoreContext";
+import { useState } from "react";
+
 
 export default function App() {
+// Creating global Storage using useContext 
+  const [item, setItem] = useState([]);
+  const [counter, setCounter] = useState(0);
+  const [show, setShow] = useState(false);
+
+  const addToBusket = (i) => setItem([...item, i])
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const countItem = () => setCounter(counter + 1)
+  const clearBusket = () => {
+    setCounter(0)
+    setItem([])
+  }
+  const deleteItem = (id) => {
+    setItem(item.filter((element) => element.id !== id))
+    setCounter(counter - 1)
+  }
+
+  const store = {
+    item,
+    addToBusket,
+    counter,
+    countItem,
+    show,
+    handleClose,
+    handleShow,
+    clearBusket,
+    deleteItem,
+  }
   const styleContent = {background: '#f5f5f5'};
   return (
-    <Container fluid  className="p-0 bg-white">
-      <Container> 
+    <StoreContext.Provider value={store}>
+    <Container fluid>
+    <Container>
       <Row align="center">
         <Col >
           <Hidden xs sm>
@@ -24,7 +57,6 @@ export default function App() {
       </Row>
 
       <Row justify="between" >
-      {/* align="center" */}
         <Col sx={12} md={8}>
         <HeaderLogo />
         </Col>
@@ -61,5 +93,6 @@ export default function App() {
       </Row>
 
     </Container>
+    </StoreContext.Provider>
   );
 }
