@@ -103,6 +103,7 @@ export function NewAccount() {
                     <Form.Control
                         type="password"
                         placeholder="Your password"
+                        autoComplete="on"
                         {...register("password", {
                             required: "Password is required.",
                             minLength: {
@@ -120,6 +121,7 @@ export function NewAccount() {
                     <Form.Control
                         type="password"
                         placeholder="Re-enter your password*"
+                        autoComplete="on"
                         {...register("confirmPassword", {
                             validate: (value) =>
                                 value === password.current || "The passwords do not match"
@@ -148,7 +150,7 @@ export function NewAccount() {
                 <hr />
                 <Form.Group className="mb-3">
                     <Form.Select aria-label="Default select">
-                        <option>Country*</option>
+                        <option>Country</option>
                         <option value="1">Sweden</option>
                         <option value="2">Deutschland</option>
                     </Form.Select>
@@ -183,7 +185,7 @@ export function NewAccount() {
                 <Form.Group className="mb-3">
                     <Form.Control type="text" placeholder="Additional address line 2" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Group className="mb-3" controlId="CheckboxAddress">
                     <Form.Check type="checkbox"
                         label="The shipping address does not match the billing address"
                     />
@@ -192,7 +194,7 @@ export function NewAccount() {
 
                 <h6 className='mt-5'>Privacy</h6>
                 <hr />
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Group className="mb-3" controlId="CheckboxPrivacy">
                     <Form.Check type="checkbox"
                         label={
                             <span>
