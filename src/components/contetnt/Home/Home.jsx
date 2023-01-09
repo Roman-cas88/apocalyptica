@@ -5,7 +5,7 @@ import { Guarantee } from "./Guarantee"
 
 export const Home = () => {
     return ( 
-        <Container fluid>
+        <Container fluid className='bg-white'>
             <h2>Home</h2>
             <CaruselTop />
             <DeliveryInfo />

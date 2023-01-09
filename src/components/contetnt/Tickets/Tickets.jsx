@@ -10,8 +10,13 @@ export const Tickets = () => {
 
     return (
         <>
+        <Container flui>
+        </Container>
             <h2>Tickets</h2>
             <Container>
+            <Row >
+
+            </Row>
                 <Row xs={1} md={2} lg={3} xl={4} className="g-3">
                     {ticket.map((card) => (
                         <Col key={card.id}>
