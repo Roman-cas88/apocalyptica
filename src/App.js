@@ -47,7 +47,7 @@ export default function App() {
   return (
     <StoreContext.Provider value={store}>
     <Container fluid className="px-0">
-    <Container className='my-0 pb-3'>
+      <Container className='px-0 my-0 pb-3' >
       <Row align="center">
         <Col >
           <Hidden xs sm>
@@ -78,25 +78,15 @@ export default function App() {
         </Col>
       </Row>
       </Container> 
-      {/* <hr className='my-0 pb-3'/> */}
+      <hr className='m-0 p-0' style={{color: '#e1e1e1'}}/>
 
-      {/* <Visible lg xl xxl>
-      <img src='https://d1lhyycl5p8pom.cloudfront.net/media/image/b8/c2/10/Unbenannt-2.jpg' style={{width: '100%', height:'22vw', maxheight:'350px'}}/>
-      shirts
-      <img src='https://d1lhyycl5p8pom.cloudfront.net/media/image/ac/1c/a0/Unbenannt-4.jpg' style={{width: '100%', height:'22vw', maxheight:'350px'}}/>
-      girls
-      <img src='https://d1lhyycl5p8pom.cloudfront.net/media/image/92/b5/c4/Unbenannt-5.jpg' style={{width: '100%', height:'22vw', maxheight:'350px'}}/>
-      hoods
-    <img src='https://d1lhyycl5p8pom.cloudfront.net/media/image/7d/51/61/Unbenannt-6.jpg' style={{width: '100%', height:'22vw', maxheight:'350px'}}/>
-      </Visible> */}
-
-      <Container fluid className="py-md-3 px-0 mx-auto" style={styleContent}  >
-      {/* <Container className="px-0  mx-auto bg-inherit"> */}
-      <Row>
+      {/* <Container fluid style={styleContent}  > */}
+      {/* <Container className="px-0  mx-auto bg-inherit"> py-md-3 */} 
+      <Row className='px-0 mx-auto pb-5' style={styleContent}>
         <Content />
       </Row>
       {/* </Container> */}
-      </Container>
+      {/* </Container> */}
 
       <Row>
       <Footer />

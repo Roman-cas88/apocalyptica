@@ -11,10 +11,13 @@ import { ProductPage } from "./ProductPage/ProductPage"
 import { Account } from "./Account/Account"
 import { Privacy } from "./Privacy/Privacy"
 import { WishList } from "./Account/WishList"
+import { ContentImage } from "./ContentImage"
 
 export const Content = () => {
     return (
-        <Container className="mt-1">
+        <>
+        <ContentImage />
+        <Container className="px-0 ">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/tickets" element={<Tickets />} />
@@ -30,5 +33,6 @@ export const Content = () => {
                 <Route path="/wishlist" element={<WishList />} />    
             </Routes>
         </Container>
+        </>
     )
 }

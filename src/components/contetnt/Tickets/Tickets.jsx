@@ -10,7 +10,7 @@ export const Tickets = () => {
 
     return (
         <>
-        <Container flui>
+        <Container fluid>
         </Container>
             <h2>Tickets</h2>
             <Container>

@@ -11,7 +11,7 @@ import { FiFacebook } from "react-icons/fi";
 
 export function Footer() {
     return (
-        <Container fluid variant='dark' className="text-light bg-dark ">
+        <Container fluid variant='dark' className="text-light bg-dark px-0">
         <Container >
             <Row>
                 <Nav className='d-md-none justify-content-around '>
