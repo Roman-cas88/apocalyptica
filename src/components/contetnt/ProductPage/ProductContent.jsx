@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Container, Form, Col, Row, Stack } from "react-bootstrap"
 import { Button } from 'react-bootstrap';
 import { Description } from './Description'
@@ -8,7 +8,7 @@ import { StoreContext } from '../StoreContext/StoreContext';
 
 export const ProductContent = ({product}) => {
     
-const { countItem, handleShow, addToBusket } = useContext(StoreContext)
+const { countItem, handleShow, addToBusket, item } = useContext(StoreContext)
 
 const SoldOutImg = () => {
           return (product.isSold &&
@@ -34,20 +34,28 @@ const SoldOutShipping = () => {
     }
 }
 
+const [amount, setAmount] = useState(1)
+const [size, setSize] = useState("S")
+
+
 const busket = {
     id: product.id,
     img: product.img,
-    amount:"",
-    size:"",
+    amount:amount,
+    size:size,
     title: product.title,
     price: product.price,
   }
 
+  const checkSameId = item.findIndex(el => el.id === busket.id)
 
 const addItem = () => {
-    countItem()
+   
     handleShow()
-    addToBusket(busket)
+    if (checkSameId === -1) {
+        addToBusket(busket)
+         countItem()
+    }
 }
 
 const SoldOutButton = () => {
@@ -56,7 +64,7 @@ const SoldOutButton = () => {
             <>
                 <Col>
                     <Button onClick={ addItem } className="w-100">ADD TO CARD</Button>
-                    <Busket busket={busket}/>
+                    <Busket />
                 </Col>
             </>
         )
@@ -86,7 +94,7 @@ const SoldOutButton = () => {
                     </Form.Group>
                     <Form.Group className='mt-4'>
                         <Form.Label>Größe:</Form.Label>
-                        <Form.Select id="size">
+                        <Form.Select onChange={(event) => setSize(event.target.value)} id="size">
                             <option>S</option>
                             <option>M</option>
                             <option>L</option>
@@ -99,7 +107,7 @@ const SoldOutButton = () => {
                     <Col>
                     <Form.Group>
                         
-                        <Form.Select id="quantity" className="fw-bold">
+                        <Form.Select onChange={(event) => setAmount(event.target.value)} id="quantity" className="fw-bold">
                             <option>1</option> 
                             <option>2</option>
                             <option>3</option>

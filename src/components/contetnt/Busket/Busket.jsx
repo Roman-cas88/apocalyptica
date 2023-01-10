@@ -13,8 +13,8 @@ export const Busket = () => {
     }
 
     let shippingCost = 10.49
-    let itemMap = item.map((map) => (<BusketItem key={map.id} id={map.id} price={map.price} 
-        img={map.img} title={map.title}/>))
+    let itemMap = item.map((map) => (<BusketItem key={map.id + Math.random()} id={map.id} price={map.price} 
+        img={map.img} title={map.title} amount={map.amount} size={map.size}/> ))
     
     return (
         <>
