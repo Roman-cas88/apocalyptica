@@ -46,7 +46,7 @@ export default function App() {
   const styleContent = {background: '#f5f5f5'};
   return (
     <StoreContext.Provider value={store}>
-    <Container fluid className="px-0">
+    <Container fluid >
       <Container className='px-0 my-0 pb-3' >
       <Row align="center">
         <Col >
@@ -79,15 +79,11 @@ export default function App() {
       </Row>
       </Container> 
       <hr className='m-0 p-0' style={{color: '#e1e1e1'}}/>
-
-      {/* <Container fluid style={styleContent}  > */}
-      {/* <Container className="px-0  mx-auto bg-inherit"> py-md-3 */} 
-      <Row className='px-0 mx-auto pb-5' style={styleContent}>
+      <Row justify="center" className='pb-5' style={styleContent}>
+        <Col className="px-0">
         <Content />
+        </Col>
       </Row>
-      {/* </Container> */}
-      {/* </Container> */}
-
       <Row>
       <Footer />
       </Row>

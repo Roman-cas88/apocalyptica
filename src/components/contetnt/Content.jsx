@@ -17,7 +17,7 @@ export const Content = () => {
     return (
         <>
         <ContentImage />
-        <Container className="px-0 ">
+        <Container >
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/tickets" element={<Tickets />} />
