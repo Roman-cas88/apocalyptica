@@ -28,7 +28,7 @@ export function NewAccount() {
     };
     return (
         <div>
-            <Form className='border p-3 mb-5' onSubmit={handleSubmit(onSubmit)}>
+            <Form className='border p-3 mb-5 bg-white' onSubmit={handleSubmit(onSubmit)}>
                 <h6>I'm a new customer.</h6>
                 <hr />
                 <Form.Group className="mb-3">

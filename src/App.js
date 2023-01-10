@@ -1,4 +1,4 @@
-// import './App.css';
+//import './App.css';
 // npm install react-grid-system --save
 import { Container, Row, Col } from "react-grid-system";
 import { Visible, Hidden } from "react-grid-system";
@@ -46,8 +46,8 @@ export default function App() {
   const styleContent = {background: '#f5f5f5'};
   return (
     <StoreContext.Provider value={store}>
-    <Container fluid>
-    <Container>
+    <Container fluid >
+      <Container className='px-0 my-0 pb-3' >
       <Row align="center">
         <Col >
           <Hidden xs sm>
@@ -78,16 +78,12 @@ export default function App() {
         </Col>
       </Row>
       </Container> 
-      <hr className='my-0'/>
-    
-      <Container fluid className="py-md-3" style={styleContent}>
-      <Container className="px-0 pt-3 mx-auto bg-white">
-      <Row>
+      <hr className='m-0 p-0' style={{color: '#e1e1e1'}}/>
+      <Row justify="center" className='pb-5' style={styleContent}>
+        <Col className="px-0">
         <Content />
+        </Col>
       </Row>
-      </Container>
-      </Container>
-
       <Row>
       <Footer />
       </Row>
