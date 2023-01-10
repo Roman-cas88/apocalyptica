@@ -22,7 +22,7 @@ export default function App() {
   const addToBusket = (i) => setItem([...item, i])
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const countItem = () => setCounter(counter + 1)
+  const countItem = () => setCounter(item.length+1)
   const clearBusket = () => {
     setCounter(0)
     setItem([])

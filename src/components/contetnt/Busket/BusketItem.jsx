@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { StoreContext } from '../StoreContext/StoreContext'
 import './busketItem.css'
 
-export const BusketItem = ({ price, title, img, id }) => {
+export const BusketItem = ({ price, title, img, id, amount, size }) => {
     const { deleteItem } = useContext(StoreContext)
 
   return (
@@ -16,7 +16,8 @@ export const BusketItem = ({ price, title, img, id }) => {
             </Col>
             <Col xs lg="7" className='Col-2'>
                 <div>
-                    <b>{1}x</b> {title}
+                    <b>{amount}x</b>  {title}
+                    <p><b>size: {size}</b></p>
                     <p className='fw-bold'>€{price}*</p>  
                 </div>
             </Col>
