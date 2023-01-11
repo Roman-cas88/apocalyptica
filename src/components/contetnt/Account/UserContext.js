@@ -26,8 +26,17 @@ export const UserProvider = ({ children }) => {
          localStorage.setItem('user', JSON.stringify(data))
          setNameAccount(isAuthenticated())
     };
+
+    const [checkRegister, setCheckRegister] = useState()
+    const isRegister = () => {
+      if (nameAccount === null) {
+          setCheckRegister(true)
+      } 
+      else {setCheckRegister(false)}
+  }
+
     return (
-      <UserContext.Provider value={{nameAccount, logout, login}}>
+      <UserContext.Provider value={{nameAccount, logout, login, checkRegister, isRegister}}>
         {children}
       </UserContext.Provider>
     );
