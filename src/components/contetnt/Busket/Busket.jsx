@@ -22,12 +22,12 @@ export const Busket = () => {
     const checkFunc = () => {
        
         if (!checkRegister) {
-            console.log("TRUE");
             let text = "If you want to confirm the order - you need to register\nEither OK or Cancel.";
             if (window.confirm(text) === true) {
                 navigate('/account')
                 handleClose()
               } 
+            else {handleClose()}
         }
         else {
         navigate("/buy-page")
