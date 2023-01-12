@@ -12,6 +12,7 @@ import { Account } from "./Account/Account"
 import { Privacy } from "./Privacy/Privacy"
 import { WishList } from "./Account/WishList"
 import { ContentImage } from "./ContentImage"
+import { BuyPage } from "./BuyPage/BuyPage"
 
 export const Content = () => {
     return (
@@ -27,10 +28,10 @@ export const Content = () => {
                 <Route path="/music" element={<Music />} />
                 <Route path="/stuff" element={<Stuff />} />
                 <Route path="/:name/product-page/:id" element={<ProductPage />} />
-                {/* <Route path="/:shirts/product-page/:id" element={<ProductPage />} /> */}
                 <Route path="/account" element={<Account />} />
                 <Route path="/privacy" element={<Privacy />} />     
-                <Route path="/wishlist" element={<WishList />} />    
+                <Route path="/wishlist" element={<WishList />} /> 
+                <Route path="/buy-page" element={<BuyPage />} />   
             </Routes>
         </Container>
         </>

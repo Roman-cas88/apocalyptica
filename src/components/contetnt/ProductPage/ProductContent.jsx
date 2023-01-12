@@ -50,7 +50,6 @@ const busket = {
   const checkSameId = item.findIndex(el => el.id === busket.id)
 
 const addItem = () => {
-   
     handleShow()
     if (checkSameId === -1) {
         addToBusket(busket)
