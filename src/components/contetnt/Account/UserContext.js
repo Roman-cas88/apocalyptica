@@ -1,4 +1,4 @@
-import React, { useState,createContext, useContext } from 'react'
+import React, { useState,createContext, useContext, useEffect } from 'react'
 
 const isAuthenticated = () => {
     const userLocaleStore = localStorage.getItem('user');
@@ -26,8 +26,24 @@ export const UserProvider = ({ children }) => {
          localStorage.setItem('user', JSON.stringify(data))
          setNameAccount(isAuthenticated())
     };
+
+   
+
+    const [checkRegister, setCheckRegister] = useState(false)
+    
+
+  useEffect(() => {
+    const isRegister = () => {
+      if (nameAccount !== null) {
+          setCheckRegister(true)
+      }
+      else {setCheckRegister(false)} 
+  }
+    isRegister()
+  }, [nameAccount])
+
     return (
-      <UserContext.Provider value={{nameAccount, logout, login}}>
+      <UserContext.Provider value={{ nameAccount, logout, login, checkRegister }}>
         {children}
       </UserContext.Provider>
     );
