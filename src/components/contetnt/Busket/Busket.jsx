@@ -42,17 +42,21 @@ export const Busket = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
             {itemMap}
+            <div className="d-grid gap-2">
+                <Button size='sm' variant="secondary" onClick={clear}>Clear Busket</Button>
+            </div>
+
             <hr />
             <div>
                 <p>Subtotal amount <span>€{0.00}*</span></p>
                 <p>Shipping costs <span>€{shippingCost}*</span></p>
                 <h5 className='fw-bold'>Total amount <span>€{0.00}*</span></h5>
             </div>
-
-        <Button onClick={clear}>Clear Busket</Button>
-        {item.length > 0 &&
-                <Button onClick={checkFunc}>Buy</Button>
-            }
+            <div className="d-grid gap-2">
+                {item.length > 0 &&
+                <Button size='lg' onClick={checkFunc}>Buy</Button>
+                }
+            </div>
         </Offcanvas.Body>
       </Offcanvas>
         </>
