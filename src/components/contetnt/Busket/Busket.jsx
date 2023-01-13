@@ -2,13 +2,14 @@ import { useContext } from 'react';
 import { Button } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useNavigate } from 'react-router-dom';
+import { BsCheckLg } from "react-icons/bs"
 import { UserContext } from '../Account/UserContext';
 import { StoreContext } from "../StoreContext/StoreContext"
 import { BusketItem } from "./BusketItem"
 
 export const Busket = () => {
     
-    const { show, handleClose, clearBusket, item } = useContext(StoreContext)
+    const { show, handleClose, clearBusket, item, itemAdded } = useContext(StoreContext)
     const { checkRegister } = useContext(UserContext)
     const clear = () => {
         clearBusket()
@@ -37,27 +38,39 @@ export const Busket = () => {
     return (
         <>
         <Offcanvas show={show} onHide={handleClose} placement="end">
-        <Offcanvas.Header onClick={handleClose} className='bg-black p-2' style={{color:"grey", cursor:"pointer"}}>
-            ❰ Continue shopping
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-            {itemMap}
-            <div className="d-grid gap-2">
-                <Button size='sm' variant="secondary" onClick={clear}>Clear Busket</Button>
-            </div>
+            <Offcanvas.Header onClick={handleClose} className='bg-black p-2' style={{color:"grey", cursor:"pointer"}}>
+                ❰ Continue shopping
+            </Offcanvas.Header>
 
-            <hr />
-            <div>
-                <p>Subtotal amount <span>€{0.00}*</span></p>
-                <p>Shipping costs <span>€{shippingCost}*</span></p>
-                <h5 className='fw-bold'>Total amount <span>€{0.00}*</span></h5>
-            </div>
-            <div className="d-grid gap-2">
-                {item.length > 0 &&
-                <Button size='lg' onClick={checkFunc}>Buy</Button>
-                }
-            </div>
-        </Offcanvas.Body>
+            {itemAdded  &&
+                <div className='added-item'>
+                    <div className='check-mark'>
+                        <BsCheckLg size={20}/>
+                    </div>
+                    <div className='added-item-text'>
+                        The product was successfully added to your shopping cart
+                    </div>
+                </div>
+            }
+            
+            <Offcanvas.Body>
+                {itemMap}
+                <div className="d-grid gap-2">
+                    <Button size='sm' variant="secondary" onClick={clear}>Clear Busket</Button>
+                </div>
+
+                <hr />
+                <div>
+                    <p>Subtotal amount <span>€{0.00}*</span></p>
+                    <p>Shipping costs <span>€{shippingCost}*</span></p>
+                    <h5 className='fw-bold'>Total amount <span>€{0.00}*</span></h5>
+                </div>
+                <div className="d-grid gap-2">
+                    {item.length > 0 &&
+                    <Button size='lg' onClick={checkFunc}>Buy</Button>
+                    }
+                </div>
+            </Offcanvas.Body>
       </Offcanvas>
         </>
     )
