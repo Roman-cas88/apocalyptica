@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { Col, Row } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { BsCheckLg } from "react-icons/bs"
 import { StoreContext } from "../StoreContext/StoreContext"
