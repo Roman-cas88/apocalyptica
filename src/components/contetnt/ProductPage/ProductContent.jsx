@@ -8,7 +8,7 @@ import { StoreContext } from '../StoreContext/StoreContext';
 
 export const ProductContent = ({product}) => {
     
-const { countItem, handleShow, addToBusket, item } = useContext(StoreContext)
+const { countItem, handleShow, addToBusket, item, setItemAdded } = useContext(StoreContext)
 
 const SoldOutImg = () => {
           return (product.isSold &&
@@ -50,6 +50,7 @@ const busket = {
   const checkSameId = item.findIndex(el => el.id === busket.id)
 
 const addItem = () => {
+    setItemAdded(true)
     handleShow()
     if (checkSameId === -1) {
         addToBusket(busket)

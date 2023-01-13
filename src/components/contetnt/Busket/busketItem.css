@@ -31,3 +31,23 @@
     border: none;
     background-color: rgb(250, 219, 219, 0.8);
 }
+
+.added-item {
+    background-color: rgb(222,242,231);
+    color: white;
+    display: flex;
+}
+
+.check-mark {
+    width: 20%;
+    background-color:rgb(46,204,113);
+    display: inline-block;
+    line-height: 60px;
+    text-align: center;
+}
+
+.added-item-text{
+    padding: 10px 20px 10px;
+    display: inline-block;
+    color: green;
+}
