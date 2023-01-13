@@ -18,9 +18,13 @@ export default function App() {
   const [item, setItem] = useState([]);
   const [counter, setCounter] = useState(0);
   const [show, setShow] = useState(false);
+  const [itemAdded, setItemAdded] = useState(false)
 
   const addToBusket = (i) => setItem([...item, i])
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false)
+    setItemAdded(false)
+  }
   const handleShow = () => setShow(true);
   const countItem = () => setCounter(item.length+1)
   const clearBusket = () => {
@@ -42,6 +46,8 @@ export default function App() {
     handleShow,
     clearBusket,
     deleteItem,
+    itemAdded,
+    setItemAdded
   }
   const styleContent = {background: '#f5f5f5'};
   return (

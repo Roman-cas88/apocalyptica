@@ -1,11 +1,13 @@
 import { useContext } from 'react';
+import { Col, Row } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { BsCheckLg } from "react-icons/bs"
 import { StoreContext } from "../StoreContext/StoreContext"
 import { BusketItem } from "./BusketItem"
 
 export const Busket = () => {
     
-   const { show, handleClose, clearBusket, item } = useContext(StoreContext)
+   const { show, handleClose, clearBusket, item, itemAdded } = useContext(StoreContext)
 
     const clear = () => {
         clearBusket()
@@ -22,7 +24,20 @@ export const Busket = () => {
         <Offcanvas.Header onClick={handleClose} className='bg-black p-2' style={{color:"grey", cursor:"pointer"}}>
             ❰ Continue shopping
         </Offcanvas.Header>
+        
+        {itemAdded  &&
+            <div className='added-item'>
+                <div className='check-mark'>
+                    <BsCheckLg size={20}/>
+                </div>
+                <div className='added-item-text'>
+                    The product was successfully added to your shopping cart
+                </div>
+            </div>
+        }
+        
         <Offcanvas.Body>
+           
             {itemMap}
             <hr />
             <div>
