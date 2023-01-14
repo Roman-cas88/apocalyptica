@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Container, Form, Col, Row, Stack } from "react-bootstrap"
 import { Button } from 'react-bootstrap';
 import { Description } from './Description'
@@ -8,7 +8,14 @@ import { StoreContext } from '../StoreContext/StoreContext';
 
 export const ProductContent = ({product}) => {
     
-const { countItem, handleShow, addToBusket, item, setItemAdded } = useContext(StoreContext)
+const { countItem, 
+    handleShow, 
+    addToBusket, 
+    item,  
+    amount,
+    setAmount,
+    size,
+    setSize } = useContext(StoreContext)
 
 const SoldOutImg = () => {
           return (product.isSold &&
@@ -34,8 +41,7 @@ const SoldOutShipping = () => {
     }
 }
 
-const [amount, setAmount] = useState(1)
-const [size, setSize] = useState("S")
+
 
 
 const busket = {
@@ -50,7 +56,6 @@ const busket = {
   const checkSameId = item.findIndex(el => el.id === busket.id)
 
 const addItem = () => {
-    setItemAdded(true)
     handleShow()
     if (checkSameId === -1) {
         addToBusket(busket)
