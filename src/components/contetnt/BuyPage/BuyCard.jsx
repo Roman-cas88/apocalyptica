@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Col, Row, Image, Container, Button } from 'react-bootstrap'
+import { StoreContext } from '../StoreContext/StoreContext'
 
 
 export const BuyCard = ({element}) => {
-
+const {deleteItem} = useContext(StoreContext)
         
   return (
     <Container className='bg-white mb-2 border'>
@@ -33,7 +34,7 @@ export const BuyCard = ({element}) => {
         </Col>
         <Col md="auto">
             <div className="h-100 d-flex align-items-center justify-content-center">
-                <Button>DELETE</Button>
+                <Button onClick={() => deleteItem(element.id)}>DELETE</Button>
             </div>
         </Col>
     </Row>
