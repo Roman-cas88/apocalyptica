@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Container } from 'react-bootstrap'
 import { StoreContext } from '../StoreContext/StoreContext'
 import { BuyCard } from './BuyCard'
