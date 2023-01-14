@@ -11,6 +11,8 @@ import HeaderNavIcons from './components/header/HeaderNavIcons';
 import {Footer} from './components/footer/Footer';
 import { StoreContext } from "./components/contetnt/StoreContext/StoreContext";
 import { useState } from "react";
+import { Cookie } from "./components/cookie/Cookie";
+
 
 
 export default function App() {
@@ -93,7 +95,7 @@ export default function App() {
       <Row>
       <Footer />
       </Row>
-
+      <Cookie />
     </Container>
     </StoreContext.Provider>
   );
