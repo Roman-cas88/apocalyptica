@@ -1,16 +1,11 @@
-//import './App.css';
-// npm install react-grid-system --save
-import { Container, Row, Col } from "react-grid-system";
-import { Visible, Hidden } from "react-grid-system";
-
+import { Container, Row, Col } from "react-bootstrap";
 import { Content } from './components/contetnt/Content';
-import NavBar from './components/navbar/NavBar';
-import HeaderTop from './components/header/HeaderTop';
-import HeaderLogo from './components/header/HeaderLogo';
-import HeaderNavIcons from './components/header/HeaderNavIcons';
+import {Header} from './components/header/Header'
 import {Footer} from './components/footer/Footer';
 import { StoreContext } from "./components/contetnt/StoreContext/StoreContext";
 import { useState } from "react";
+import { Cookie } from "./components/cookie/Cookie";
+
 
 
 export default function App() {
@@ -59,47 +54,15 @@ export default function App() {
   return (
     <StoreContext.Provider value={store}>
     <Container fluid >
-      <Container className='px-0 my-0 pb-3' >
-      <Row align="center">
-        <Col >
-          <Hidden xs sm>
-          <HeaderTop />
-          </Hidden>
-        </Col>
-      </Row>
-
-      <Row justify="between" >
-        <Col sx={12} md={8}>
-        <HeaderLogo />
-        </Col>
-        <Col >
-          <Hidden xs sm>
-          <HeaderNavIcons />
-          </Hidden>
-        </Col>
-      </Row>
-
-      <Row justify="between">      
-        <Col md={12} xs="content" >         
-          <NavBar />
-        </Col>
-        <Col >
-        <Visible sm xs>
-          <HeaderNavIcons />
-        </Visible>
-        </Col>
-      </Row>
-      </Container> 
+      <Header />
       <hr className='m-0 p-0' style={{color: '#e1e1e1'}}/>
       <Row justify="center" className='pb-5' style={styleContent}>
         <Col className="px-0">
         <Content />
         </Col>
       </Row>
-      <Row>
       <Footer />
-      </Row>
-
+      <Cookie />
     </Container>
     </StoreContext.Provider>
   );
