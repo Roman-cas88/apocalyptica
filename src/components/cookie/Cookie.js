@@ -13,7 +13,7 @@ export const Cookie = () => {
         cookieName="myCookie"
         style={{display: "block",  fontSize: "14px", color: "grey", background: "#f5f5f5"}}
         buttonStyle= {{width: "40%", color: "white", fontSize: "1rem", background: "#1e4f7c" }}
-        expires={1}
+        expires={14}
         overlay
         enableDeclineButton 
         flipButtons
