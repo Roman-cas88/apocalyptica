@@ -1,11 +1,25 @@
 // npm install react-cookie-consent
 // https://mastermindzh.github.io/react-cookie-consent/?path=/docs/cookieconsent--default
-// import React from 'react';
+
+import { useState, useEffect } from "react";
 import CookieConsent from "react-cookie-consent";
+import HeaderSearch from '../header/HeaderSearch';
 
 export const Cookie = () => {
+    const [isShow, setIsShow] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setIsShow(true)
+        }, 3000);
+        return () => {
+            clearTimeout(timeout)
+        };
+    }, []);
 
     return (
+        <div >
+         {isShow && (
         <CookieConsent 
         debug
         location="bottom"
@@ -23,5 +37,8 @@ export const Cookie = () => {
         >
         This site uses third-party website tracking technologies to provide and continually improve our services, and to display advertisements according to users' interests. I agree and may revoke or change my consent at any time with effect for the future.
         </CookieConsent>
+         )}
+        </div>
     )
 }
+
