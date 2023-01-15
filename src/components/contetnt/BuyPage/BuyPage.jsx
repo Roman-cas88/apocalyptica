@@ -19,4 +19,5 @@ export const BuyPage = () => {
                 </div>
     </Container>
   )
+  
 }
