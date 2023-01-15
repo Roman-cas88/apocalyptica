@@ -1,6 +1,5 @@
-import React,{ useContext } from 'react'
-import { Container, Row, Col } from "react-bootstrap/";
-import { RegisteredAccount } from './RegisteredAccount';
+import React from 'react'
+import { Container} from "react-bootstrap/";
 import { NewAccount } from './NewAccount'
 
 export const Account = () => {
