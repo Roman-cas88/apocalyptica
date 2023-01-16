@@ -20,9 +20,12 @@ const subtotalAmount = parseFloat(countTottalPrice.toFixed(2))
 const shippingCost = 10.49
 const tottalAmount = (subtotalAmount + shippingCost).toFixed(2)
 
+const deleteCart = (id) => {
+  delete data[id]
+}
 
  const checkElements = () => {
-  console.log(typeof subtotalAmount*1)
+  console.log("MASG");
  
  }
 
@@ -35,7 +38,7 @@ const tottalAmount = (subtotalAmount + shippingCost).toFixed(2)
     <Container>
       BuyPage 
       {item.map(element => 
-      <BuyCard key={element.id} element={element} setData={setData} handleUpdate={handleUpdate} />
+      <BuyCard key={element.id} element={element} deleteCart={deleteCart} handleUpdate={handleUpdate} />
       )}
      <div>
                     <p>Subtotal amount <span>€{subtotalAmount}*</span></p>
