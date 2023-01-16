@@ -13,7 +13,7 @@ export const Cards = ({ card }) => {
 
     return (
       <Link style={{all: 'unset'}} to={`/${card.name}/product-page/${card.id}`}>
-        <Card style={{ width: '19rem', height:'25rem', textAlign:'center',cursor:"pointer" }}>
+        <Card style={{ textAlign:'center',cursor:"pointer" }}>
           <Card.Img style={{position:"relative"}} variant="top" src={card.img} />
           <SoldOut />
           <Card.Body>

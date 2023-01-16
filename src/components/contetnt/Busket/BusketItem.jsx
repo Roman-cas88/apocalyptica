@@ -18,7 +18,7 @@ export const BusketItem = ({ price, title, img, id, amount, size }) => {
                 <div>
                     <b>{amount}x</b>  {title}
                     <p><b>size: {size}</b></p>
-                    <p className='fw-bold'>€{price}*</p>  
+                    <p className='fw-bold'>€{price.toFixed(2)}*</p>  
                 </div>
             </Col>
             <Col md="auto" className='Col-3'>

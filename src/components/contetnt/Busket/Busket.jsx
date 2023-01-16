@@ -26,12 +26,14 @@ export const Busket = () => {
         if (!checkRegister) {
             let text = "If you want to confirm the order - you need to register\nEither OK or Cancel.";
             if (window.confirm(text) === true) {
+                window.scroll(0,0)
                 navigate('/account')
                 handleClose()
               } 
             else {handleClose()}
         }
         else {
+        window.scroll(0,0)
         navigate("/buy-page")
         handleClose()}
     }
@@ -43,7 +45,7 @@ export const Busket = () => {
         setAllPrice(countTottalPrice)
     }, [item, countTottalPrice])
 
-    let tottalAmount = (allPrice + shippingCost).toFixed(2)
+    let tottalAmount = (allPrice + shippingCost)
     
     return (
         <>
@@ -71,9 +73,9 @@ export const Busket = () => {
 
                 <hr />
                 <div>
-                    <p>Subtotal amount <span>€{allPrice}*</span></p>
-                    <p>Shipping costs <span>€{shippingCost}*</span></p>
-                    <h5 className='fw-bold'>Total amount <span>€{tottalAmount}*</span></h5>
+                    <p>Subtotal amount <span>€{allPrice.toFixed(2)}*</span></p>
+                    <p>Shipping costs <span>€{shippingCost.toFixed(2)}*</span></p>
+                    <h5 className='fw-bold'>Total amount <span>€{tottalAmount.toFixed(2)}*</span></h5>
                 </div>
                 <div className="d-grid gap-2">
                     {item.length > 0 &&
