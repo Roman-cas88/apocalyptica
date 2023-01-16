@@ -3,7 +3,7 @@ import { Col, Row, Image, Container, Button, Dropdown } from 'react-bootstrap'
 import { StoreContext } from '../StoreContext/StoreContext'
 
 
-export const BuyCard = ({element, setData, handleUpdate}) => {
+export const BuyCard = ({element, handleUpdate}) => {
 const { deleteItem } = useContext(StoreContext)
 
 const [size, setSize] = useState(element.size)
@@ -24,12 +24,6 @@ useEffect(() => {
     setAmount(amount)
     setSize(size)
     handleUpdate(oldData)
-    // setData([{
-    //     id: element.id, 
-    //     price: price, 
-    //     size: size,
-    //     amount: amount
-    // }])
 }, [size, amount, price, element])
 
 
