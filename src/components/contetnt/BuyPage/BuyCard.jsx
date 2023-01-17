@@ -1,17 +1,35 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Col, Row, Image, Container, Button, Dropdown } from 'react-bootstrap'
+import { Col, Row, Image, Container, Dropdown } from 'react-bootstrap'
 import { StoreContext } from '../StoreContext/StoreContext'
 
 
-export const BuyCard = ({element}) => {
+export const BuyCard = ({element, handleUpdate, deleteCart}) => {
 const { deleteItem } = useContext(StoreContext)
 
 const [size, setSize] = useState(element.size)
 const [amount, setAmount] = useState(element.amount)
 const [price, setPrice] = useState(element.price)
-useEffect(() => {setPrice(price)}, [size, amount, price])
 
+let oldData = {
+    id: element.id,
+    img: element.img,
+    amount: amount,
+    size: size,
+    title: element.title,
+    price: element.price,
+}
 
+useEffect(() => {
+    setPrice(price)
+    setAmount(amount)
+    setSize(size)
+    handleUpdate(oldData)
+}, [size, amount, price, element])
+
+const deleteElement = () => {
+    deleteItem(element.id)
+    deleteCart(element.id)
+}
 
 return (
     <Container className='bg-white mb-2 border'>
@@ -60,17 +78,12 @@ return (
         </Col>
         <Col md="2">
             <div className="h-100 d-flex align-items-center justify-content-center m-md-0 m-2">
-                €{(price * amount).toFixed(2)} *
+            €{(price * amount).toFixed(2)}*
             </div>
         </Col>
         <Col md="1">
             <div className="h-100 d-none d-md-flex align-items-center justify-content-center">
-                <button onClick={() => deleteItem(element.id)} type="button" class="btn-close" aria-label="Close"></button>
-            </div>
-            <div className="h-100 d-md-none d-flex align-items-center justify-content-center">
-                <div className="d-grid gap-2 w-100 m-2">
-                    <Button size="sm" variant="danger" onClick={() => deleteItem(element.id)}>Delete Item</Button>
-                </div>
+                <button onClick={deleteElement} type="button" className="btn-close" aria-label="Close"></button>
             </div>
         </Col>
     </Row>
