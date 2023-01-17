@@ -21,7 +21,6 @@ const SoldOutImg = () => {
           return (product.isSold &&
         <div className="soldOut">Sold Out</div>
         )
-    
 }
 
 const SoldOutShipping = () => {
@@ -40,9 +39,6 @@ const SoldOutShipping = () => {
         )
     }
 }
-
-
-
 
 const busket = {
     id: product.id,
@@ -73,9 +69,7 @@ const SoldOutButton = () => {
                 </Col>
             </>
         )
-    
 }
-
 
     return (
         <Container>

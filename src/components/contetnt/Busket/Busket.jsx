@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +11,7 @@ export const Busket = () => {
     
     const { show, handleClose, clearBusket, item, itemAdded } = useContext(StoreContext)
     const { checkRegister } = useContext(UserContext)
+
     const clear = () => {
         clearBusket()
         handleClose()
@@ -25,15 +26,26 @@ export const Busket = () => {
         if (!checkRegister) {
             let text = "If you want to confirm the order - you need to register\nEither OK or Cancel.";
             if (window.confirm(text) === true) {
+                window.scroll(0,0)
                 navigate('/account')
                 handleClose()
               } 
             else {handleClose()}
         }
         else {
+        window.scroll(0,0)
         navigate("/buy-page")
         handleClose()}
     }
+    const countTottalPrice = item.reduce((acc, curr) => acc + curr.amount * curr.price, 0)
+
+    const [allPrice, setAllPrice] = useState(countTottalPrice)
+
+    useEffect(() => {
+        setAllPrice(countTottalPrice)
+    }, [item, countTottalPrice])
+
+    let tottalAmount = (allPrice + shippingCost)
     
     return (
         <>
@@ -61,9 +73,9 @@ export const Busket = () => {
 
                 <hr />
                 <div>
-                    <p>Subtotal amount <span>€{0.00}*</span></p>
-                    <p>Shipping costs <span>€{shippingCost}*</span></p>
-                    <h5 className='fw-bold'>Total amount <span>€{0.00}*</span></h5>
+                    <p>Subtotal amount <span>€{allPrice.toFixed(2)}*</span></p>
+                    <p>Shipping costs <span>€{shippingCost.toFixed(2)}*</span></p>
+                    <h5 className='fw-bold'>Total amount <span>€{tottalAmount.toFixed(2)}*</span></h5>
                 </div>
                 <div className="d-grid gap-2">
                     {item.length > 0 &&
