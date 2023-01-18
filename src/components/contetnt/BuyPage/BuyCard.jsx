@@ -24,7 +24,7 @@ useEffect(() => {
     setAmount(amount)
     setSize(size)
     handleUpdate(oldData)
-}, [size, amount, price, element])
+}, [size, amount, price, element, oldData])
 
 const deleteElement = () => {
     deleteItem(element.id)

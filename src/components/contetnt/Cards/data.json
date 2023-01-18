@@ -1,177 +1,317 @@
 {
-    "ticket": [
-      {
-        "id": "еt-01",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 18.01.2023, Vilnius, LT",
-        "price": 73.20,
-        "isSold": false       
-      },
-      {
-        "id": "et-02",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": false       
-      },
-      {
-        "id": "et-03",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": true       
-      },
-      {
-        "id": "et-04",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": false       
-      },
-      {
-        "id": "et-05",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": true       
-      },
-      {
-        "id": "et-06",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": false       
-      },
-      {
-        "id": "et-07",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": false       
-      },
-      {
-        "id": "et-08",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": false       
-      },
-      {
-        "id": "et-09",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": false       
-      },
-      {
-        "id": "et-010",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": false       
-      },
-      {
-        "id": "et-011",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": false       
-      },
-      {
-        "id": "et-012",
-        "name": "ticket",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
-        "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-        "price": 73.20,
-        "isSold": false       
-      }
-    ],
-    "shirts": [
-      {
-        "id": "sh-01",
-        "name": "shirts",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/ce/c7/e8/22-APO-tshirt-mayhem-black_200x200.jpg",
-        "title": "T-Shirt - Mayhem",
-        "price": 26.99,
-        "isSold": false,
-        "description": [
-          {"id":"01", "key":"Künstler*innen", "value":"Apocalyptica"},
-          {"id":"02", "key":"Produkttyp", "value":"T-shirt"},
-          {"id":"03", "key":"Passform", "value":"Regular Fit"},
-          {"id":"04", "key":"Materialzusammensetzung", "value":"100% Baumwolle in Bio-Qualität"},
-          {"id":"05", "key":"Rohware", "value":"Stanley/Stella"},
-          {"id":"06", "key":"Veredelung", "value":"Siebdruck"},
-          {"id":"07", "key":"Pflegehinweise", "value":"Maschinenwäsche bei 30°C, Mit ähnlichen Farben waschen"}
-        ] 
-      },
-      {
-        "id": "sh-02",
-        "name": "shirts",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/5b/5a/APO-TS-Skeletons_200x200.jpg",
-        "title": "T-Shirt - Skeletons",
-        "price": 24.99,
-        "isSold": true,
-        "description": "" 
-      },
-      {
-        "id": "sh-03",
-        "name": "shirts",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/5f/e8/bf/22-APO-tanktop-skull-black_200x200.jpg",
-        "title": "Tanktop - I'll get through it",
-        "price": 26.99,
-        "isSold": false  
-      },
-      {
-        "id": "sh-04",
-        "name": "shirts",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/1c/f8/7e/APO-LS-Cult_200x200.jpg",
-        "title": "Longsleeve - Cult",
-        "price": 34.99,
-        "isSold": true  
-      },
-      {
-        "id": "sh-05",
-        "name": "shirts",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/77/fc/2d/APO-TS-Cult_200x200.jpg",
-        "title": "T-Shirt - Cult",
-        "price": 25.99,
-        "isSold": true  
-      },
-      {
-        "id": "sh-06",
-        "name": "shirts",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/7e/0b/cd/APO-TS-CallMyName_200x200.jpg",
-        "title": "T-Shirt - Call my name",
-        "price": 24.99,
-        "isSold": true  
-      },
-      {
-        "id": "sh-07",
-        "name": "shirts",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/a3/33/cf/APO-TS-Eclipse_200x200.jpg",
-        "title": "T-Shirt - Eclipse",
-        "price": 24.99,
-        "isSold": false  
-      },
-      {
-        "id": "sh-08",
-        "name": "shirts",
-        "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/5f/e8/bf/22-APO-tanktop-skull-black_200x200.jpg",
-        "title": "Tanktop - I'll get through it",
-        "price": 26.99,
-        "isSold": false  
-      }
-    ]
-  }
-  
+  "ticket": [
+    {
+      "id": "еt-01",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 18.01.2023, Vilnius, LT",
+      "price": 73.20,
+      "isSold": false       
+    },
+    {
+      "id": "et-02",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": false       
+    },
+    {
+      "id": "et-03",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": true       
+    },
+    {
+      "id": "et-04",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": false       
+    },
+    {
+      "id": "et-05",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": true       
+    },
+    {
+      "id": "et-06",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": false       
+    },
+    {
+      "id": "et-07",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": false       
+    },
+    {
+      "id": "et-08",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": false       
+    },
+    {
+      "id": "et-09",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": false       
+    },
+    {
+      "id": "et-010",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": false       
+    },
+    {
+      "id": "et-011",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": false       
+    },
+    {
+      "id": "et-012",
+      "name": "ticket",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/21/ab/66/e-ticket_m_g_upgradeWFPbbG0s2XMly_200x200.jpg",
+      "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
+      "price": 73.20,
+      "isSold": false       
+    }
+  ],
+  "shirts": [
+    {
+      "id": "sh-01",
+      "name": "shirts",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/ce/c7/e8/22-APO-tshirt-mayhem-black_200x200.jpg",
+      "title": "T-Shirt - Mayhem",
+      "price": 26.99,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"Künstler*innen", "value":"Apocalyptica"},
+        {"id":"02", "key":"Produkttyp", "value":"T-shirt"},
+        {"id":"03", "key":"Passform", "value":"Regular Fit"},
+        {"id":"04", "key":"Materialzusammensetzung", "value":"100% Baumwolle in Bio-Qualität"},
+        {"id":"05", "key":"Rohware", "value":"Stanley/Stella"},
+        {"id":"06", "key":"Veredelung", "value":"Siebdruck"},
+        {"id":"07", "key":"Pflegehinweise", "value":"Maschinenwäsche bei 30°C, Mit ähnlichen Farben waschen"}
+      ] 
+    },
+    {
+      "id": "sh-02",
+      "name": "shirts",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/5b/5a/APO-TS-Skeletons_200x200.jpg",
+      "title": "T-Shirt - Skeletons",
+      "price": 24.99,
+      "isSold": true,
+      "description": "" 
+    },
+    {
+      "id": "sh-03",
+      "name": "shirts",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/5f/e8/bf/22-APO-tanktop-skull-black_200x200.jpg",
+      "title": "Tanktop - I'll get through it",
+      "price": 26.99,
+      "isSold": false  
+    },
+    {
+      "id": "sh-04",
+      "name": "shirts",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/1c/f8/7e/APO-LS-Cult_200x200.jpg",
+      "title": "Longsleeve - Cult",
+      "price": 34.99,
+      "isSold": true  
+    },
+    {
+      "id": "sh-05",
+      "name": "shirts",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/77/fc/2d/APO-TS-Cult_200x200.jpg",
+      "title": "T-Shirt - Cult",
+      "price": 25.99,
+      "isSold": true  
+    },
+    {
+      "id": "sh-06",
+      "name": "shirts",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/7e/0b/cd/APO-TS-CallMyName_200x200.jpg",
+      "title": "T-Shirt - Call my name",
+      "price": 24.99,
+      "isSold": true  
+    },
+    {
+      "id": "sh-07",
+      "name": "shirts",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/a3/33/cf/APO-TS-Eclipse_200x200.jpg",
+      "title": "T-Shirt - Eclipse",
+      "price": 24.99,
+      "isSold": false  
+    },
+    {
+      "id": "sh-08",
+      "name": "shirts",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/5f/e8/bf/22-APO-tanktop-skull-black_200x200.jpg",
+      "title": "Tanktop - I'll get through it",
+      "price": 26.99,
+      "isSold": false  
+    }
+  ],
+    "girls": [
+    {
+      "id": "gr-01",
+      "name": "girls",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/da/e9/6c/22-APO-tanktop-skull-black_600x600.jpg",
+      "title": "Tanktop - I'll get through it",
+      "price": 26.99,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"Artist:", "value":"Apocalyptica"},
+        {"id":"02", "key":"Style:", "value":"Tanktop"},
+        {"id":"03", "key":"Fit:", "value":"Slim Fit"},
+        {"id":"04", "key":"Refinement:", "value":"Screen print"},
+        {"id":"05", "key":"Care instructions:", "value":"machine wash at 30°C, Wash with similar colours"}
+      ] 
+    },
+              {
+      "id": "gr-02",
+      "name": "girls",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/77/84/d5/APO-TT-Apocalyptica_600x600.jpg",
+      "title": "Girls Tank - Apocalyptica",
+      "price": 25.99,
+      "isSold": true
+    },
+    {
+      "id": "gr-03",
+      "name": "girls",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/81/b5/77/APO-TT-CallMyName_600x600.jpg",
+      "title": "Girls Tank - Call my name",
+      "price": 24.99,
+      "isSold": true
+    }
+       ],
+    "hoods": [
+    {
+      "id": "hd-01",
+      "name": "hoods",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/6b/fd/6a/APO-Hoodie-MadeInHelsinki_600x600.jpg",
+      "title": "Hoodie - Made in Helsinki",
+      "price": 55.99,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"Artist:", "value":"Apocalyptica"},
+        {"id":"02", "key":"Style:", "value":"Hoodie"},
+        {"id":"03", "key":"Material:", "value":"100% organic cotton"},
+        {"id":"04", "key":"Supplier:", "value":"Continental Clothing"}
+      ] 
+    },
+    {
+      "id": "hd-02",
+      "name": "hoods",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/0a/17/a6/APO-Zipper-Metallic-Skull_600x600.jpg",
+      "title": "Zipper - Metallic Skull",
+      "price": 44.99,
+      "isSold": false
+    }
+  ],
+  "stuff": [
+    {
+      "id": "st-01",
+      "name": "stuff",
+      "img": [
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/a3/d8/fe/APO-Fotobuch-a_600x600.jpg",
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/8f/c7/db/APO-Fotobuch-b_600x600.jpg",
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/8b/60/b6/APO-Fotobuch-c_600x600.jpg",
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/6e/31/b3/APO-Fotobuch-d_600x600.jpg"
+      ],
+      "title": "Photo Book - Apocalyptica",
+      "price": 17.98,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"Artist:", "value":"Apocalyptica"},
+        {"id":"02", "key":"Größe:", "value":"100x150cm"},
+        {"id":"03", "key":"Accessories:", "value":"Flagge"}
+      ] 
+    },
+    {
+      "id": "st-02",
+      "name": "stuff",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/a8/1d/1b/APO-Flagge-A_600x600.jpg",
+      "title": "Flag - A",
+      "price": 14.99,
+      "isSold": false
+    },
+    {
+      "id": "st-03",
+      "name": "stuff",
+      "img": [
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/f1/9a/0a/APO-Bandana-Ouija-1_600x600.jpg",
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/af/ee/01/APO-Bandana-Ouija-2_600x600.jpg"
+      ],
+      "title": "Bandana - Ouija",
+      "price": 15.99,
+      "isSold": true
+    },
+    {
+      "id": "st-04",
+      "name": "stuff",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/9a/96/e4/APO-Lanyard-Typo_600x600.jpg",
+      "title": "Lanyard - Apocalyptica Typo",
+      "price": 10.00,
+      "isSold": false
+    },
+    {
+      "id": "st-05",
+      "name": "stuff",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/62/2f/01/APO-Patch_A_600x600.jpg",
+      "title": "Patch - A",
+      "price": 5.99,
+      "isSold": false
+    },
+    {
+      "id": "st-06",
+      "name": "stuff",
+      "img": [
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/bf/a7/d7/APO_coffee_1_600x600.jpg",
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/5d/9d/a0/APO_coffee_3_600x600.jpg",
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/8f/3f/e9/APO_coffee_2_600x600.jpg"
+      ],
+      "title": "Apocalyptica Coffee",
+      "price": 11.95,
+      "isSold": true,
+      "description": [
+        {"id":"01", "key":"", "value":"<div><p>Order <a style href='https://en.helsinginkahvipaahtimo.fi/product/72/'>here</a></p><br /><br /><p>Together with Helsinki Coffee Roastery we chose their 50/60 to be our first own coffee. How and why did we choose the coffee, you might ask? It was by tasting. In our opinion this was the coffee that best expressed Apocalyptica in a caffeinated form.</p><br /><br /><p>t’s a perfect espresso for the traditional taste. Goes nicely in a latte as well as straight up as a strong shot like a digestive. Many coffee lovers have found its mouth filling creaminess to be great as a filter coffee too. </p><br /><br /><br /><p>We hope you enjoy it!</p><br /><p>APOCALYPTICA</p><p>Eicca, Mikko, Paavo, Perttu</p></div>"}
+      ] 
+    },
+    {
+      "id": "st-07",
+      "name": "stuff",
+      "img": [
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/d4/ef/96/IMG_9013_klein_600x600.jpg",
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/56/03/19/Apocalyptica-vol2_600x600.jpg"
+      ],
+      "title": "Apocalyptica Coffee Vol. 2",
+      "price": 11.95,
+      "isSold": true,
+      "description": [
+        {"id":"01", "key":"", "value":"<div><p>Order <a href='https://en.helsinginkahvipaahtimo.fi/product/91/apocalyptica-coffee-vol-2'>here</a></p><br /><br /><p>This is the second coming of Apocalyptica Coffee. Their new single I'll Get Through It has just been released and with it comes the launching of the new coffee!</p><br /><br /><p>The band chose a combination of our Blend No4 and 50/60 to be their second own coffee. And the decision was made again naturally by tasting. In their opinion this was the coffee that best expressed the darker side of Apocalyptica in coffee form.</p><br /><br /><p>Apocalyptica coffee vol. 2 is delivered in a brown craft paper bag with the band's official label.</p><br /><br /><p>In this coffee the smooth richness of Blend No4 is combined with the robusta kick of Fifty-Sixty. This too goes nicely in a latte as well as straight up as a strong shot like a digestive, but also nicely as filter coffee especially with a bit of milk.</p></div>"}
+      ] 
+    }
+  ]
+}
