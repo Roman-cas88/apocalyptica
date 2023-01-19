@@ -88,7 +88,7 @@ return (
             
             {/* Button for adaptive */}
             <div className="h-100 w-100 d-grid d-md-none  m-md-0">
-                <Button onClick={deleteElement} size="sm" variant="danger">Remove item</Button>
+                <Button onClick={deleteElement} size="sm" variant="danger">Remove this item</Button>
             </div>
         </Col>
     </Row>

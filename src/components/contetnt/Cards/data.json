@@ -313,5 +313,122 @@
         {"id":"01", "key":"", "value":"<div><p>Order <a href='https://en.helsinginkahvipaahtimo.fi/product/91/apocalyptica-coffee-vol-2'>here</a></p><br /><br /><p>This is the second coming of Apocalyptica Coffee. Their new single I'll Get Through It has just been released and with it comes the launching of the new coffee!</p><br /><br /><p>The band chose a combination of our Blend No4 and 50/60 to be their second own coffee. And the decision was made again naturally by tasting. In their opinion this was the coffee that best expressed the darker side of Apocalyptica in coffee form.</p><br /><br /><p>Apocalyptica coffee vol. 2 is delivered in a brown craft paper bag with the band's official label.</p><br /><br /><p>In this coffee the smooth richness of Blend No4 is combined with the robusta kick of Fifty-Sixty. This too goes nicely in a latte as well as straight up as a strong shot like a digestive, but also nicely as filter coffee especially with a bit of milk.</p></div>"}
       ] 
     }
+  ],
+  "music": [
+    {
+      "id": "mu-01",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/a7/79/4d/APO-Boxset-Cell-0_600x600.jpg",
+      "title": "Box Set - Cell-0",
+      "price": 62.00,
+      "isSold": true       
+    },
+    {
+      "id": "mu-02",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/49/e7/e2/APO-LP-Cell-0_600x600.jpg",
+      "title": "LP - Cell-0",
+      "price": 38.00,
+      "isSold": true,
+      "description": [
+        {"id":"01", "key":"", "value":"The new Apocalyptica album Cell-0 on 12' double vinyl, in a triple gatefold sleeve with limited edition custom etching on side D. Includes a 20-page booklet."}
+      ] 
+    },
+    {
+      "id": "mu-03",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e2/06/6d/APO-Mediabook-Cell-0_600x600.jpg",
+      "title": "CD Mediabook - Cell-0",
+      "price": 17.01,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"", "value":"The new Apocalyptica album Cell-0 on CD Mediabook."}
+      ] 
+    },
+    {
+      "id": "mu-04",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/68/d6/9b/APO-LP-PMBFC_600x600.jpg",
+      "title": "LP+DVD - Plays Metallica by four cellos - A LIVE Performance",
+      "price": 37.98,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"", "value":"WORLD-FAMOUS CELLO REBELS ANNOUNCE NEW LIVE ALBUM: “APOCALYPTICA PLAYS METALLICA BY FOUR CELLOS - A LIVE PERFORMANCE” OUT FEBRUARY 8TH, 2019!"}
+      ] 
+    },
+    {
+      "id": "mu-05",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/f4/da/c5/APO-CD-PMBFC_600x600.jpg",
+      "title": "CD+DVD - Plays Metallica by four cellos - A LIVE Performance",
+      "price": 19.99,
+      "isSold": true,
+      "description": [
+        {"id":"01", "key":"", "value":"WORLD-FAMOUS CELLO REBELS ANNOUNCE NEW LIVE ALBUM: “APOCALYPTICA PLAYS METALLICA BY FOUR CELLOS - A LIVE PERFORMANCE” OUT DECEMBER 7th, 2018"}
+      ] 
+    },
+    {
+      "id": "mu-06",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/f2/8f/fd/APO-Boxset-Shadowmaker_600x600.jpg",
+      "title": "Boxset - Shadowmaker, 2015 (Special Edition)",
+      "price": 40.00,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"", "value":"Beinhaltet neben der Mediabook-CD und dem 180g Doppel-Vinyl ein exklusives Apocalyptica-Windlicht und diverse Photos."}
+      ] 
+    },
+    {
+      "id": "mu-07",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/6b/f2/0a/APO-LP-Shadowmaker_600x600.jpg",
+      "title": "LP - Shadowmaker",
+      "price": 19.99,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"", "value":"180g schwarzes Doppel-Vinyl, inclusive CD mit allen Tracks"}
+      ] 
+    },
+    {
+      "id": "mu-08",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/07/05/ff/APO-Mediabook-Shadowmaker_600x600.jpg",
+      "title": "CD - Shadowmaker (Mediabook)",
+      "price": 19.99,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"", "value":"Tracklist (+2 Bonustracks!):1. I-III-V Seed of Chaos"}
+      ] 
+    },
+    {
+      "id": "mu-09",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/5d/1c/dc/APO-CD-Shadowmaker_600x600.jpg",
+      "title": "CD - Shadowmaker (Jewelcase)",
+      "price": 14.99,
+      "isSold": false,
+      "description": [
+        {"id":"01", "key":"", "value":"Tracklist (+2 Bonustracks!):1. I-III-V Seed of Chaos"}
+      ] 
+    },
+    {
+      "id": "mu-10",
+      "name": "music",
+      "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/06/e4/94/APO-CD-Im-not-jesus_600x600.jpg",
+      "title": "Single - I'm Not Jesus (CD)",
+      "price": 2.99,
+      "isSold": false
+    },
+    {
+      "id": "mu-11",
+      "name": "music",
+      "img": [
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/ff/64/47/APO-CD-Eicca-Toppinen-a_600x600.jpg",
+        "https://d1lhyycl5p8pom.cloudfront.net/media/image/a3/86/ac/APO-CD-Eicca-Toppinen-b_600x600.jpg"
+      ],
+      "title": "Eicca Toppinen - Music For The Movie Black Ice",
+      "price": 10.00,
+      "isSold": false
+    }
   ]
 }
