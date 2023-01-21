@@ -17,7 +17,7 @@ export const Tickets = () => {
             <Row >
 
             </Row>
-                <Row xs={1} md={2} lg={3} xl={4} className="g-3">
+                <Row xs={2} md={2} lg={3} xl={4} className="g-3">
                     {ticket.map((card) => (
                         <Col key={card.id}>
                             <Cards card={card} />

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Col, Row, Image, Container, Dropdown } from 'react-bootstrap'
+import { Col, Row, Image, Container, Dropdown, Button } from 'react-bootstrap'
 import { StoreContext } from '../StoreContext/StoreContext'
 
 
@@ -24,7 +24,7 @@ useEffect(() => {
     setAmount(amount)
     setSize(size)
     handleUpdate(oldData)
-}, [size, amount, price, element])
+}, [size, amount, price])
 
 const deleteElement = () => {
     deleteItem(element.id)
@@ -32,7 +32,7 @@ const deleteElement = () => {
 }
 
 return (
-    <Container className='bg-white mb-2 border'>
+    <Container className='bg-white p-2 mb-2 border'>
     <Row className='text-center mh-100'>
         <Col md="2">
             <Image src={element.img} alt={element.title} fluid />
@@ -84,6 +84,11 @@ return (
         <Col md="1">
             <div className="h-100 d-none d-md-flex align-items-center justify-content-center">
                 <button onClick={deleteElement} type="button" className="btn-close" aria-label="Close"></button>
+            </div>
+            
+            {/* Button for adaptive */}
+            <div className="h-100 w-100 d-grid d-md-none  m-md-0">
+                <Button onClick={deleteElement} size="sm" variant="danger">Remove this item</Button>
             </div>
         </Col>
     </Row>
