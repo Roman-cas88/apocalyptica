@@ -21,7 +21,6 @@ export const Cards = ({ card }) => {
             <Card.Text className="mt-3" style={{fontWeight:"bold"}}>€{card.price.toFixed(2)} *</Card.Text>
           </Card.Body>
         </Card>
-        </Link>
-      
+        </Link>    
       )
 }
