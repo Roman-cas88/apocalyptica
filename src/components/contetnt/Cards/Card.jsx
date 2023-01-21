@@ -1,4 +1,4 @@
-import { Card } from 'react-bootstrap'
+import { Card, Image } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import "./cards.css"
 
@@ -13,11 +13,11 @@ export const Cards = ({ card }) => {
 
     return (
       <Link style={{all: 'unset'}} to={`/${card.name}/product-page/${card.id}`}>
-        <Card style={{ textAlign:'center',cursor:"pointer" }}>
-          <Card.Img style={{position:"relative"}} variant="top" src={card.img} />
+        <Card style={{ position:"relative", height:'24rem', textAlign:'center',cursor:"pointer" }}>
+          <Card.Img style={{padding:"10px 30px"}} variant="top" width={250} height={250} src={card.img} alt={card.tittle} />
           <SoldOut />
-          <Card.Body>
-            <Card.Title style={{fontSize: "15px", fontWeight:"lighter"}}>{card.title}</Card.Title>
+          <Card.Body style={{position:"absolute", bottom: 0, width:"100%" }}>
+            <Card.Title style={{fontWeight:"lighter"}}>{card.title}</Card.Title>
             <Card.Text className="mt-3" style={{fontWeight:"bold"}}>€{card.price.toFixed(2)} *</Card.Text>
           </Card.Body>
         </Card>

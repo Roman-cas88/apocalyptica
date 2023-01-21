@@ -72,10 +72,10 @@ const SoldOutButton = () => {
 }
 
     return (
-        <Container>
+        <Container className='bg-white'>
         <Row>
             <Col style={{position:"relative", textAlign:"center"}}>
-                <img width="400px" src={product.img} alt={product.title} />
+                <img width="100%" src={product.img} alt={product.title} />
                 <SoldOutImg />
             </Col>
             <Col>
