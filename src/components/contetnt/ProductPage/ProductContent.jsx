@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'
 import { Container, Form, Col, Row, Stack } from "react-bootstrap"
-import { Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap'
 import { Description } from './Description'
 import "../Cards/cards.css"
 import { Busket } from "../Busket/Busket"
-import { StoreContext } from '../StoreContext/StoreContext';
+import { StoreContext } from '../StoreContext/StoreContext'
+import { ProductCarusel } from './ProductCarusel'
 
 export const ProductContent = ({product}) => {
     
@@ -129,6 +130,7 @@ const SoldOutButton = () => {
             </Col>
         </Row>
 <Description product={product}/>
+<ProductCarusel/>
     </Container>
 
     )
