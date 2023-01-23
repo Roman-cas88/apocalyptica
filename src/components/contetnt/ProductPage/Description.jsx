@@ -8,8 +8,9 @@ export const Description = ({ product }) => {
     
             product.description.map((des) => (
                 <tr key={des.id}>
-                    <th>{des.key}</th>
-                    <td>{des.value}</td>
+                    <th className="d-none d-md-table-cell">{des.key}</th>
+                    <td className="d-none d-md-table-cell">{des.value}</td>
+                    <td className="d-block d-md-none"><b>{des.key}:</b> <br/><i>{des.value}</i></td>
                 </tr>
             ))
             )
@@ -20,7 +21,7 @@ return (
     <form>
         <fieldset>
             <legend>Description</legend>
-            <div style={{}} className='fw-bold mb-3'>
+            <div className='fw-bold mb-3'>
                     Product information "{product.title}"
                 </div>
             <Table style={{maxWidth:'500px'}} striped bordered hover size='sm'>
