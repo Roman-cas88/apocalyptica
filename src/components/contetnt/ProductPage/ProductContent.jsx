@@ -64,7 +64,7 @@ const SoldOutButton = () => {
         return (!product.isSold &&
             <>
                 <Col>
-                    <Button onClick={ addItem } className="w-100">ADD TO CARD</Button>
+                    <Button type="submit" onClick={ addItem } className="w-100">ADD TO CARD</Button>
                     <Busket />
                 </Col>
             </>
@@ -74,7 +74,7 @@ const SoldOutButton = () => {
     return (
         <Container className='bg-white'>
         <Row>
-            <Col style={{position:"relative", textAlign:"center"}}>
+            <Col>
                 <img width="100%" src={product.img} alt={product.title} />
                 <SoldOutImg />
             </Col>
@@ -87,13 +87,13 @@ const SoldOutButton = () => {
                 <Form>
                     <Form.Group className='mt-4'>
                         <Form.Label>Color:</Form.Label>
-                        <Form.Select id="disabledSelect">
+                        <Form.Select className="fw-bold">
                             <option>schwarz</option>
                         </Form.Select>
                     </Form.Group>
                     <Form.Group className='mt-4'>
                         <Form.Label>Größe:</Form.Label>
-                        <Form.Select onChange={(event) => setSize(event.target.value)} id="size">
+                        <Form.Select value={size} onChange={(event) => setSize(event.target.value)} className="fw-bold">
                             <option>S</option>
                             <option>M</option>
                             <option>L</option>
@@ -106,7 +106,7 @@ const SoldOutButton = () => {
                     <Col>
                     <Form.Group>
                         
-                        <Form.Select onChange={(event) => setAmount(event.target.value)} id="quantity" className="fw-bold">
+                        <Form.Select value={amount} onChange={(event) => setAmount(event.target.value)} className="fw-bold">
                             <option>1</option> 
                             <option>2</option>
                             <option>3</option>
