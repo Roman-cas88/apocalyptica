@@ -1,0 +1,37 @@
+{
+    "nav" : 
+        {
+        "home": "HEIMAT",
+        "tickets": "TICKETS",
+        "shirts": "SHIRTS",
+        "girls": "GIRLS",
+        "hoods": "HOODS",
+        "music": "MUSIC",
+        "stuff": "STUFF",
+        "information": "Informationen",
+        "categories": "Kategorien",
+        "closemenu": "Menü schließen",
+        "faq": "FAQ",
+        "return": "Rücksendung"
+        },
+    "headertop":
+        {
+        "help": " Service/Hilfe"
+        },
+    "footer":
+        {
+        "information": "INFORMATIONEN",
+        "consumerarbitration": "Consumer arbitration",
+        "cookieSettings": "Cookie-Settings",
+        "imprint": "Imprint",
+        "privacy": "Privacy",
+        "termsConditions": "Terms and Conditions",
+        "revocation": "Revocation",
+        "shopservice": "SHOP SERVICE", 
+        "shipping": "VERSAND",
+        "paiment": "ZAHLUNGSATEN",
+        "contact": "KONTAKT",
+        "comment": "* Alle Preise inkl. gesetzl. Mehrwertsteuer zzgl. Versandkosten und ggf. Nachnahmegebühren, wenn nicht anders beschrieben"
+
+        }
+}

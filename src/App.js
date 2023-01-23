@@ -5,8 +5,9 @@ import {Footer} from './components/footer/Footer';
 import { StoreContext } from "./components/contetnt/StoreContext/StoreContext";
 import { useState } from "react";
 import { Cookie } from "./components/cookie/Cookie";
-
-
+import i18n from './i18n';
+import React, { Suspense } from 'react';
+import LocaleContext from "./LocaleContext";
 
 export default function App() {
 // Creating global Storage using useContext 
@@ -51,7 +52,13 @@ export default function App() {
     setSize,
   }
   const styleContent = {background: '#f5f5f5'};
+
+  const [locale, setLocale] = useState(i18n.language);
+  i18n.on("languageChanged", (lng) => setLocale(i18n.language));
+
   return (
+    <LocaleContext.Provider value={{ locale, setLocale }}>
+    <Suspense fallback="loading">
     <StoreContext.Provider value={store}>
     <Container fluid >
       <Header />
@@ -65,5 +72,8 @@ export default function App() {
       <Cookie />
     </Container>
     </StoreContext.Provider>
+    </Suspense>
+    </LocaleContext.Provider>
+
   );
 }
