@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 import { Container, Navbar, Nav, Offcanvas } from "react-bootstrap/"
 import { NavLink } from "react-router-dom";
 import "./navBar.css"
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next"; 
+import { HeaderLanguage } from "../header/HeaderLanguage";
 
 export default function NavBar() {
   // Unstyling navbar buttons     let unsetStyle = { all: 'unset' };
@@ -33,9 +34,11 @@ export default function NavBar() {
           <Offcanvas.Header closeButton className="text-white bg-dark">
             <Offcanvas.Title id="offcanvasNavbar-expand" >{t("nav.closemenu")}</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body className='p-0' onClick={handleClose}>
+          <Offcanvas.Body className='p-0' 
+          // onClick={handleClose}
+          >
             <Nav className='me-auto ' >
-              {/* <HeaderLanguage className="d-xs-none"/> */}
+              <NavLink className='d-md-none' ><HeaderLanguage /></NavLink>
               <NavLink className={navLinkStyleMdNoneBg} >{t("nav.categories")}</NavLink>
               <NavLink  className={navLinkStyle} to="/">{t("nav.home")}</NavLink>
               <NavLink  className={navLinkStyle} to="/tickets">{t("nav.tickets")}</NavLink>

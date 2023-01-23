@@ -6,21 +6,28 @@ import deflag from './img/de.png'
 import Select from 'react-select';     //  npm i --save react-select   https://react-select.com/home#custom-styles
 
 export function HeaderLanguage () {
+
+  // sessionStorage.setItem('language', 'value')
+  // Сохранение данных в sessionStorage
+  //sessionStorage.setItem('key', 'value');
+  // Получение данных из sessionStorage
+  //var data = sessionStorage.getItem('key');
+
+    const { locale } = useContext(LocaleContext);
+  
     const options = [
       { value: 'en', label: <div><img src={ukflag} width="20" alt="" />  en</div> },
       { value: 'de', label: <div><img src={deflag} width="20" alt="" />  de</div> },
     ]
-    // const [language, setLanguage] = useState(options[0].value);
-  
-    const { locale } = useContext(LocaleContext);
-  
-    function changeLocale(l) {
-      if (locale !== l.value) {
-        i18n.changeLanguage(l.value);
-        console.log('locale=',locale)
-      }
+    const defVal = locale === 'en' ? 0 : 1 ;
+    // const [defVal, setDefVal] = useState(options[locale === 'en' ? 0 : 1])
+    // useEffect(()=> {
+    //   setDefVal(options.map(num => {
+    //     if (num.value === locale) { return locale === 'en' ? options[0] : options[1]}
+    //   }))
+    //   console.log("useEf:", locale)
+    // }, []);  
 
-    }
     const selectStyle = { 
       control: (base) => ({
         ...base,
@@ -71,15 +78,23 @@ export function HeaderLanguage () {
   
   
     };
-  
+    function changeLocale(l) {
+      if (locale !== l.value) {
+        i18n.changeLanguage(l.value);
+      }
+    }
+
+
     return (
         <>
             <Select 
               onChange={changeLocale}
               styles={selectStyle}               
-              defaultValue={options[0]}
+              defaultValue={options[defVal]}
               options={options} 
               />
+                      {/* {console.log('defVal:', options[defVal].value)} */}
+
         </>
     )
 };

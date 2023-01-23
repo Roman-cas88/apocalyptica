@@ -8,7 +8,6 @@ function getCookie(cname) {
     // let x = document.cookie;
     let name = cname + "=";
     let ca = document.cookie.split(';');
-    console.log('ca:',ca)
     for(let i=0; i < ca.length; i++) {
         let c = ca[i]           
          while (c.charAt(0) === ' ') {
@@ -29,8 +28,6 @@ export const Cookie = () => {
 
     useEffect(() => {
         const isCookie = getCookie("myCookie");
-        console.log('isCookie:', isCookie)
-
         if(isCookie !== "true") {
         const timeout = setTimeout(() => {
             setIsShow(true)
