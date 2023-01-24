@@ -79,8 +79,8 @@ let productMap = product.map((item) => (
         slidesToSlide={1}
         swipeable
         >
-        {productMap}
-        </Carousel>
+            {productMap}
+            </Carousel>
 </Container>
     )
 }
