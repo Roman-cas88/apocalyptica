@@ -38,19 +38,19 @@ export default function NavBar() {
           // onClick={handleClose}
           >
             <Nav className='me-auto ' >
-              <NavLink className='d-md-none' ><HeaderLanguage /></NavLink>
+              <NavLink className='d-md-none'><HeaderLanguage /></NavLink>
               <NavLink className={navLinkStyleMdNoneBg} >{t("nav.categories")}</NavLink>
-              <NavLink  className={navLinkStyle} to="/">{t("nav.home")}</NavLink>
-              <NavLink  className={navLinkStyle} to="/tickets">{t("nav.tickets")}</NavLink>
-              <NavLink  className={navLinkStyle} to="/shirts">{t("nav.shirts")}</NavLink>
-              <NavLink  className={navLinkStyle} to="/girls">{t("nav.girls")}</NavLink>
-              <NavLink  className={navLinkStyle} to="/hoods">{t("nav.hoods")}</NavLink>
-              <NavLink  className={navLinkStyle} to="/music">{t("nav.music")}</NavLink>
-              <NavLink className={navLinkStyle} to="/stuff">{t("nav.stuff")}</NavLink>
+              <NavLink  className={navLinkStyle} to="/" onClick={handleClose} >{t("nav.home")}</NavLink>
+              <NavLink  className={navLinkStyle} to="/tickets" onClick={handleClose} >{t("nav.tickets")}</NavLink>
+              <NavLink  className={navLinkStyle} to="/shirts" onClick={handleClose} >{t("nav.shirts")}</NavLink>
+              <NavLink  className={navLinkStyle} to="/girls" onClick={handleClose} >{t("nav.girls")}</NavLink>
+              <NavLink  className={navLinkStyle} to="/hoods" onClick={handleClose} >{t("nav.hoods")}</NavLink>
+              <NavLink  className={navLinkStyle} to="/music" onClick={handleClose} >{t("nav.music")}</NavLink>
+              <NavLink className={navLinkStyle} to="/stuff" onClick={handleClose} >{t("nav.stuff")}</NavLink>
               <NavLink className={navLinkStyle} href='https://en.helsinginkahvipaahtimo.fi/search/?q=apocalyptica' target="_blank">COFFEE</NavLink>              
               <NavLink className={navLinkStyleMdNoneBg} >{t("nav.information")}</NavLink>
-              <NavLink  className={navLinkStyleMdNone}   to="/">{t("nav.faq")}</NavLink>
-              <NavLink  className={navLinkStyleMdNone} to="/">{t("nav.return")}</NavLink>
+              <NavLink  className={navLinkStyleMdNone} to="/" onClick={handleClose} >{t("nav.faq")}</NavLink>
+              <NavLink  className={navLinkStyleMdNone} to="/" onClick={handleClose} >{t("nav.return")}</NavLink>
               <hr className='d-md-none' />
             </Nav>
           </Offcanvas.Body>

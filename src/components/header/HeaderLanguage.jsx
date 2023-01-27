@@ -1,13 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect} from 'react';
 import LocaleContext from "../../../src/LocaleContext";
 import i18n from "../../../src/i18n";
 import ukflag from './img/uk.png'
 import deflag from './img/de.png'
-// import Select from 'react-select';     //  npm i --save react-select   https://react-select.com/home#custom-styles
 import { Dropdown, ButtonGroup } from 'react-bootstrap';
 
 export function HeaderLanguage () {
-    const { locale } = useContext(LocaleContext);
     const options = [
       {
         value: "en",
@@ -18,46 +16,35 @@ export function HeaderLanguage () {
         label: (<img src={deflag} width="20" alt="" />)
       } 
     ];
-    const [lang, setLang] = useState(locale);
-    const [langLabel, setLangLabel] = useState(options[0].label);
+    const { locale } = useContext(LocaleContext);
+  
+    // let option = options.find(obj => obj.value === locale);  
+    const [langLabel, setLangLabel] = useState('');
   
     function  handlclick(n){
-      setLangLabel(options[n].label);
-      setLang(options[n].value);
-       if (locale !== lang) {
-        i18n.changeLanguage(lang);
-        console.log('<>lang:',lang,'locale:', locale)
-       }
+      if (locale !== options[n].value) {
+        i18n.changeLanguage(options[n].value);
+      }
     }
 
-    // function changeLocale(l) {
-    //   console.log('l.value:',l)
-    //   const lbl = l.value === 'en' ? options[0] : options[1] 
-    //   if (locale !== l.value) {
-    //     i18n.changeLanguage(l.value);
-    //     setLangLabel(lbl.label);
-    //     setLang(lbl.value);
-    //   }
-    // }
+    useEffect(()=>{
+      setLangLabel(options.find(obj => obj.value === locale).label);
+    },[locale])
 
     return (
         <>
-        <Dropdown as={ButtonGroup}>
+        <Dropdown as={ButtonGroup} className="d-inline-block">
           <Dropdown.Toggle
-            className=" bg-transparent btn-outline-secondary border-0 p-0"
+            className=" bg-transparent btn-outline-secondary border-0 pt-0"
             id="lng-dropdown"
           >
             {langLabel}
           </Dropdown.Toggle>
-          <Dropdown.Menu>
+          <Dropdown.Menu >
           <Dropdown.Item onClick={() => handlclick(0)}>{options[0].value}</Dropdown.Item>
           <Dropdown.Item onClick={() => handlclick(1)}>{options[1].value}</Dropdown.Item>
         </Dropdown.Menu>
         </Dropdown>
-        <p>{lang}</p>
-        <p>{locale}</p>
-
-
         </>
     )
 };
