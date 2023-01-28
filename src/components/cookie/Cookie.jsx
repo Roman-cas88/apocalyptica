@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import CookieConsent from "react-cookie-consent";
 
 function getCookie(cname) {
-    // let x = document.cookie;
     let name = cname + "=";
     let ca = document.cookie.split(';');
     for(let i=0; i < ca.length; i++) {
@@ -15,7 +14,7 @@ function getCookie(cname) {
            }
 
         if (c.indexOf(name) === 0) {     //  c == "myCookie=true" or "myCookie=false"
-            console.log('name:',name, 'c:',c, 'c.substring(name.length',c.substring(name.length))
+            //console.log('name:',name, 'c:',c, 'c.substring(name.length',c.substring(name.length))
             // return c.substring(name.length, c.length);
             return c.substring(name.length);
           }
@@ -48,7 +47,7 @@ export const Cookie = () => {
                     cookieName="myCookie"
                     style={{ display: "block", fontSize: "14px", color: "grey", background: "#f5f5f5" }}
                     buttonStyle={{ width: "40%", color: "white", fontSize: "1rem", background: "#1e4f7c" }}
-                    expires={1}  // for debug
+                    expires={7}  // for debug
                     overlay
                     enableDeclineButton
                     flipButtons

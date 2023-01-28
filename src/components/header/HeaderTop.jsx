@@ -1,7 +1,7 @@
 import { Container, Navbar, Col, Row, Dropdown, NavItem, NavLink} from "react-bootstrap/";
 import { BsFillQuestionCircleFill, } from "react-icons/bs";
 import { Link } from "react-router-dom"; 
-import { HeaderLanguage } from './HeaderLanguage'
+import { HeaderLanguage } from './HeaderLanguage';
 import { useTranslation } from "react-i18next";
 
 export default function HeaderTop() {

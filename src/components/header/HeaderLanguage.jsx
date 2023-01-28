@@ -1,100 +1,41 @@
-import React, { useContext } from 'react';
-import LocaleContext from "../../../src/LocaleContext";
-import i18n from "../../../src/i18n";
+import React, { useContext, useState, useEffect} from 'react';
+import LocaleContext from "../../LocaleContext";
+import i18n from "../../i18n";
 import ukflag from './img/uk.png'
 import deflag from './img/de.png'
-import Select from 'react-select';     //  npm i --save react-select   https://react-select.com/home#custom-styles
+import { Dropdown, ButtonGroup } from 'react-bootstrap';
 
 export function HeaderLanguage () {
-
-  // sessionStorage.setItem('language', 'value')
-  // Сохранение данных в sessionStorage
-  //sessionStorage.setItem('key', 'value');
-  // Получение данных из sessionStorage
-  //var data = sessionStorage.getItem('key');
+    const enLabel = (<img src={ukflag} width="20" alt="" />);
+    const deLabel = (<img src={deflag} width="20" alt="" />);
 
     const { locale } = useContext(LocaleContext);
+    const [langLabel, setLangLabel] = useState(enLabel);
   
-    const options = [
-      { value: 'en', label: <div><img src={ukflag} width="20" alt="" />  en</div> },
-      { value: 'de', label: <div><img src={deflag} width="20" alt="" />  de</div> },
-    ]
-    const defVal = locale === 'en' ? 0 : 1 ;
-    // const [defVal, setDefVal] = useState(options[locale === 'en' ? 0 : 1])
-    // useEffect(()=> {
-    //   setDefVal(options.map(num => {
-    //     if (num.value === locale) { return locale === 'en' ? options[0] : options[1]}
-    //   }))
-    //   console.log("useEf:", locale)
-    // }, []);  
-
-    const selectStyle = { 
-      control: (base) => ({
-        ...base,
-        padding: 0,
-        border: '0',
-        boxShadow: 'none',
-        height: '10px',
-      }),
-      indicatorSeparator: (base) => ({
-        ...base,
-         display: 'none',
-         height: '10px',
-      }),
-      valueContainer: (provided) => ({
-        ...provided,
-        paddingTop: '0',
-      }),
-      dropdownIndicator: (base) => ({
-        ...base,
-        color: '#757575',
-        padding: 0,
-        height: '40px',
-       //
-      }),
-      clearIndicator: (base) => ({
-        ...base,
-       }),
-      container: (base) => ({
-        ...base,
-      }),
-      input: (base) => ({
-        ...base,
-        height: '10px',
-      }),
-      singleValue: (provided) => ({
-        ...provided,
-        height: '40px',   // 
-        paddingTop: '0',
-      }),
-  
-      option: (styles, { isFocused }) => {
-        return {
-          ...styles,
-          backgroundColor: isFocused ? '#e9ecef' : 'white',
-          color: 'black',
-          };
-      },
-  
-  
-    };
-    function changeLocale(l) {
-      if (locale !== l.value) {
-        i18n.changeLanguage(l.value);
+    function  changeLocale(l){
+      if (locale !== l) {
+        i18n.changeLanguage(l);
       }
     }
 
+    useEffect(()=>{
+      setLangLabel(locale === 'en' ? enLabel : deLabel)
+    },[locale])
 
     return (
         <>
-            <Select 
-              onChange={changeLocale}
-              styles={selectStyle}               
-              defaultValue={options[defVal]}
-              options={options} 
-              />
-                      {/* {console.log('defVal:', options[defVal].value)} */}
-
+        <Dropdown as={ButtonGroup} className="d-inline-block">
+          <Dropdown.Toggle
+            className=" bg-transparent btn-outline-secondary border-0 pt-0"
+            id="lng-dropdown"
+          >
+            {langLabel}
+          </Dropdown.Toggle>
+          <Dropdown.Menu >
+          <Dropdown.Item onClick={() => changeLocale('en')}>en</Dropdown.Item>
+          <Dropdown.Item onClick={() => changeLocale('de')}>de</Dropdown.Item>
+        </Dropdown.Menu>
+        </Dropdown>
         </>
     )
 };
