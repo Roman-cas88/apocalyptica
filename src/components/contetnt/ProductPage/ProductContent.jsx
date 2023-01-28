@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'
 import { Container, Form, Col, Row, Stack } from "react-bootstrap"
-import { Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap'
 import { Description } from './Description'
 import "../Cards/cards.css"
 import { Busket } from "../Busket/Busket"
-import { StoreContext } from '../StoreContext/StoreContext';
+import { StoreContext } from '../StoreContext/StoreContext'
+import { ProductCarusel } from './ProductCarusel'
 
 export const ProductContent = ({product}) => {
     
@@ -63,8 +64,8 @@ const SoldOutButton = () => {
 
         return (!product.isSold &&
             <>
-                <Col>
-                    <Button onClick={ addItem } className="w-100">ADD TO CARD</Button>
+                <Col md="6">
+                    <Button type="submit" onClick={ addItem } className="w-100">ADD TO CARD</Button>
                     <Busket />
                 </Col>
             </>
@@ -74,26 +75,29 @@ const SoldOutButton = () => {
     return (
         <Container className='bg-white'>
         <Row>
-            <Col style={{position:"relative", textAlign:"center"}}>
+            <Col className='d-none d-md-block'>
                 <img width="100%" src={product.img} alt={product.title} />
                 <SoldOutImg />
             </Col>
             <Col>
-                <p>Apocaliptica</p>
-                <h2>{product.title}</h2>
-                <h2>€{product.price.toFixed(2)} *</h2>
-                <h6>*incl. VAT plus shipping costs</h6>
-                <SoldOutShipping />
+                <div className="d-md-block d-flex flex-column align-items-center">
+                    <div><p>Apocaliptica</p></div>
+                    <div><h2>{product.title}</h2></div>
+                    <div className='d-block d-md-none text-center'><img width="70%" src={product.img} alt={product.title} /></div>
+                    <div><h2>€{product.price.toFixed(2)} *</h2></div>
+                    <div><h6>*incl. VAT plus shipping costs</h6></div>
+                    <SoldOutShipping />
+                </div>
                 <Form>
                     <Form.Group className='mt-4'>
                         <Form.Label>Color:</Form.Label>
-                        <Form.Select id="disabledSelect">
+                        <Form.Select className="fw-bold">
                             <option>schwarz</option>
                         </Form.Select>
                     </Form.Group>
                     <Form.Group className='mt-4'>
                         <Form.Label>Größe:</Form.Label>
-                        <Form.Select onChange={(event) => setSize(event.target.value)} id="size">
+                        <Form.Select value={size} onChange={(event) => setSize(event.target.value)} className="fw-bold">
                             <option>S</option>
                             <option>M</option>
                             <option>L</option>
@@ -103,17 +107,16 @@ const SoldOutButton = () => {
                     </Form.Group>
 
                     <Row className='mt-4'>
-                    <Col>
-                    <Form.Group>
-                        
-                        <Form.Select onChange={(event) => setAmount(event.target.value)} id="quantity" className="fw-bold">
-                            <option>1</option> 
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </Form.Select>
-                        </Form.Group>
+                        <Col md="6" className='mb-4 mb-md-0'>
+                            <Form.Group>
+                            <Form.Select value={amount} onChange={(event) => setAmount(event.target.value)} className="fw-bold">
+                                <option>1</option> 
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </Form.Select>
+                            </Form.Group>
                         </Col>
                         <SoldOutButton />
                     </Row>
@@ -127,6 +130,7 @@ const SoldOutButton = () => {
             </Col>
         </Row>
 <Description product={product}/>
+<ProductCarusel/>
     </Container>
 
     )
