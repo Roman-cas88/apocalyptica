@@ -7,7 +7,7 @@ import { Dropdown, ButtonGroup } from 'react-bootstrap';
 
 export function HeaderLanguage () {
     const enLabel = (<img src={ukflag} width="20" alt="" />);
-    const deLabel = (<img src={deflag} width="20" alt="" />);
+    //const deLabel = (<img src={deflag} width="20" alt="" />);
 
     const { locale } = useContext(LocaleContext);
     const [langLabel, setLangLabel] = useState(enLabel);
@@ -19,8 +19,9 @@ export function HeaderLanguage () {
     }
 
     useEffect(()=>{
-      setLangLabel(locale === 'en' ? enLabel : deLabel)
-    },[locale])
+      //setLangLabel(locale === 'en' ? enLabel : deLabel)
+      setLangLabel(locale === 'en' ? (<img src={ukflag} width="20" alt="" />) : (<img src={deflag} width="20" alt="" />));
+    },[locale])           //  WARNING:  React Hook useEffect has missing dependencies: 'deLabel' and 'enLabel'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
 
     return (
         <>

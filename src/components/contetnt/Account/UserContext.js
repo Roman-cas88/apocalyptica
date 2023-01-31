@@ -1,4 +1,4 @@
-import React, { useState,createContext, useContext, useEffect } from 'react'
+import React, { useState,createContext, useEffect } from 'react'
 
 const isAuthenticated = () => {
     const userLocaleStore = localStorage.getItem('user');
@@ -10,7 +10,7 @@ const isAuthenticated = () => {
 };
 
 
-const setLocaleStorage = (data) => { localStorage.setItem('user', JSON.stringify(data))};
+// const setLocaleStorage = (data) => { localStorage.setItem('user', JSON.stringify(data))};
 
 const removeLocaleStorage = () => { localStorage.removeItem('user') };
 
