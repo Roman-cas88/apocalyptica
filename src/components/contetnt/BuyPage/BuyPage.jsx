@@ -28,13 +28,14 @@ const deleteCart = (id) => {
     <Container>
       BuyPage 
       {item.map(element => 
-      <BuyCard key={element.id} element={element} deleteCart={deleteCart} handleUpdate={handleUpdate} />
+        <BuyCard key={element.id} element={element} deleteCart={deleteCart} handleUpdate={handleUpdate} />
       )}
-     <div>
-                    <p>Subtotal amount <span>€{subtotalAmount.toFixed(2)}*</span></p>
-                    <p>Shipping costs <span>€{shippingCost}*</span></p>
-                    <h5 className='fw-bold'>Total amount <span>€{tottalAmount}*</span></h5>
-                </div>
+
+      <div>
+        <p>Subtotal amount <span>€{subtotalAmount.toFixed(2)}*</span></p>
+        <p>Shipping costs <span>€{shippingCost}*</span></p>
+        <h5 className='fw-bold'>Total amount <span>€{tottalAmount}*</span></h5>
+      </div>
     </Container>
   )
 }
