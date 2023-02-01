@@ -1,3 +1,4 @@
+// import { match } from 'assert';
 import React, { useState, useRef } from 'react';
 import { Nav, Overlay, Popover } from "react-bootstrap/";
 import data from "../contetnt/Cards/data.json";
@@ -30,11 +31,16 @@ export const PopoverSearchList = (props) => {
 const SearchList = (props) => {
   const text = props.text;
   const { girls } = data;
+  const { ticket } = data;
+  const { shirts } = data;
+  const { hoods } = data;
+  const { stuff } = data;
+  const  allProducts = [...girls,...ticket,...shirts,...hoods,...stuff];
 
-  return girls.map((item) => {
+  return allProducts.map((item) => {
     return (
       <Nav.Item key={item.id}>
-        {item.title.includes(text) && <SearchedItem item={item} />}
+        {item.title.toLowerCase().includes(text.toLowerCase()) && <SearchedItem item={item} />}
       </Nav.Item>
     )
   })

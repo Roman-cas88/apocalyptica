@@ -1,8 +1,9 @@
 import { Row, Col } from "react-bootstrap/";
+import { Link } from 'react-router-dom'
 
 export const SearchedItem = ({ item }) => {
     return (
-        <>
+        <Link style={{all: 'unset', cursor: 'pointer'}} to={`/${item.name}/product-page/${item.id}`}>
             <Row>
                 <Col xs={2} >
                     <img src={item.img} width={50} height={50} alt={item.title}></img>
@@ -15,6 +16,6 @@ export const SearchedItem = ({ item }) => {
                 </Col>
             </Row>
             <hr className="my-0" />
-        </>
+        </Link> 
     )
 }
