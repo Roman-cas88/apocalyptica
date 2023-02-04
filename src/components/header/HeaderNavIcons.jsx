@@ -6,7 +6,10 @@ import HeaderSearch from './HeaderSearch';
 import { Busket } from '../contetnt/Busket/Busket';
 import { StoreContext } from '../contetnt/StoreContext/StoreContext';
 import { UserContext } from "../contetnt/Account/UserContext";
-import { PopoverMyAccount } from './PopoverMyAccount'
+import { PopoverMyAccount } from './PopoverMyAccount';
+import { createContext } from "react";
+
+export const isShownContext = createContext();
 
 export default function HeaderNavIcons() {
   const { counter, handleShow } = useContext(StoreContext)
@@ -15,7 +18,7 @@ export default function HeaderNavIcons() {
     color: 'black',
   }
   const [isShown, setIsShown] = useState(false);
-  const handleClick = event => {
+  const handleClick = () => {
     setIsShown(current => !current)
   }
   const [isShownMyAccount, setIsShownMyAccount] = useState(false);
@@ -29,6 +32,7 @@ export default function HeaderNavIcons() {
   const {nameAccount} = useContext(UserContext);
 
   return (
+    <isShownContext.Provider value={{isShown, setIsShown}}>
     <Container>
       <Row xs={1}>
         <Col >
@@ -53,10 +57,14 @@ export default function HeaderNavIcons() {
           </div>
         </Col>
         <Col >
-          {isShown && (<HeaderSearch />)}
+          {isShown && (<HeaderSearch  />)}   
         </Col>
 
       </Row>
     </Container>
+    </isShownContext.Provider>
   );
 }
+
+
+//setIsShown={setIsShown} isShown={isShown}

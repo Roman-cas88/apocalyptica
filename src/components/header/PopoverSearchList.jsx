@@ -1,40 +1,45 @@
-// import { match } from 'assert';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import { useEffect } from 'react';
 import { Nav, Overlay, Popover } from "react-bootstrap/";
 import data from "../contetnt/Cards/data.json";
-import { SearchedItem } from './SearchedItem'
+import { SearchedItem } from './SearchedItem';
+import {isShownContext} from "./HeaderNavIcons"
 
 export const PopoverSearchList = (props) => {
+   const {setIsShown} = useContext(isShownContext)
+
   const ref = useRef(null);
-   const [show, setShow] = useState(false);
+    const [isShow, setIsShow] = useState(false);
    const [resFooter , setResFooter] = useState(0);
- 
+
     useEffect(() => {
-      setShow(props.seachInput ? true : false)
+       setIsShow(props.seachInput ? true : false)
+
 
     },[props.seachInput] )
 
   return (
     <div ref={ref} >
       <Overlay
-        show={show}
+        show={isShow}
         target={props.target}
         placement="bottom-end"
         container={ref}
         containerPadding={20}
+
       >
-        <Popover id="popover-contained" onClick={() => setShow(false)} className="mw-100">
-          {/* <Popover.Header as="h3">`Search Result: {}`</Popover.Header>                // No results found */}
+        <Popover id="popover-contained" onClick={() => {setIsShow(false); setIsShown(false)}} className="mw-100">
           <Popover.Body className='p-0 '>
-            <SearchList text={props.seachInput} setResFooter={setResFooter}/>
-            <PopoverFooter resFooter={resFooter}/>
+            <SearchList text={props.seachInput} />
+            {/* <SearchList text={props.seachInput} setResFooter={setResFooter}/> */}
+            {/* <PopoverFooter resFooter={resFooter}/> */}
           </Popover.Body>
         </Popover>
       </Overlay>
     </div>
   );
 }
+
 
 const SearchList = (props) => {
   const text = props.text;
@@ -49,7 +54,7 @@ const SearchList = (props) => {
   return allProducts.map((item) => {
   let res = item.title.toLowerCase().includes(text.toLowerCase());
   i= res ? i+1 : i;
-  props.setResFooter(i);
+  // props.setResFooter(i);
     return (
 
       <Nav.Item key={item.id}>
@@ -62,7 +67,7 @@ const SearchList = (props) => {
 };
 
 const PopoverFooter = (props) => {
-const foot = props.resFooter == 0 ? `No results found` : `${props.resFooter} results`;
+const foot = props.resFooter === 0 ? `No results found` : `${props.resFooter} results`;
 
 return (
   <Nav className='p-2 w-100 justify-content-center'>
@@ -71,3 +76,4 @@ return (
 )
 }
 
+//  Warning: Cannot update a component (`PopoverSearchList`) while rendering a different component (`SearchList`). To locate the bad setState() call inside `SearchList`,
