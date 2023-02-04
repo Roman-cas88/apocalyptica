@@ -9,23 +9,9 @@ import { CaruselCard } from './CaruselCard';
 
 export const ProductCarusel = () => {
 let params = useParams()
-let productName = params.name
-let product = data[productName]
 
-let productMap = product.map((item) => (
+let productMap = data[params.name].map((item) => (
     <CaruselCard item={item} key={item.id} />
-
-
-
-    // <Container key={item.id} onClick={() => console.log("54")}>
-    //     <Card style={{ maxWidth: '12rem', height: '20rem'  }}>
-    //         <Card.Img variant="top" src={item.img} alt={item.title} />
-    //         <Card.Body>
-    //             <Card.Title>{item.title}</Card.Title>
-    //             <Card.Text>{item.price}</Card.Text>
-    //         </Card.Body>
-    //     </Card>
-    // </Container>
 ))
 
   return (
