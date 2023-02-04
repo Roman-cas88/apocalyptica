@@ -18,7 +18,7 @@ export const Cards = ({ card }) => {
           <SoldOut />
           <Card.Body style={{position:"absolute", bottom: 0, width:"100%" }}>
             <Card.Title style={{fontWeight:"lighter"}}>{card.title}</Card.Title>
-            <Card.Text className="mt-3" style={{fontWeight:"bold"}}>€{card.price.toFixed(2)} *</Card.Text>
+            <Card.Text className="mt-3" style={{fontWeight:"bold"}}>€{card.price?.toFixed(2)} *</Card.Text>
           </Card.Body>
         </Card>
         </Link>    

@@ -75,7 +75,7 @@ const SoldOutButton = () => {
     return (
         <Container className='bg-white'>
         <Row>
-            <Col className='d-none d-md-block'>
+            <Col className='d-none d-md-block position-relative me-3'>
                 <img width="100%" src={product.img} alt={product.title} />
                 <SoldOutImg />
             </Col>
@@ -83,7 +83,10 @@ const SoldOutButton = () => {
                 <div className="d-md-block d-flex flex-column align-items-center">
                     <div><p>Apocaliptica</p></div>
                     <div><h2>{product.title}</h2></div>
-                    <div className='d-block d-md-none text-center'><img width="70%" src={product.img} alt={product.title} /></div>
+                    <div className='d-block d-md-none text-center position-relative'>
+                        <img width="70%" src={product.img} alt={product.title} />
+                        <SoldOutImg />
+                        </div>
                     <div><h2>€{product.price.toFixed(2)} *</h2></div>
                     <div><h6>*incl. VAT plus shipping costs</h6></div>
                     <SoldOutShipping />
