@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import { Nav, Overlay, Popover } from "react-bootstrap/";
 import data from "../contetnt/Cards/data.json";
 import { SearchedItem } from './SearchedItem';
-import {isShownContext} from "./HeaderNavIcons"
+import {isShownSearchContext} from "./HeaderNavIcons"
 
 export const PopoverSearchList = (props) => {
-   const {setIsShown} = useContext(isShownContext)
+   const {setIsShownSearch} = useContext(isShownSearchContext)
 
   const ref = useRef(null);
     const [isShow, setIsShow] = useState(false);
@@ -28,7 +28,7 @@ export const PopoverSearchList = (props) => {
         containerPadding={20}
 
       >
-        <Popover id="popover-contained" onClick={() => {setIsShow(false); setIsShown(false)}} className="mw-100">
+        <Popover id="popover-contained" onClick={() => {setIsShow(false); setIsShownSearch(false)}} className="mw-100">
           <Popover.Body className='p-0 '>
             <SearchList text={props.seachInput} />
             {/* <SearchList text={props.seachInput} setResFooter={setResFooter}/> */}

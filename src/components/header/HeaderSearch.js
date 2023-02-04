@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState, useContext} from 'react';
 import { BsSearch } from "react-icons/bs";
 import { Form, InputGroup, Container } from "react-bootstrap/";
 import { PopoverSearchList } from "./PopoverSearchList";
-import {isShownContext} from "./HeaderNavIcons"
+import {isShownSearchContext} from "./HeaderNavIcons"
 
   export default function HeaderSearch() {
-    const {isShown, setIsShown} = useContext(isShownContext)
+    const {isShownSearch, setIsShownSearch} = useContext(isShownSearchContext)
     const [target, setTarget] = useState(null);
     const [seachInput, setSeachInput] = useState('');
     // const [isShownSearchRes, setisShownSearchRes] = useState(false);
@@ -26,7 +26,7 @@ import {isShownContext} from "./HeaderNavIcons"
       <Container >      
         <InputGroup  className="w-100 justify-content-end">
         <Form className="d-flex no-border" >
-        {isShown &&       
+        {isShownSearch &&       
         <Form.Control
           type="search"
           placeholder="Search"
@@ -36,7 +36,7 @@ import {isShownContext} from "./HeaderNavIcons"
           onChange={handleChange}
           autoFocus
           ref={searchRef}
-          // onBlur={() => {setIsShown(false); }}  // hide out of focus            
+          //onBlur={() => {setIsShownSearch(false); }}  // hide out of focus            
           />
          }
         </Form>

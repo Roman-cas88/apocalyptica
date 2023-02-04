@@ -9,7 +9,7 @@ import { UserContext } from "../contetnt/Account/UserContext";
 import { PopoverMyAccount } from './PopoverMyAccount';
 import { createContext } from "react";
 
-export const isShownContext = createContext();
+export const isShownSearchContext = createContext();
 
 export default function HeaderNavIcons() {
   const { counter, handleShow } = useContext(StoreContext)
@@ -17,9 +17,9 @@ export default function HeaderNavIcons() {
     margin: ".5rem",
     color: 'black',
   }
-  const [isShown, setIsShown] = useState(false);
+  const [isShownSearch, setIsShownSearch] = useState(false);
   const handleClick = () => {
-    setIsShown(current => !current)
+    setIsShownSearch(current => !current)
   }
   const [isShownMyAccount, setIsShownMyAccount] = useState(false);
   const [target, setTarget] = useState(null);
@@ -32,12 +32,12 @@ export default function HeaderNavIcons() {
   const {nameAccount} = useContext(UserContext);
 
   return (
-    <isShownContext.Provider value={{isShown, setIsShown}}>
+    <isShownSearchContext.Provider value={{isShownSearch, setIsShownSearch}}>
     <Container>
       <Row xs={1}>
         <Col >
           <div className="pt-2 text-end">
-            {!isShown && (
+            {!isShownSearch && (
               <Link onClick={handleClick} style={linkStyle} ><BsSearch size={22} /></Link>
             )}
             {nameAccount && (
@@ -57,12 +57,12 @@ export default function HeaderNavIcons() {
           </div>
         </Col>
         <Col >
-          {isShown && (<HeaderSearch  />)}   
+          {isShownSearch && (<HeaderSearch  />)}   
         </Col>
 
       </Row>
     </Container>
-    </isShownContext.Provider>
+    </isShownSearchContext.Provider>
   );
 }
 
