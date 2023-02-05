@@ -4,6 +4,7 @@ import { DeliveryInfo } from "./DeliveryInfo";
 import { Guarantee } from "./Guarantee";
 import NewMerch from "../img/newMerch-700x800.jpg";
 import { Link } from 'react-router-dom';
+import { СarouselTopseller } from "./СarouselTopseller";
 
 
 export const Home = () => {
@@ -23,6 +24,7 @@ export const Home = () => {
             </div>  
             <DeliveryInfo />
             <Guarantee />
+            <СarouselTopseller />
         </Container>
     )
 }
