@@ -1,31 +1,14 @@
-import { Container, Row, Col } from "react-bootstrap"
-import { Cards } from "../Cards/Card"
-
-
+import React from 'react'
 import data from "../Cards/data.json"
-
+import { Filter } from "../Filter/Filter"
 
 export const Tickets = () => {
-     const { ticket } = data
+    const { ticket } = data
 
     return (
         <>
-        <Container fluid>
-        </Container>
             <h2>Tickets</h2>
-            <Container>
-            <Row >
-
-            </Row>
-                <Row xs={2} md={2} lg={3} xl={4} className="g-3">
-                    {ticket.map((card) => (
-                        <Col key={card.id}>
-                            <Cards card={card} />
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
-    </>
-
+            <Filter props={ticket} />
+        </>
     )
 }

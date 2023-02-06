@@ -5,7 +5,7 @@
       "name": "ticket",
       "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/f0/e6/e-ticket_m_g_upgradeWFPbbG0s2XMly_600x600.jpg",
       "title": "Print@Home VIP Upgrade - 18.01.2023, Vilnius, LT",
-      "price": 73.20,
+      "price": 45.20,
       "isSold": false       
     },
     {
@@ -13,7 +13,7 @@
       "name": "ticket",
       "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/f0/e6/e-ticket_m_g_upgradeWFPbbG0s2XMly_600x600.jpg",
       "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-      "price": 73.20,
+      "price": 23.99,
       "isSold": false       
     },
     {
@@ -21,7 +21,7 @@
       "name": "ticket",
       "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/f0/e6/e-ticket_m_g_upgradeWFPbbG0s2XMly_600x600.jpg",
       "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-      "price": 73.20,
+      "price": 75.50,
       "isSold": true       
     },
     {
@@ -37,7 +37,7 @@
       "name": "ticket",
       "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/f0/e6/e-ticket_m_g_upgradeWFPbbG0s2XMly_600x600.jpg",
       "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-      "price": 73.20,
+      "price": 73.99,
       "isSold": true       
     },
     {
@@ -45,7 +45,7 @@
       "name": "ticket",
       "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/f0/e6/e-ticket_m_g_upgradeWFPbbG0s2XMly_600x600.jpg",
       "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-      "price": 73.20,
+      "price": 70.20,
       "isSold": false       
     },
     {
@@ -53,7 +53,7 @@
       "name": "ticket",
       "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/f0/e6/e-ticket_m_g_upgradeWFPbbG0s2XMly_600x600.jpg",
       "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-      "price": 73.20,
+      "price": 83.25,
       "isSold": false       
     },
     {
@@ -85,7 +85,7 @@
       "name": "ticket",
       "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/f0/e6/e-ticket_m_g_upgradeWFPbbG0s2XMly_600x600.jpg",
       "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-      "price": 73.20,
+      "price": 79.20,
       "isSold": false       
     },
     {
@@ -93,7 +93,7 @@
       "name": "ticket",
       "img": "https://d1lhyycl5p8pom.cloudfront.net/media/image/e8/f0/e6/e-ticket_m_g_upgradeWFPbbG0s2XMly_600x600.jpg",
       "title": "Print@Home VIP Upgrade - 19.01.2023, Riga, LV",
-      "price": 73.20,
+      "price": 93.20,
       "isSold": false       
     }
   ],
