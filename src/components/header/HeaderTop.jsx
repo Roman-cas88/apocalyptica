@@ -10,7 +10,7 @@ export default function HeaderTop() {
 
   return (
     <Navbar className="p-0">
-      <Container className="justify-content-end ">
+      <Container variant='dark' className="justify-content-end  bg-dark text-white">
         <Row >
           <Col>
           <HeaderLanguage />

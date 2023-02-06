@@ -23,7 +23,8 @@ export const Home = () => {
             </Link>
             </div>  
             <DeliveryInfo />
-            <Guarantee />
+            <hr />
+            {/* <Guarantee /> */}
             <СarouselTopseller />
         </Container>
     )

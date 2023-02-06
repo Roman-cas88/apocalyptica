@@ -7,11 +7,13 @@ import { ProductCarousel } from './ProductCarousel'
 
 
 export const СarouselTopseller = () => {
-    const { girls } = data;
-    const { ticket } = data;
-    const { shirts } = data;
-    const { hoods } = data;
-    const { stuff } = data;
+    // const { girls } = data;
+    // const { ticket } = data;
+    // const { shirts } = data;
+    // const { hoods } = data;
+    // const { stuff } = data;
+    const { girls, ticket, shirts, hoods, stuff } = data;
+
 
     let topProducts =[]
        for (let i=0; i<6; i++) {
