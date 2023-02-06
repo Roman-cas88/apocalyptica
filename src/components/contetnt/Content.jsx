@@ -13,13 +13,15 @@ import { Privacy } from "./Privacy/Privacy"
 import { WishList } from "./Account/WishList"
 import { ContentImage } from "./ContentImage"
 import { BuyPage } from "./BuyPage/BuyPage"
+import { ScrollToTop } from "./ScrollToTop"
 
 export const Content = () => {
     return (
         <>
         <ContentImage />
         <Container >
-            <Routes>
+        <ScrollToTop>
+            <Routes>           
                 <Route path="/" element={<Home />} />
                 <Route path="/tickets" element={<Tickets />} />
                 <Route path="/shirts" element={<Shirts />} />
@@ -32,7 +34,9 @@ export const Content = () => {
                 <Route path="/privacy" element={<Privacy />} />     
                 <Route path="/wishlist" element={<WishList />} /> 
                 <Route path="/buy-page" element={<BuyPage />} />   
+            
             </Routes>
+            </ScrollToTop>
         </Container>
         </>
     )
