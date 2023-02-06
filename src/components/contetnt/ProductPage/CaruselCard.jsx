@@ -1,10 +1,12 @@
 import React from 'react'
-import "../Cards/cards.css"
+import "../Cards/cards.css";
+import { Link } from 'react-router-dom'
 
 export const CaruselCard = ({ item }) => {
 
   return (
-    <div style={{height:"340px"}} className='border pb-3 m-2 mb-4 text-center d-flex flex-column align-items-center position-relative' id='container'>
+    <Link style={{all: 'unset', cursor: 'pointer'}} to={`/${item.name}/product-page/${item.id}`}>
+    <div style={{maxWidth: "220px", height:"340px"}} className='border pb-3 m-2 mb-4 text-center d-flex flex-column align-items-center position-relative' id='container'>
         <div className='m-2' id='img'>
           {item.isSold &&
             <div className="soldOut">Sold Out</div>
@@ -16,5 +18,8 @@ export const CaruselCard = ({ item }) => {
             <div className='fw-bold' id='price'>€{item.price.toFixed(2)}</div>
         </div>
     </div>
+    </Link> 
   )
 }
+
+//window.scroll(0,0)
