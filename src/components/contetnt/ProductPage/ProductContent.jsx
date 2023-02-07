@@ -5,7 +5,12 @@ import { Description } from './Description'
 import "../Cards/cards.css"
 import { Busket } from "../Busket/Busket"
 import { StoreContext } from '../StoreContext/StoreContext'
-import { ProductCarusel } from './ProductCarusel'
+import { ProductCarousel } from '../Home/ProductCarousel'
+import { CaruselCard } from './CaruselCard';
+import { useParams } from "react-router-dom"
+import data from "../Cards/data.json"
+
+
 
 export const ProductContent = ({product}) => {
     
@@ -72,6 +77,13 @@ const SoldOutButton = () => {
         )
 }
 
+let params = useParams()
+const carouselProduct = data[params.name]
+const carouselProductMap = carouselProduct.map((element) => (
+    <CaruselCard item={element} key={element.id} />
+))
+console.log(carouselProduct)
+
     return (
         <Container className='bg-white'>
         <Row>
@@ -133,7 +145,7 @@ const SoldOutButton = () => {
             </Col>
         </Row>
 <Description product={product}/>
-<ProductCarusel/>
+<ProductCarousel content={carouselProductMap}/>
     </Container>
 
     )
