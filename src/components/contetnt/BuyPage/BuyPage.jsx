@@ -6,7 +6,7 @@ import { BuyCard } from './BuyCard'
 import 'animate.css';
 
 export const BuyPage = () => {
-  const { item } = useContext(StoreContext)
+  const { item, clearBusket } = useContext(StoreContext)
 
   const currentElementsObj = item.reduce((value, index) => 
   ({...value, [index.id]: index}), {})
@@ -43,20 +43,26 @@ let buyCard = [
 
 useEffect(() => {
 buyCard.push(data)
-// buyCard.push(userInfo)
 buyCard.push("Payment: €" + tottalAmount)
 }, [data, buyCard, tottalAmount])
 
+let [hide, setHide] = useState({display:"block"})
+let [show, setShow] = useState({display:"none"})
+
 const applyItems = () => {
+  setHide({display:"none"})
+  setShow({display:"block"})
+  clearBusket()
   console.log(buyCard)
 }
  
   return (
     <Container>
-      BuyPage 
+      <Container style={hide}>
+
       {item.map(element => 
         <BuyCard key={element.id} element={element} deleteCart={deleteCart} handleUpdate={handleUpdate} />
-      )}
+        )}
 
       <div>
         <p>Subtotal amount <span>€{subtotalAmount.toFixed(2)}*</span></p>
@@ -68,15 +74,16 @@ const applyItems = () => {
           </span>
         </h5>
       </div>
-        <div style={{left:"50%", bottom:"50%"}} className="position-absolute animate__animated animate__fadeInUpBig color-green text-success">
+    </Container>
+        <div style={show} className="animate__animated animate__fadeInUpBig color-green text-success">
           <Alert className='d-flex justify-content-center' variant="success">
             <div>
-              <div className='display-1 fw-bolder'>Thanks</div>
-              <div className='text-monospace ms-4' style={{display:"initial"}}>Our manager will contact you</div>
+              <div className='display-1 fw-bolder d-flex justify-content-center'>Thanks</div>
+              <div className='text-monospace d-flex justify-content-center'>Our manager will contact you</div>
+              <div className='d-flex justify-content-center mt-5'><Button onClick={() => {window.location.href = "/";}} variant='success'>Return to store</Button></div>
             </div>
           </Alert>
         </div>
-      {/* <h1 class="animate__animated animate__bounce">An animated element</h1> */}
-    </Container>
+  </Container>
   )
 }
