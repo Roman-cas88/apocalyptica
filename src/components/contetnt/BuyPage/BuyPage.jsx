@@ -6,7 +6,7 @@ import { BuyCard } from './BuyCard'
 import 'animate.css';
 
 export const BuyPage = () => {
-  const { item, clearBusket } = useContext(StoreContext)
+  const { item, clearBusket, counter } = useContext(StoreContext)
 
   const currentElementsObj = item.reduce((value, index) => 
   ({...value, [index.id]: index}), {})
@@ -56,7 +56,7 @@ const applyItems = () => {
   console.log(buyCard)
 }
  
-  return (
+  return (counter > 0 &&
     <Container>
       <Container style={hide}>
 
@@ -80,10 +80,10 @@ const applyItems = () => {
             <div>
               <div className='display-1 fw-bolder d-flex justify-content-center'>Thanks</div>
               <div className='text-monospace d-flex justify-content-center'>Our manager will contact you</div>
-              <div className='d-flex justify-content-center mt-5'><Button onClick={() => {window.location.href = "/";}} variant='success'>Return to store</Button></div>
+              <div className='d-flex justify-content-center mt-5'><Button onClick={() => {window.location.href = "/"}} variant='success'>Return to store</Button></div>
             </div>
           </Alert>
         </div>
   </Container>
-  )
+)
 }
