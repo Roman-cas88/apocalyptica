@@ -60,7 +60,7 @@ export default function App() {
     <LocaleContext.Provider value={{ locale, setLocale }}>
     <Suspense fallback="loading">
     <StoreContext.Provider value={store}>
-    <Container fluid >
+    <Container fluid className="px-0">
       <Header />
       <hr className='m-0 p-0' style={{color: '#e1e1e1'}}/>
       <Row justify="center" className='pb-5' style={styleContent}>

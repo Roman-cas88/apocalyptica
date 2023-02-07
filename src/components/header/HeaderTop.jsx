@@ -9,8 +9,8 @@ export default function HeaderTop() {
   const { t } = useTranslation();
 
   return (
-    <Navbar className="p-0">
-      <Container variant='dark' className="justify-content-end  bg-dark text-white">
+    <Navbar className="p-0" >
+      <Container  className="justify-content-end">
         <Row >
           <Col>
           <HeaderLanguage />

@@ -33,8 +33,7 @@ export const Content = () => {
                 <Route path="/account" element={<Account />} />
                 <Route path="/privacy" element={<Privacy />} />     
                 <Route path="/wishlist" element={<WishList />} /> 
-                <Route path="/buy-page" element={<BuyPage />} />   
-            
+                <Route path="/buy-page" element={<BuyPage />} />               
             </Routes>
             </ScrollToTop>
         </Container>

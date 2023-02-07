@@ -1,7 +1,6 @@
 import { Container } from "react-bootstrap";
 import { CaruselTop } from "./CaruselTop";
 import { DeliveryInfo } from "./DeliveryInfo";
-import { Guarantee } from "./Guarantee";
 import NewMerch from "../img/newMerch-700x800.jpg";
 import { Link } from 'react-router-dom';
 import { СarouselTopseller } from "./СarouselTopseller";
@@ -10,7 +9,6 @@ import { СarouselTopseller } from "./СarouselTopseller";
 export const Home = () => {
     return ( 
         <Container fluid className='bg-white p-0'>
-            {/* <h2>Home</h2> */}
             <div className='d-none d-md-block my-0'>
             <CaruselTop />
             </div>
@@ -24,7 +22,6 @@ export const Home = () => {
             </div>  
             <DeliveryInfo />
             <hr />
-            {/* <Guarantee /> */}
             <СarouselTopseller />
         </Container>
     )
