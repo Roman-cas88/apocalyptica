@@ -47,7 +47,7 @@ export default function NavBar() {
               <NavLink  className={navLinkStyle} to="/hoods" onClick={handleClose} >{t("nav.hoods")}</NavLink>
               <NavLink  className={navLinkStyle} to="/music" onClick={handleClose} >{t("nav.music")}</NavLink>
               <NavLink className={navLinkStyle} to="/stuff" onClick={handleClose} >{t("nav.stuff")}</NavLink>
-              <NavLink className={navLinkStyle} href='https://en.helsinginkahvipaahtimo.fi/search/?q=apocalyptica' target="_blank">COFFEE</NavLink>              
+              <a className={navLinkStyle} href='https://en.helsinginkahvipaahtimo.fi/search/?q=apocalyptica' target="_blank" rel="noreferrer">COFFEE</a>              
               <NavLink className={navLinkStyleMdNoneBg} >{t("nav.information")}</NavLink>
               <NavLink  className={navLinkStyleMdNone} to="/" onClick={handleClose} >{t("nav.faq")}</NavLink>
               <NavLink  className={navLinkStyleMdNone} to="/" onClick={handleClose} >{t("nav.return")}</NavLink>
