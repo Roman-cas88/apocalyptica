@@ -5,7 +5,6 @@ import NewMerch from "../img/newMerch-700x800.jpg";
 import { Link } from 'react-router-dom';
 import { СarouselTopseller } from "./СarouselTopseller";
 
-
 export const Home = () => {
     return ( 
         <Container fluid className='bg-white p-0'>
