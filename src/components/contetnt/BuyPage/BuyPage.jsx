@@ -6,7 +6,7 @@ import { BuyCard } from './BuyCard'
 import 'animate.css';
 
 export const BuyPage = () => {
-  const { item, clearBusket, counter } = useContext(StoreContext)
+  const { item, clearBasket } = useContext(StoreContext)
 
   const currentElementsObj = item.reduce((value, index) => 
   ({...value, [index.id]: index}), {})
@@ -52,7 +52,7 @@ let [show, setShow] = useState({display:"none"})
 const applyItems = () => {
   setHide({display:"none"})
   setShow({display:"block"})
-  clearBusket()
+  clearBasket()
   console.log(buyCard)
 }
  
