@@ -45,7 +45,7 @@ export const Basket = () => {
 
     let tottalAmount = (allPrice + shippingCost)
     
-    return (
+    return ( item.length > 0 &&
         <>
         <Offcanvas show={show} onHide={handleClose} placement="end">
             <Offcanvas.Header onClick={handleClose} className='bg-black p-2' style={{color:"grey", cursor:"pointer"}}>
