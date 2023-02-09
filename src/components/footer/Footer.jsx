@@ -166,7 +166,7 @@ export function Footer() {
             <Row className="text-center text-white-50 my-5"  >
                 <p>{t("footer.comment")}</p>
             </Row>
-            <Row className=" text-center text-white-50 my-5">
+            <Row className=" text-center text-white-50">
                 <p>Theme version: 2022.9.1 | © 2007 - 2022 | </p>
             </Row>
         </Container>
