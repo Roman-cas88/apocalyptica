@@ -56,8 +56,7 @@ const applyItems = () => {
   setShow({display:"block"})
   clearBasket()
   console.log(buyCard)
-}
- 
+} 
   return (
     <Container>
       <Container style={hide}>
