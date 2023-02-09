@@ -2,7 +2,7 @@ import React from 'react'
 import "../Cards/cards.css";
 import { Link } from 'react-router-dom'
 
-export const CaruselCard = ({ item }) => {
+export const CarouselCard = ({ item }) => {
 
   return (
     <Link style={{all: 'unset', cursor: 'pointer'}} to={`/${item.name}/product-page/${item.id}`}>

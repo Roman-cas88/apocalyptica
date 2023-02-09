@@ -6,7 +6,7 @@ import "../Cards/cards.css"
 import { Basket } from "../Basket/Basket"
 import { StoreContext } from '../StoreContext/StoreContext'
 import { ProductCarousel } from '../Home/ProductCarousel'
-import { CaruselCard } from './CaruselCard';
+import { CarouselCard } from './CarouselCard';
 import { useParams } from "react-router-dom"
 import data from "../Cards/data.json"
 
@@ -80,7 +80,7 @@ const SoldOutButton = () => {
 let params = useParams()
 const carouselProduct = data[params.name]
 const carouselProductMap = carouselProduct.map((element) => (
-    <CaruselCard item={element} key={element.id} />
+    <CarouselCard item={element} key={element.id} />
 ))
 
     return (
