@@ -92,7 +92,7 @@ const [show, setShow] = useState(false)
                                     </ToggleButton>
                                     </ToggleButtonGroup>
                                 {show &&
-                                <Container id='price' className="w-50 mt-2 rounded border">
+                                <Container id='priceFilter' className="w-50 mt-2 rounded border">
                                     <p className='text-center'><b>Price</b></p>
                                     <RangeSlider 
                                         min={minPrice} 

@@ -30,8 +30,10 @@ let user = localStorage.getItem("user")
 let name = JSON.parse(user).firstName
 let lastName = JSON.parse(user).lastName
 let email = JSON.parse(user).email
+let salutation = JSON.parse(user).salutation
 
 let userInfo = {
+  salutation: salutation,
   name: name,
   lastName: lastName,
   email: email
