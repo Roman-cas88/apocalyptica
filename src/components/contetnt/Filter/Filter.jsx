@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Button, Accordion, Card } from 'react-bootstrap'
+import { Container, Row, Col, Button, Accordion, Card, ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { Cards } from "../Cards/Card"
 import { ImFilter } from 'react-icons/im'
 import { BiDownArrow } from 'react-icons/bi'
@@ -7,6 +7,7 @@ import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import { useState } from "react"
 import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
+import './filter.css'
 
 export const Filter = ({props}) => {
 // Price filter
@@ -35,21 +36,27 @@ const removeSoldOut = (el) => {
     }
 };
 
+
 const CustomButton = ({eventKey}) => {
     const accordionHook = useAccordionButton(eventKey)
     return (
-        <Button 
-            className='border border-secondary'
-            onClick={accordionHook}
-            variant="light" 
-            size='sm'
-        >
-                <ImFilter className='mb-1 me-2' size={14}/> 
-                Filters
-                <BiDownArrow className='ms-5'/>
-        </Button>
+            <Button 
+                id="filter"
+                value="1"
+                className='border'
+                onClick={accordionHook}
+                type="checkbox"
+                variant="light"
+                size='sm'
+            >
+                    <ImFilter className='mb-1 me-2' size={14}/> 
+                    Filters
+                    <BiDownArrow className='ms-5'/>
+            </Button>
     )
 };
+
+const [show, setShow] = useState(false)
 
       return (            
         <Container>
@@ -60,25 +67,43 @@ const CustomButton = ({eventKey}) => {
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
                         <Card.Body>
-                            <Row>
-                                <Col>
-                                    <input className='me-3' type="checkbox" name="check" onChange={check}/>
-                                    <label htmlFor="check">In stock</label>
-                                </Col>
-                                <Col>
-                                    <Container className="m-3 mx-auto">
-                                        <p className='text-center'><b>Price</b></p>
-                                        <RangeSlider 
-                                            min={minPrice} 
-                                            max={maxPrice} 
-                                            defaultValue={priceValue}
-                                            step="any"
-                                            onInput={value => setPriceValue(value)}
-                                            />
-                                        <p className='text-center'>from <b>€{priceMinFixed}</b> to <b>€{priceMaxFixed}</b></p>
-                                    </Container>
-                                </Col>
-                            </Row>
+                                <ToggleButtonGroup type="checkbox">
+                                    <ToggleButton
+                                        className='rounded'
+                                        id="tbg-check-1"
+                                        value={1}
+                                        variant="outline-primary"
+                                        onChange={check}
+                                        >
+                                        In Stock
+                                    </ToggleButton>
+                                    <ToggleButton
+                                        className='rounded ms-5 px-4'
+                                        id="tbg-check-2"
+                                        value={2}
+                                        variant="outline-primary"
+                                        checked={show}
+                                        onChange={() => {
+                                            setShow(!show)
+                                            setPriceValue(price)
+                                        }}
+                                        >
+                                        Price
+                                    </ToggleButton>
+                                    </ToggleButtonGroup>
+                                {show &&
+                                <Container id='price' className="w-50 mt-2 rounded border">
+                                    <p className='text-center'><b>Price</b></p>
+                                    <RangeSlider 
+                                        min={minPrice} 
+                                        max={maxPrice} 
+                                        defaultValue={priceValue}
+                                        step="any"
+                                        onInput={value => setPriceValue(value)}
+                                        />
+                                    <p className='text-center mt-1'>from <b>€{priceMinFixed}</b> to <b>€{priceMaxFixed}</b></p>
+                                </Container>
+                                }
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>
