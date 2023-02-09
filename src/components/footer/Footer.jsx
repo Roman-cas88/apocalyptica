@@ -7,6 +7,7 @@ import payment2 from './img/payment2.png';
 import payment3 from './img/payment3.png';
 import payment4 from './img/payment4.png';
 import payment5 from './img/payment5.png';
+// import background from './img/background1.png';
 import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { FiFacebook } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
@@ -14,10 +15,18 @@ import LocaleContext from "../../../src/LocaleContext";
 
 export function Footer() {
     const { t } = useTranslation();
-    //console.log("!!!:",i18next.languageChanged)
+
     const { locale } = useContext(LocaleContext);
     return (
-        <Container fluid variant='dark' className="text-light bg-dark">
+        <Container fluid variant='dark' className="text-light bg-dark"
+        // <Container fluid variant='dark' className="text-light " 
+        // style={{  
+        //     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${background})`,            
+        //     backgroundPosition: 'center',
+        //     backgroundSize: 'cover',
+        //     backgroundRepeat: 'no-repeat',
+        //  }}
+         >
         <Container >
             <Row>
                 <Nav className='d-md-none justify-content-around '>
@@ -166,3 +175,6 @@ export function Footer() {
 
 };
 
+// background-blend-mode: overlay
+// <img src="..." class="img-fluid" alt="...">
+// https://images..com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350

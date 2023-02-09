@@ -7,11 +7,16 @@ import HeaderNavIcons from './HeaderNavIcons';
 
 export function Header() {
   return (
-    <Container className='px-0 my-0 pb-3' >
-    <Row >
-    <Col md={12} className="d-none d-md-block ">
+    <>
+    <Container fluid variant='dark' className="d-none d-md-block bg-dark text-white">
+    {/* <Col md={12} variant='dark' className="d-none d-md-block bg-dark text-white "> */}
+    <Container>
     <HeaderTop />
-    </Col>
+    </Container>
+
+    </Container>
+    <Container className='my-0 pb-3' >
+    <Row >
     <Col xs={12} md={8}>
       <HeaderLogo />
     </Col>
@@ -27,8 +32,11 @@ export function Header() {
     >
       <NavBar />
     </Col>
+
   </Row>
+
   </Container>
+  </>
   )
 }
 
