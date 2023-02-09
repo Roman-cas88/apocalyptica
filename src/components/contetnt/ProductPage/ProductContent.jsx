@@ -82,7 +82,6 @@ const carouselProduct = data[params.name]
 const carouselProductMap = carouselProduct.map((element) => (
     <CaruselCard item={element} key={element.id} />
 ))
-console.log(carouselProduct)
 
     return (
         <Container className='bg-white'>
