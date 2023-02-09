@@ -56,7 +56,7 @@ const applyItems = () => {
   console.log(buyCard)
 }
  
-  return (counter > 0 &&
+  return (
     <Container>
       <Container style={hide}>
 
