@@ -6,7 +6,7 @@ import { BuyCard } from './BuyCard'
 import 'animate.css';
 
 export const BuyPage = () => {
-  const { item, clearBusket, counter } = useContext(StoreContext)
+  const { item, clearBasket } = useContext(StoreContext)
 
   const currentElementsObj = item.reduce((value, index) => 
   ({...value, [index.id]: index}), {})
@@ -30,8 +30,10 @@ let user = localStorage.getItem("user")
 let name = JSON.parse(user).firstName
 let lastName = JSON.parse(user).lastName
 let email = JSON.parse(user).email
+let salutation = JSON.parse(user).salutation
 
 let userInfo = {
+  salutation: salutation,
   name: name,
   lastName: lastName,
   email: email
@@ -52,11 +54,10 @@ let [show, setShow] = useState({display:"none"})
 const applyItems = () => {
   setHide({display:"none"})
   setShow({display:"block"})
-  clearBusket()
+  clearBasket()
   console.log(buyCard)
-}
- 
-  return (counter > 0 &&
+} 
+  return (
     <Container>
       <Container style={hide}>
 

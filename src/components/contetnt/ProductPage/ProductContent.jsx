@@ -3,10 +3,10 @@ import { Container, Form, Col, Row, Stack } from "react-bootstrap"
 import { Button } from 'react-bootstrap'
 import { Description } from './Description'
 import "../Cards/cards.css"
-import { Busket } from "../Busket/Busket"
+import { Basket } from "../Basket/Basket"
 import { StoreContext } from '../StoreContext/StoreContext'
 import { ProductCarousel } from '../Home/ProductCarousel'
-import { CaruselCard } from './CaruselCard';
+import { CarouselCard } from './CarouselCard';
 import { useParams } from "react-router-dom"
 import data from "../Cards/data.json"
 
@@ -16,7 +16,7 @@ export const ProductContent = ({product}) => {
     
 const { countItem, 
     handleShow, 
-    addToBusket, 
+    addToBasket, 
     item,  
     amount,
     setAmount,
@@ -46,7 +46,7 @@ const SoldOutShipping = () => {
     }
 }
 
-const busket = {
+const basket = {
     id: product.id,
     img: product.img,
     amount:amount,
@@ -55,12 +55,12 @@ const busket = {
     price: product.price,
   }
 
-  const checkSameId = item.findIndex(el => el.id === busket.id)
+  const checkSameId = item.findIndex(el => el.id === basket.id)
 
 const addItem = () => {
     handleShow()
     if (checkSameId === -1) {
-        addToBusket(busket)
+        addToBasket(basket)
          countItem()
     }
 }
@@ -70,8 +70,8 @@ const SoldOutButton = () => {
         return (!product.isSold &&
             <>
                 <Col md="6">
-                    <Button type="submit" onClick={ addItem } className="w-100">ADD TO CARD</Button>
-                    <Busket />
+                    <Button type="submit" onClick={ addItem } className="w-100">ADD TO BASKET</Button>
+                    <Basket />
                 </Col>
             </>
         )
@@ -80,9 +80,8 @@ const SoldOutButton = () => {
 let params = useParams()
 const carouselProduct = data[params.name]
 const carouselProductMap = carouselProduct.map((element) => (
-    <CaruselCard item={element} key={element.id} />
+    <CarouselCard item={element} key={element.id} />
 ))
-console.log(carouselProduct)
 
     return (
         <Container className='bg-white'>

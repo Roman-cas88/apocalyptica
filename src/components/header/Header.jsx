@@ -9,13 +9,12 @@ export function Header() {
   return (
     <>
     <Container fluid variant='dark' className="d-none d-md-block bg-dark text-white">
-    {/* <Col md={12} variant='dark' className="d-none d-md-block bg-dark text-white "> */}
-    <Container>
-    <HeaderTop />
-    </Container>
+      {/* <Col md={12} variant='dark' className="d-none d-md-block bg-dark text-white "> */}
+      
+      <HeaderTop />
 
     </Container>
-    <Container className='my-0 pb-3' >
+    <Container className='my-0' >
     <Row >
     <Col xs={12} md={8}>
       <HeaderLogo />

@@ -18,7 +18,6 @@ export function RegisteredAccount(props) {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    console.log('submit data');
     navigate("/")
   };
 

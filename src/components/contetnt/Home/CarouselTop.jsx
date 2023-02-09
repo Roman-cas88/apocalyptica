@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 
 
-export const CaruselTop = () => {
+export const CarouselTop = () => {
     return (
         <Carousel indicators={false}>
                 <Carousel.Item>

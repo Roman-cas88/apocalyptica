@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState, useContext} from 'react'; 
-import { BsSearch } from "react-icons/bs";
+import React, { useRef, useState, useContext} from 'react'; 
+// import { BsSearch } from "react-icons/bs";
 import { Form, InputGroup, Container } from "react-bootstrap/";
 import { PopoverSearchList } from "./PopoverSearchList";
 import {isShownSearchContext} from "./HeaderNavIcons"
 
   export default function HeaderSearch() {
-    const {isShownSearch, setIsShownSearch} = useContext(isShownSearchContext)
+    const {isShownSearch} = useContext(isShownSearchContext)
     const [target, setTarget] = useState(null);
     const [seachInput, setSeachInput] = useState('');
     // const [isShownSearchRes, setisShownSearchRes] = useState(false);

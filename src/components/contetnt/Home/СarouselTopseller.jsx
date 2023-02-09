@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import data from "../Cards/data.json";
 // import Carousel from 'react-multi-carousel';
-import { CaruselCard } from '../ProductPage/CaruselCard';
+import { CarouselCard } from '../ProductPage/CarouselCard';
 import { ProductCarousel } from './ProductCarousel'
 
 
@@ -34,7 +34,7 @@ export const СarouselTopseller = () => {
       }
 
      let productMap = topProducts.map((item) => (
-        <CaruselCard item={item} key={item.id} />
+        <CarouselCard item={item} key={item.id} />
      ))
 
 

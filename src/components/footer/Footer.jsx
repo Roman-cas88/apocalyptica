@@ -102,7 +102,7 @@ export function Footer() {
                                             <img src={shipping}  className='p-1' width="82" alt="" />
                                         {/* </Nav.Link> */}
                                         {/* {locale =="de" && <Nav.Link href="#"> */}
-                                        {locale =="de" && <img src={shipping2} className='p-1' width="82" alt="" />}
+                                        {locale ==="de" && <img src={shipping2} className='p-1' width="82" alt="" />}
                                         {/* </Nav.Link>} */}
                                     </Nav.Item>
                                     
@@ -126,8 +126,8 @@ export function Footer() {
                                 <Navbar.Collapse id="nav" className="me-auto">
                                     <Nav className='flex-column  p-1'>
                                         <Nav.Item >
-                                            {locale =="en" && <img src={payment1} className='p-1' width="82" alt="" />}
-                                            {locale =="de" && <img src={payment5} className='p-1' width="82" alt="" />}                                                                                                    
+                                            {locale ==="en" && <img src={payment1} className='p-1' width="82" alt="" />}
+                                            {locale ==="de" && <img src={payment5} className='p-1' width="82" alt="" />}                                                                                                    
                                             <img src={payment2} className='p-1' width="82" alt="" />
                                             <img src={payment3} className='p-1' width="82" alt="" />
                                             <img src={payment4} className='p-1' width="82" alt="" />
@@ -147,7 +147,7 @@ export function Footer() {
                         {/* <Navbar.Toggle aria-controls="nav" /> */}
                         <Nav className='flex-column text-white p-1'>
                             <Nav.Item>
-                            {locale =="en" && <Nav.Link href="#" className='text-white  p-1 w-100'> +49(0)815-123 1234 12</Nav.Link>}
+                            {locale ==="en" && <Nav.Link href="#" className='text-white  p-1 w-100'> +49(0)815-123 1234 12</Nav.Link>}
                                 <Nav.Link href="mailto:support@merchcowboy.com" className='text-white  p-1'>support@merchcowboy.com </Nav.Link>
                             </Nav.Item>
                             <Nav >
@@ -166,7 +166,7 @@ export function Footer() {
             <Row className="text-center text-white-50 my-5"  >
                 <p>{t("footer.comment")}</p>
             </Row>
-            <Row className=" text-center text-white-50 my-5">
+            <Row className=" text-center text-white-50">
                 <p>Theme version: 2022.9.1 | © 2007 - 2022 | </p>
             </Row>
         </Container>

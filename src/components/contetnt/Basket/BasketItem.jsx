@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { StoreContext } from '../StoreContext/StoreContext'
-import './busketItem.css'
+import './basketItem.css'
 
-export const BusketItem = ({ price, title, img, id, amount, size }) => {
+export const BasketItem = ({ price, title, img, id, amount, size }) => {
     const { deleteItem } = useContext(StoreContext)
 
   return (

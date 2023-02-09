@@ -10,7 +10,7 @@ export const PopoverSearchList = (props) => {
 
   const ref = useRef(null);
     const [isShow, setIsShow] = useState(false);
-   const [resFooter , setResFooter] = useState(0);
+  //  const [resFooter , setResFooter] = useState(0);
 
     useEffect(() => {
        setIsShow(props.seachInput ? true : false)
@@ -43,11 +43,7 @@ export const PopoverSearchList = (props) => {
 
 const SearchList = (props) => {
   const text = props.text;
-  const { girls } = data;
-  const { ticket } = data;
-  const { shirts } = data;
-  const { hoods } = data;
-  const { stuff } = data;
+  const { girls, ticket, shirts, stuff, hoods } = data;
   const  allProducts = [...girls,...ticket,...shirts,...hoods,...stuff];
   let i = 0;
 
@@ -66,14 +62,14 @@ const SearchList = (props) => {
   )
 };
 
-const PopoverFooter = (props) => {
-const foot = props.resFooter === 0 ? `No results found` : `${props.resFooter} results`;
+// const PopoverFooter = (props) => {
+// const foot = props.resFooter === 0 ? `No results found` : `${props.resFooter} results`;
 
-return (
-  <Nav className='p-2 w-100 justify-content-center'>
-   {foot}
-   </Nav>
-)
-}
+// return (
+//   <Nav className='p-2 w-100 justify-content-center'>
+//    {foot}
+//    </Nav>
+// )
+// }
 
 //  Warning: Cannot update a component (`PopoverSearchList`) while rendering a different component (`SearchList`). To locate the bad setState() call inside `SearchList`,

@@ -18,14 +18,14 @@ export default function App() {
   const [amount, setAmount] = useState(1)
   const [size, setSize] = useState("S")
 
-  const addToBusket = (i) => setItem([...item, i])
+  const addToBasket = (i) => setItem([...item, i])
   const handleClose = () => {
     setShow(false)
     setItemAdded(false)
   }
   const handleShow = () => setShow(true);
   const countItem = () => setCounter(item.length+1)
-  const clearBusket = () => {
+  const clearBasket = () => {
     setCounter(0)
     setItem([])
   }
@@ -36,13 +36,13 @@ export default function App() {
 
   const store = {
     item,
-    addToBusket,
+    addToBasket,
     counter,
     countItem,
     show,
     handleClose,
     handleShow,
-    clearBusket,
+    clearBasket,
     deleteItem,
     setItemAdded,
     itemAdded,
@@ -60,17 +60,18 @@ export default function App() {
     <LocaleContext.Provider value={{ locale, setLocale }}>
     <Suspense fallback="loading">
     <StoreContext.Provider value={store}>
-    <Container fluid className="px-0">
-      <Header />
+      <Header /> 
+      <hr/>
+    <Container fluid>
       <hr className='m-0 p-0' style={{color: '#e1e1e1'}}/>
       <Row justify="center" className='pb-5' style={styleContent}>
         <Col className="px-0">
         <Content />
         </Col>
       </Row>
-      <Footer />
       <Cookie />
     </Container>
+      <Footer />
     </StoreContext.Provider>
     </Suspense>
     </LocaleContext.Provider>

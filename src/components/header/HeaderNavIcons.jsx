@@ -3,7 +3,7 @@ import { BsSearch, BsPersonFill, BsCartCheckFill } from "react-icons/bs";
 import { Button, Container, Row, Col } from "react-bootstrap/";
 import { Link } from 'react-router-dom';
 import HeaderSearch from './HeaderSearch';
-import { Busket } from '../contetnt/Busket/Busket';
+import { Basket } from '../contetnt/Basket/Basket';
 import { StoreContext } from '../contetnt/StoreContext/StoreContext';
 import { UserContext } from "../contetnt/Account/UserContext";
 import { PopoverMyAccount } from './PopoverMyAccount';
@@ -51,7 +51,7 @@ export default function HeaderNavIcons() {
                 <BsCartCheckFill size={28} />
                 {counter !== 0 && <div className="count">{counter}</div>}
               </Button>
-              <Busket />
+              <Basket />
             </div>
             {isShownMyAccount && (<PopoverMyAccount show={isShownMyAccount} target={target} />)}
           </div>

@@ -5,20 +5,20 @@ import { useNavigate } from 'react-router-dom';
 import { BsCheckLg } from "react-icons/bs"
 import { UserContext } from '../Account/UserContext';
 import { StoreContext } from "../StoreContext/StoreContext"
-import { BusketItem } from "./BusketItem"
+import { BasketItem } from "./BasketItem"
 
-export const Busket = () => {
+export const Basket = () => {
     
-    const { show, handleClose, clearBusket, item, itemAdded } = useContext(StoreContext)
+    const { show, handleClose, clearBasket, item, itemAdded } = useContext(StoreContext)
     const { checkRegister } = useContext(UserContext)
 
     const clear = () => {
-        clearBusket()
+        clearBasket()
         handleClose()
     }
 
     let shippingCost = 10.49
-    let itemMap = item.map((map) => (<BusketItem key={map.id + Math.random()} id={map.id} price={map.price} 
+    let itemMap = item.map((map) => (<BasketItem key={map.id + Math.random()} id={map.id} price={map.price} 
         img={map.img} title={map.title} amount={map.amount} size={map.size}/> ))
     const navigate = useNavigate()
     const checkFunc = () => {
@@ -45,7 +45,7 @@ export const Busket = () => {
 
     let tottalAmount = (allPrice + shippingCost)
     
-    return (
+    return ( item.length > 0 &&
         <>
         <Offcanvas show={show} onHide={handleClose} placement="end">
             <Offcanvas.Header onClick={handleClose} className='bg-black p-2' style={{color:"grey", cursor:"pointer"}}>
@@ -66,7 +66,7 @@ export const Busket = () => {
             <Offcanvas.Body>
                 {itemMap}
                 <div className="d-grid gap-2">
-                    <Button size='sm' variant="secondary" onClick={clear}>Clear Busket</Button>
+                    <Button size='sm' variant="secondary" onClick={clear}>Clear Basket</Button>
                 </div>
 
                 <hr />
